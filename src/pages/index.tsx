@@ -24,7 +24,7 @@ export default function Home({ data }: HomeProps) {
 
 // GraphQL Query
 const page: string = "Forside";
-const query = gql`
+const query: string = gql`
   query {
     allPages(filter: { name: { eq: ${page} } }) {
       id
@@ -41,9 +41,9 @@ const query = gql`
 `;
 
 // GET Request
-export async function getStaticProps() {
+export async function getStaticProps(): Promise<{ props: { data: any } }> {
   const endpoint: string = "https://graphql.datocms.com/";
-  const graphQLClient = new GraphQLClient(endpoint, {
+  const graphQLClient: GraphQLClient = new GraphQLClient(endpoint, {
     headers: {
       "content-type": "application/json",
       authorization: `Bearer ${process.env.DATOCMS_API_KEY}`,
