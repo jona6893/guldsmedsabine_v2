@@ -1,5 +1,6 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
+// Frontend
 export default function Document() {
   return (
     <Html lang="da">

@@ -1,8 +1,9 @@
 import { gql, GraphQLClient } from "graphql-request";
 import { GraphQLResponse } from "graphql-request/build/esm/types";
+import { Page } from "../_app";
 
 // Types
-interface HomeProps {
+interface ContactProps {
   data: Data;
 }
 
@@ -12,7 +13,7 @@ interface Data {
 }
 
 // Frontend
-export default function Home({ data }: HomeProps) {
+export default function Contact({ data }: ContactProps) {
   console.log(data);
 
   return (
@@ -23,7 +24,7 @@ export default function Home({ data }: HomeProps) {
 }
 
 // GraphQL Query
-const page: string = "Forside";
+const page: Page = "Kontakt";
 const query = gql`
   query {
     allPages(filter: { name: { eq: ${page} } }) {
