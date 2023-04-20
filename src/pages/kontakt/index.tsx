@@ -14,7 +14,7 @@ interface Data {
 
 // Frontend
 export default function Contact({ data }: ContactProps) {
-  console.log(data);
+  //console.log(data);
 
   return (
     <div>
@@ -53,7 +53,7 @@ export async function getStaticProps() {
 
   const graphQLData: GraphQLResponse | any = await graphQLClient.request(query);
   const filteredGraphQLData = graphQLData.allPages[0];
-  console.log(filteredGraphQLData);
+  //console.log(filteredGraphQLData);
   return {
     props: { data: filteredGraphQLData },
   };
