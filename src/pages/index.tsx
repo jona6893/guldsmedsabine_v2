@@ -1,5 +1,6 @@
 import { gql, GraphQLClient } from "graphql-request";
 import { GraphQLResponse } from "graphql-request/build/esm/types";
+import SimpleText from "@/components/DatoCMS/SimpleText";
 
 // Types
 interface HomeProps {
@@ -9,6 +10,7 @@ interface HomeProps {
 interface Data {
   id: number;
   name: string;
+  content: any[];
 }
 
 // Frontend
@@ -18,6 +20,13 @@ export default function Home({ data }: HomeProps) {
   return (
     <div>
       <h1>Hello {data.name}</h1>
+      {data.content.map((content) => {
+        // render content on the page
+        switch (content.__typename) {
+          case "SimpleTextRecord":
+            return <SimpleText key={content.title} title={content.title} level={1} description={content.description} />;
+        }
+      })}
     </div>
   );
 }
