@@ -1,12 +1,6 @@
-// Types
-interface HeadingProps {
-  level: number;
-  children: string;
-}
-
 // Frontend
-export default function Heading({ level, children }: HeadingProps) {
-  function HeadingLevel(level: number) {
+export default function Heading({ level, children }) {
+  function HeadingLevel(level) {
     switch (level) {
       case 1:
         return <h1>{children}</h1>;

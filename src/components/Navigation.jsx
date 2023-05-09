@@ -1,23 +1,7 @@
-import Anchor from "@/components/Anchor";
-
-// Types
-interface NavigationProps {
-  navData: NavData[];
-}
-
-export interface NavData {
-  index: number;
-  menuItem: MenuItem;
-}
-
-interface MenuItem {
-  id: number;
-  name: string;
-  slug: string;
-}
+import Anchor from "./Anchor";
 
 // Frontend
-export default function Navigation({ navData }: NavigationProps) {
+export default function Navigation({ navData }) {
   navData.sort((a, b) => a.index - b.index);
   return (
     <nav>

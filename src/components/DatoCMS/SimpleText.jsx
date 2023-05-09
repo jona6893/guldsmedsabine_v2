@@ -1,16 +1,9 @@
-import Heading from "@/components/Heading";
+import Heading from "../Heading";
 import Markdown from "markdown-to-jsx";
 import React from "react";
 
-// Types
-interface SimpleTextProps {
-  title: string;
-  level: 1 | 2 | 3 | 4 | 5 | 6;
-  description: string;
-}
-
 // Frontend
-export default function SimpleText({ title, level, description }: SimpleTextProps) {
+export default function SimpleText({ title, level, description }) {
   return (
     <section className="p-4">
       <Heading level={level}>{title}</Heading>
