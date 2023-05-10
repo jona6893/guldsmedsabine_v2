@@ -1,8 +1,8 @@
 import { gql, GraphQLClient } from "graphql-request";
-
+import {omSabineInhold} from "../Modules/DatoCMSImports"
 export default function omSabine({data}) {
     const {content} = data;
-    console.log(data);
+    console.log(content);
   return (
     <div>
       <section>
@@ -24,37 +24,7 @@ export default function omSabine({data}) {
 
 // GraphQL Query
 const page = "Om Sabine";
-const query = gql`
-  query {
-    allPages(filter: { name: { eq: "Om Sabine" } }) {
-      id
-      name
-      content {
-        ... on OmSabineHeroRecord {
-          id
-          title
-          paragraph
-          heroImage {
-            url
-          }
-        }
-        ... on MinHistorieRecord {
-          id
-          title
-          title2
-          paragraph
-          paragraph2
-          knap {
-            text
-            url
-          }
-          sabinephoto {
-            url
-          }
-        }
-      }
-    }
-  }
+const query = gql`${omSabineInhold}
 `;
 
 // GET Request
