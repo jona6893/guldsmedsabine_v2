@@ -1,15 +1,25 @@
 import Anchor from "./Anchor";
 
 // Frontend
-export default function Navigation({ navData }) {
-  navData.sort((a, b) => a.index - b.index);
+export default function Navigation() {
+  const navData = [
+    {
+      name: "Forside",
+      path: "",
+    },
+    {
+      name: "Kontakt",
+      path: "kontakt",
+    },
+  ];
+
   return (
     <nav>
       <ul>
         {navData.map((item) => {
           return (
-            <li key={item.menuItem.id}>
-              <Anchor href={`/${item.menuItem.slug}`}>{item.menuItem.name}</Anchor>
+            <li key={item.name}>
+              <Anchor href={`/${item.path}`}>{item.name}</Anchor>
             </li>
           );
         })}

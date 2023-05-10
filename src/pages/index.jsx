@@ -29,6 +29,7 @@ const query = gql`
       content {
         ... on SimpleTextRecord {
           __typename
+          id
           title
           description
         }
