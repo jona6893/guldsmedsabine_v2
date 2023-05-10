@@ -8,6 +8,22 @@ export default function Navigation() {
       path: "",
     },
     {
+      name: "Smykker",
+      path: "smykker",
+    },
+    {
+      name: "Ydelser",
+      path: "ydelser",
+    },
+    {
+      name: "Om Sabine",
+      path: "om-sabine",
+    },
+    {
+      name: "Events",
+      path: "events",
+    },
+    {
       name: "Kontakt",
       path: "kontakt",
     },
