@@ -1,6 +1,7 @@
 import Heading from "../Heading";
 import Markdown from "markdown-to-jsx";
 import React from "react";
+import Anchor from "../Anchor";
 
 // Frontend
 export default function SimpleText({ title, level, description }) {
@@ -11,6 +12,7 @@ export default function SimpleText({ title, level, description }) {
         options={{
           overrides: {
             a: {
+              component: Anchor,
               props: {
                 className: "text-blue-900",
               },
