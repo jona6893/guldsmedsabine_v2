@@ -31,6 +31,12 @@ export const omSabineQuery = gql`
             url
           }
         }
+          ... on OmSabineGalleriRecord {
+            id
+            galleri {
+              url
+            }
+          }
       }
     }
   }
