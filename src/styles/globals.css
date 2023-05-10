@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-
-h1{
- @apply 
+@layer components {
+  h1 {
+    @apply text-8xl 
+  }
 }

@@ -7,7 +7,7 @@ function Ydelser({ content }) {
         return (
           <div>
             <div>
-              <h2>{ydelse.title}</h2>
+              <h2 >{ydelse.title}</h2>
               <p>{ydelse.paragraph}</p>
               <p>{ydelse.price}</p>
             </div>

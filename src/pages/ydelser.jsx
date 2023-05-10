@@ -2,6 +2,7 @@ import { gql, GraphQLClient } from "graphql-request";
 import YdelserHero from "../components/DatoCMS/YdelserHero";
 import Ydelser from "../components/DatoCMS/Ydelser";
 import Question from "../components/DatoCMS/Question";
+import { ydelserIndhold } from "../Modules/ydelser";
 
 export default function YdelserPage({ data }) {
   console.log(data);
@@ -26,49 +27,7 @@ export default function YdelserPage({ data }) {
 // GraphQL Query
 const page = "Ydelser";
 const query = gql`
-  query {
-    allPages(filter: { name: { eq: "Ydelser" } }) {
-      id
-      name
-      content {
-        ... on YdelserHeroRecord {
-          __typename
-          id
-          title
-          paragraph
-          heroImage {
-            url
-          }
-        }
-        ... on YdelserRecord {
-          __typename
-          id
-          ydelser {
-            title
-            paragraph
-            price
-            photo {
-              url
-            }
-          }
-        }
-        ... on QuestionRecord {
-          __typename
-          id
-          title
-          paragraph
-          knapOne {
-            url
-            text
-          }
-          knapTwo {
-            url
-            text
-          }
-        }
-      }
-    }
-  }
+  ${ydelserIndhold}
 `;
 
 // GET Request

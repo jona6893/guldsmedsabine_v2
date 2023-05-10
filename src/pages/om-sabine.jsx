@@ -1,5 +1,5 @@
 import { gql, GraphQLClient } from "graphql-request";
-import {omSabineInhold} from "../Modules/DatoCMSImports"
+import {omSabineIndhold} from "../Modules/omSabine"
 export default function omSabine({data}) {
     const {content} = data;
     console.log(content);
@@ -24,7 +24,7 @@ export default function omSabine({data}) {
 
 // GraphQL Query
 const page = "Om Sabine";
-const query = gql`${omSabineInhold}
+const query = gql`${omSabineIndhold}
 `;
 
 // GET Request
