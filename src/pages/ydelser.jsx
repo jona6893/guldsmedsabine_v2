@@ -1,18 +1,19 @@
 import { gql, GraphQLClient } from "graphql-request";
-import SimpleText from "../components/DatoCMS/SimpleText";
+import YdelserHero from "../components/DatoCMS/YdelserHero";
+import Ydelser from "../components/DatoCMS/Ydelser"
 
-// Frontend
-export default function HomePage({ data }) {
-  //console.log(data);
-
+export default function YdelserPage({ data }) {
+  console.log(data);
   return (
     <div>
-      <h1>Hello {data.name}</h1>
       {data.content.map((content) => {
         // render content on the page
         switch (content.__typename) {
-          case "SimpleTextRecord":
-            return <SimpleText key={content.title} title={content.title} level={1} description={content.description} />;
+          case "YdelserHeroRecord":
+            return <YdelserHero content={content} />;
+
+          case "YdelserRecord":
+            return <Ydelser content={content} />;
         }
       })}
     </div>
@@ -20,18 +21,33 @@ export default function HomePage({ data }) {
 }
 
 // GraphQL Query
-const page = "Forside";
+const page = "Ydelser";
 const query = gql`
   query {
-    allPages(filter: { name: { eq: ${page} } }) {
+    allPages(filter: { name: { eq: "Ydelser" } }) {
       id
       name
       content {
-        ... on SimpleTextRecord {
+        ... on YdelserHeroRecord {
           __typename
           id
           title
-          description
+          paragraph
+          heroImage {
+            url
+          }
+        }
+        ... on YdelserRecord {
+          __typename
+          id
+          ydelser {
+            title
+            paragraph
+            price
+            photo {
+              url
+            }
+          }
         }
       }
     }

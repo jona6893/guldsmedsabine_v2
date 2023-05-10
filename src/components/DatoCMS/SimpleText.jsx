@@ -6,7 +6,9 @@ import React from "react";
 export default function SimpleText({ title, level, description }) {
   return (
     <section className="p-4">
+   
       <Heading level={level}>{title}</Heading>
+      {/*  hvad foregår der her præcis? */}
       <Markdown
         options={{
           overrides: {

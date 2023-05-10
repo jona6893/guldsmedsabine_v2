@@ -1,7 +1,7 @@
 import { gql, GraphQLClient } from "graphql-request";
 
 // Frontend
-export default function Contact({ data }) {
+export default function KontaktPage({ data }) {
   //console.log(data);
 
   return (
