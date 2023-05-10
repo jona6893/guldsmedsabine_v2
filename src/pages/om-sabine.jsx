@@ -1,8 +1,8 @@
-import { gql, GraphQLClient } from "graphql-request";
-import {omSabineIndhold} from "../Modules/omSabine"
-export default function omSabine({data}) {
-    const {content} = data;
-    console.log(content);
+import { GraphQLClient } from "graphql-request";
+import { omSabineQuery } from "../modules/omSabineQuery";
+export default function omSabine({ data }) {
+  const { content } = data;
+  console.log(content);
   return (
     <div>
       <section
@@ -41,11 +41,6 @@ export default function omSabine({data}) {
   );
 }
 
-// GraphQL Query
-const page = "Om Sabine";
-const query = gql`${omSabineIndhold}
-`;
-
 // GET Request
 export async function getStaticProps() {
   const endpoint = "https://graphql.datocms.com/";
@@ -56,7 +51,7 @@ export async function getStaticProps() {
     },
   });
 
-  const graphQLData = await graphQLClient.request(query);
+  const graphQLData = await graphQLClient.request(omSabineQuery);
   const filteredGraphQLData = graphQLData.allPages[0];
   //console.log(filteredGraphQLData);
   return {

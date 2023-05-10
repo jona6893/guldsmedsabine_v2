@@ -1,8 +1,8 @@
-import { gql, GraphQLClient } from "graphql-request";
+import { GraphQLClient } from "graphql-request";
 import YdelserHero from "../components/DatoCMS/YdelserHero";
 import Ydelser from "../components/DatoCMS/Ydelser";
 import Question from "../components/DatoCMS/Question";
-import { ydelserIndhold } from "../Modules/ydelser";
+import { ydelserQuery } from "../modules/ydelserQuery";
 
 export default function YdelserPage({ data }) {
   console.log(data);
@@ -16,19 +16,13 @@ export default function YdelserPage({ data }) {
 
           case "YdelserRecord":
             return <Ydelser content={content} />;
-          case "QuestionRecord":
+          case "SpoergsmaalRecord":
             return <Question content={content} />;
         }
       })}
     </div>
   );
 }
-
-// GraphQL Query
-const page = "Ydelser";
-const query = gql`
-  ${ydelserIndhold}
-`;
 
 // GET Request
 export async function getStaticProps() {
@@ -40,7 +34,7 @@ export async function getStaticProps() {
     },
   });
 
-  const graphQLData = await graphQLClient.request(query);
+  const graphQLData = await graphQLClient.request(ydelserQuery);
   const filteredGraphQLData = graphQLData.allPages[0];
   //console.log(filteredGraphQLData);
   return {

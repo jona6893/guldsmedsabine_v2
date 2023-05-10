@@ -1,5 +1,6 @@
-import { gql, GraphQLClient } from "graphql-request";
+import { GraphQLClient } from "graphql-request";
 import SimpleText from "../components/DatoCMS/SimpleText";
+import { forsideQuery } from "../modules/forsideQuery";
 
 // Frontend
 export default function HomePage({ data }) {
@@ -19,25 +20,6 @@ export default function HomePage({ data }) {
   );
 }
 
-// GraphQL Query
-const page = "Forside";
-const query = gql`
-  query {
-    allPages(filter: { name: { eq: ${page} } }) {
-      id
-      name
-      content {
-        ... on SimpleTextRecord {
-          __typename
-          id
-          title
-          description
-        }
-      }
-    }
-  }
-`;
-
 // GET Request
 export async function getStaticProps() {
   const endpoint = "https://graphql.datocms.com/";
@@ -48,7 +30,7 @@ export async function getStaticProps() {
     },
   });
 
-  const graphQLData = await graphQLClient.request(query);
+  const graphQLData = await graphQLClient.request(forsideQuery);
   const filteredGraphQLData = graphQLData.allPages[0];
   //console.log(filteredGraphQLData);
   return {

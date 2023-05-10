@@ -1,13 +1,14 @@
-//
-//
-//
+import { gql } from "graphql-request";
+
 //* Import af Inhold til siden "Om Sabine"
-export const omSabineIndhold = `  query {
+export const omSabineQuery = gql`
+  query {
     allPages(filter: { name: { eq: "Om Sabine" } }) {
       id
       name
       content {
         ... on OmSabineHeroRecord {
+          __typename
           id
           title
           paragraph
@@ -16,6 +17,7 @@ export const omSabineIndhold = `  query {
           }
         }
         ... on MinHistorieRecord {
+          __typename
           id
           title
           title2
@@ -31,8 +33,5 @@ export const omSabineIndhold = `  query {
         }
       }
     }
-  }`;
-//
-//
-//
-
+  }
+`;

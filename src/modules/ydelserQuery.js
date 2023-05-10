@@ -1,8 +1,8 @@
-//
-//
-//
+import { gql } from "graphql-request";
+
 //* Import af Inhold til siden "Ydelser"
-export const ydelserIndhold = `query {
+export const ydelserQuery = gql`
+  query {
     allPages(filter: { name: { eq: "Ydelser" } }) {
       id
       name
@@ -28,24 +28,21 @@ export const ydelserIndhold = `query {
             }
           }
         }
-        ... on QuestionRecord {
+        ... on SpoergsmaalRecord {
           __typename
           id
           title
           paragraph
-          knapOne {
+          buttonOne {
             url
             text
           }
-          knapTwo {
+          buttonTwo {
             url
             text
           }
         }
       }
     }
-  }`;
-//
-//
-//
-
+  }
+`;
