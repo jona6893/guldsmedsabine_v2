@@ -5,18 +5,37 @@ export default function omSabine({data}) {
     console.log(content);
   return (
     <div>
-      <section>
-        <h1>{content[0].title}</h1>
-        <p>{content[0].paragraph}</p>
-        <img src={content[0].heroImage.url} alt="" />
+      <section
+        style={{ backgroundImage: `url("${content[0].heroImage.url}")` }}
+        className="w-screen h-screen sm:bg-cover max-sm:bg-right"
+      >
+        <div className="grid sm:grid-cols-2 content-center p-4 h-full bg-black/50">
+          <div className="sm:p-8 inset-0">
+            <h1 className="text-gold-light font-tangier">{content[0].title}</h1>
+            <p className="text-offWhite">{content[0].paragraph}</p>
+          </div>
+        </div>
       </section>
-      <section>
-        <h3>{content[1].title}</h3>
-        <p>{content[1].paragraph}</p>
-        <h3>{content[1].title2}</h3>
-        <p>{content[1].paragraph2}</p>
-        <a href={content[1].knap[0].url}>{content[1].knap[0].text}</a>
-        <img src={content[1].sabinephoto.url} alt="" />
+      <section className="bg-grey-light text-offWhite grid sm:grid-cols-2 h-screen">
+        <div className="flex flex-col gap-8 p-8 justify-center">
+          <div className="flex flex-col gap-4">
+            <h3 className="text-3xl text-gold-light">{content[1].title}</h3>
+            <p>{content[1].paragraph}</p>
+          </div>
+          <div className="flex flex-col gap-4">
+            <h3 className="text-3xl text-gold-light">{content[1].title2}</h3>
+            <p>{content[1].paragraph2}</p>
+          </div>
+          <a href={content[1].knap[0].url}>{content[1].knap[0].text}</a>
+        </div>
+        <div className="grid grid-cols-1 p-8 w-full h-full">
+          <div className="bg-gold-dark/40 col-start-1 row-start-1 z-10"></div>
+          <img
+            className="col-start-1 row-start-1 z-0 w-full h-full"
+            src={content[1].sabinephoto.url}
+            alt=""
+          />
+        </div>
       </section>
     </div>
   );
