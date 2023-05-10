@@ -1,6 +1,7 @@
 import { gql, GraphQLClient } from "graphql-request";
 import YdelserHero from "../components/DatoCMS/YdelserHero";
-import Ydelser from "../components/DatoCMS/Ydelser"
+import Ydelser from "../components/DatoCMS/Ydelser";
+import Question from "../components/DatoCMS/Question";
 
 export default function YdelserPage({ data }) {
   console.log(data);
@@ -14,6 +15,8 @@ export default function YdelserPage({ data }) {
 
           case "YdelserRecord":
             return <Ydelser content={content} />;
+          case "QuestionRecord":
+            return <Question content={content} />;
         }
       })}
     </div>
@@ -47,6 +50,20 @@ const query = gql`
             photo {
               url
             }
+          }
+        }
+        ... on QuestionRecord {
+          __typename
+          id
+          title
+          paragraph
+          knapOne {
+            url
+            text
+          }
+          knapTwo {
+            url
+            text
           }
         }
       }

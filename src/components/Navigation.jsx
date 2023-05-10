@@ -31,7 +31,7 @@ export default function Navigation() {
 
   return (
     <nav>
-      <ul>
+      <ul className="flex justify-end gap-4 p-4 max-w-[1450px]">
         {navData.map((item) => {
           return (
             <li key={item.name}>
