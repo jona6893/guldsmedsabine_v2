@@ -2,12 +2,22 @@ import { gql, GraphQLClient } from "graphql-request";
 
 export default function omSabine({data}) {
     const {content} = data;
-    console.log(content[0]);
+    console.log(data);
   return (
     <div>
-      <h1>{content[0].title}</h1>
-      <p>{content[0].paragraph}</p>
-      <img src={content[0].heroImage.url} alt="" />
+      <section>
+        <h1>{content[0].title}</h1>
+        <p>{content[0].paragraph}</p>
+        <img src={content[0].heroImage.url} alt="" />
+      </section>
+      <section>
+        <h3>{content[1].title}</h3>
+        <p>{content[1].paragraph}</p>
+        <h3>{content[1].title2}</h3>
+        <p>{content[1].paragraph2}</p>
+        <a href={content[1].knap[0].url}>{content[1].knap[0].text}</a>
+        <img src={content[1].sabinephoto.url} alt="" />
+      </section>
     </div>
   );
 }
@@ -24,11 +34,26 @@ const query = gql`
           id
           title
           paragraph
-          heroImage{url}
+          heroImage {
+            url
+          }
+        }
+        ... on MinHistorieRecord {
+          id
+          title
+          title2
+          paragraph
+          paragraph2
+          knap {
+            text
+            url
+          }
+          sabinephoto {
+            url
+          }
         }
       }
     }
-
   }
 `;
 
