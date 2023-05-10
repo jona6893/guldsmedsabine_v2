@@ -10,6 +10,7 @@ export default function SimpleText({ title, level, description }) {
       <Heading level={level}>{title}</Heading>
       <Markdown
         options={{
+          forceBlock: true,
           overrides: {
             a: {
               component: Anchor,
