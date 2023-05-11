@@ -5,14 +5,19 @@ function Ydelser({ content }) {
     <>
       {content.ydelser.map((ydelse, index) => {
         return (
-          <div className="grid grid-cols-2">
-            <div>
-              <h2 >{ydelse.title}</h2>
-              <p>{ydelse.paragraph}</p>
-              <p>{ydelse.price}</p>
+          <section className="mx-auto bg-grey-dark grid justify-items-center">
+            <div className=" grid grid-cols-2 max-w-[1450px] ">
+              <div className="flex flex-col  justify-center items-center">
+                <article className="max-w-lg p-4 ">
+                  <h2 className="text-gold-light text-4xl mb-4 font-light uppercase">{ydelse.title}</h2>
+                  <p className="text-offWhite mb-4">{ydelse.paragraph}</p>
+                  <p className="text-gold-light text-2xl font-light">{ydelse.price}</p>
+                </article>
+              </div>
+
+              <img className={`w-full h-[530px] object-cover object-center ${index % 2 == 1 ? "order-first" : ""}`} src={ydelse.photo.url} alt="" />
             </div>
-            <img className={index % 2 == 0 ? "order-first" : ""}  src={ydelse.photo.url} alt="" />
-          </div>
+          </section>
         );
       })}
     </>

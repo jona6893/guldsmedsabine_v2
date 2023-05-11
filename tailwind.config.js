@@ -10,12 +10,12 @@ module.exports = {
       colors: {
         offWhite: "#E8DFD4",
         gold: {
-          light: "#af9o75",
-          dark: "#6d5948"
+          light: "#AF9075",
+          dark: "#6d5948",
         },
         grey: {
           light: "#1c1c21",
-          dark: "#16161a"
+          dark: "#16161a",
         },
       },
     },
