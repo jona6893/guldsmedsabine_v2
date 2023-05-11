@@ -1,5 +1,6 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import ProduktGrid from "./ProduktGrid";
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -11,7 +12,7 @@ function Galleri({produkter}) {
   const refSecondGrid = useRef(null);
   const refThirdGrid = useRef(null);
   const refFourthGrid = useRef(null);
-
+  
   // Scroll progress for each grid
   const { scrollYProgress: scrollYProgressSecond } = useScroll({
     target: refSecondGrid,
@@ -20,9 +21,12 @@ function Galleri({produkter}) {
     target: refFourthGrid,
   });
 
+
   // Parallax effect for first and third grid
   const ySecond = useParallax(scrollYProgressSecond, 100);
   const yFourth = useParallax(scrollYProgressFourth, 100);
+
+
 
   return (
     <>
@@ -52,6 +56,7 @@ function Galleri({produkter}) {
         style={{ y: ySecond }}
         ref={refSecondGrid}
       >
+        <div>
         {produkter
           .filter((_, index) => index % 4 === 1)
           .map((produkt) => (
@@ -69,7 +74,7 @@ function Galleri({produkter}) {
               <h3>{produkt.produktNavn}</h3>
               <p>{produkt.pris},- DKK</p>
             </div>
-          ))}
+          ))}</div>
       </motion.div>
 
       <div className="thirdGrid grid gap-8 mt-16" ref={refThirdGrid}>
