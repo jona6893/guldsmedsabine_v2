@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from "framer-motion";
 import ProduktGrid from "./ProduktGrid";
 import PopupModal from "../../PopupModal";
+import IndholdModal from "./IndholdModal";
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
@@ -82,10 +83,7 @@ function closeModal() {
       <AnimatePresence>
         {isModalOpen && (
           <PopupModal isOpen={isModalOpen} onClose={closeModal}>
-            <div className="min-h-fit" onClick={(e) => e.stopPropagation()}>
-              <h1>{produktInfo.produktNavn}</h1>
-              <p>This is the content of the modal.</p>
-            </div>
+              <IndholdModal produktInfo={produktInfo}/>
           </PopupModal>
         )}
       </AnimatePresence>

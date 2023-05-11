@@ -25,7 +25,7 @@ function PopupModal({ isOpen, onClose, children }) {
         damping: 30,
       }}
     >
-      <div className="bg-white rounded-md p-4 shadow-md">
+      <div className="bg-white rounded-md p-4 shadow-md max-w-[1450px] mx-auto max-h-[80vh]">
         <button onClick={onClose}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

@@ -2,7 +2,6 @@
 function ProduktGrid({ produkter, filterValue, openModal, setProduktInfo }) {
   
     function openNindex(produkt) {
-        console.log(produkt)
         setProduktInfo(produkt)
         openModal()
   }
