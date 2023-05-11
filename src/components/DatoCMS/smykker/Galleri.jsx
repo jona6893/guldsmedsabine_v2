@@ -1,18 +1,30 @@
-import { useRef } from "react";
-import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useRef, useState } from "react";
+import { motion, useScroll, useTransform, useSpring, AnimatePresence } from "framer-motion";
 import ProduktGrid from "./ProduktGrid";
+import PopupModal from "../../PopupModal";
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 1], [-distance, distance]);
 }
 
-function Galleri({produkter}) {
+function Galleri({ produkter }) {
+const [isModalOpen, setIsModalOpen] = useState(false);
+const [produktInfo, setProduktInfo] = useState(null);
+
+function openModal() {
+  setIsModalOpen(true);
+}
+
+function closeModal() {
+  setIsModalOpen(false);
+}
+
   // References for each grid
   const refFirstGrid = useRef(null);
   const refSecondGrid = useRef(null);
   const refThirdGrid = useRef(null);
   const refFourthGrid = useRef(null);
-  
+
   // Scroll progress for each grid
   const { scrollYProgress: scrollYProgressSecond } = useScroll({
     target: refSecondGrid,
@@ -21,107 +33,62 @@ function Galleri({produkter}) {
     target: refFourthGrid,
   });
 
-
   // Parallax effect for first and third grid
   const ySecond = useParallax(scrollYProgressSecond, 100);
   const yFourth = useParallax(scrollYProgressFourth, 100);
 
-
-
   return (
     <>
       <div className="firstGrid grid gap-8 mt-16" ref={refFirstGrid}>
-        {produkter
-          .filter((_, index) => index % 4 === 0)
-          .map((produkt) => (
-            <div key={produkt.id}>
-              <img src={produkt.produktFoto[0].url} alt="" />
-              <h3>{produkt.produktNavn}</h3>
-              <p>{produkt.pris},- DKK</p>
-            </div>
-          ))}
-        {produkter
-          .filter((_, index) => index % 4 === 0)
-          .map((produkt) => (
-            <div key={produkt.id}>
-              <img src={produkt.produktFoto[0].url} alt="" />
-              <h3>{produkt.produktNavn}</h3>
-              <p>{produkt.pris},- DKK</p>
-            </div>
-          ))}
+        <ProduktGrid
+          produkter={produkter}
+          filterValue={0}
+          openModal={openModal}
+          setProduktInfo={setProduktInfo}
+        />
       </div>
-
       <motion.div
         className="secondGrid grid gap-8"
         style={{ y: ySecond }}
         ref={refSecondGrid}
       >
-        <div>
-        {produkter
-          .filter((_, index) => index % 4 === 1)
-          .map((produkt) => (
-            <div key={produkt.id}>
-              <img src={produkt.produktFoto[0].url} alt="" />
-              <h3>{produkt.produktNavn}</h3>
-              <p>{produkt.pris},- DKK</p>
-            </div>
-          ))}
-        {produkter
-          .filter((_, index) => index % 4 === 1)
-          .map((produkt) => (
-            <div key={produkt.id}>
-              <img src={produkt.produktFoto[0].url} alt="" />
-              <h3>{produkt.produktNavn}</h3>
-              <p>{produkt.pris},- DKK</p>
-            </div>
-          ))}</div>
+        <ProduktGrid
+          produkter={produkter}
+          filterValue={1}
+          openModal={openModal}
+          setProduktInfo={setProduktInfo}
+        />
       </motion.div>
-
       <div className="thirdGrid grid gap-8 mt-16" ref={refThirdGrid}>
-        {produkter
-          .filter((_, index) => index % 4 === 2)
-          .map((produkt) => (
-            <div key={produkt.id}>
-              <img src={produkt.produktFoto[0].url} alt="" />
-              <h3>{produkt.produktNavn}</h3>
-              <p>{produkt.pris},- DKK</p>
-            </div>
-          ))}
-        {produkter
-          .filter((_, index) => index % 4 === 2)
-          .map((produkt) => (
-            <div key={produkt.id}>
-              <img src={produkt.produktFoto[0].url} alt="" />
-              <h3>{produkt.produktNavn}</h3>
-              <p>{produkt.pris},- DKK</p>
-            </div>
-          ))}
+        <ProduktGrid
+          produkter={produkter}
+          filterValue={2}
+          openModal={openModal}
+          setProduktInfo={setProduktInfo}
+        />
       </div>
-
       <motion.div
         className="fourthGrid grid gap-8"
         style={{ y: yFourth }}
         ref={refFourthGrid}
       >
-        {produkter
-          .filter((_, index) => index % 4 === 3)
-          .map((produkt) => (
-            <div key={produkt.id}>
-              <img src={produkt.produktFoto[0].url} alt="" />
-              <h3>{produkt.produktNavn}</h3>
-              <p>{produkt.pris},- DKK</p>
-            </div>
-          ))}
-        {produkter
-          .filter((_, index) => index % 4 === 3)
-          .map((produkt) => (
-            <div key={produkt.id}>
-              <img src={produkt.produktFoto[0].url} alt="" />
-              <h3>{produkt.produktNavn}</h3>
-              <p>{produkt.pris},- DKK</p>
-            </div>
-          ))}
+        <ProduktGrid
+          produkter={produkter}
+          filterValue={3}
+          openModal={openModal}
+          setProduktInfo={setProduktInfo}
+        />
       </motion.div>
+      <AnimatePresence>
+        {isModalOpen && (
+          <PopupModal isOpen={isModalOpen} onClose={closeModal}>
+            <div className="min-h-fit" onClick={(e) => e.stopPropagation()}>
+              <h1>{produktInfo.produktNavn}</h1>
+              <p>This is the content of the modal.</p>
+            </div>
+          </PopupModal>
+        )}
+      </AnimatePresence>
     </>
   );
 }

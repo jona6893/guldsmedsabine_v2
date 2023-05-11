@@ -1,8 +1,35 @@
 
-function ProduktGrid() {
+function ProduktGrid({ produkter, filterValue, openModal, setProduktInfo }) {
+  
+    function openNindex(produkt) {
+        console.log(produkt)
+        setProduktInfo(produkt)
+        openModal()
+  }
+
   return (
-    <div>ProduktGrid</div>
-  )
+    <div className="grid gap-16">
+      {produkter
+        .filter((_, index) => index % 4 === filterValue)
+        .map((produkt, index) => (
+          <div
+            className="bg-grey-light grid cursor-pointer hover:brightness-125 duration-300"
+            onClick={()=>openNindex(produkt)}
+            key={produkt.id}
+          >
+            <img
+              className="aspect-[1/2] "
+              src={produkt.produktFoto[0].url}
+              alt=""
+            />
+            <div className=" text-offWhite p-4">
+              <h4 className="">{produkt.produktNavn}</h4>
+              <p className="text-sm text-gray-300">{produkt.pris},- DKK</p>
+            </div>
+          </div>
+        ))}
+    </div>
+  );
 }
 
-export default ProduktGrid
+export default ProduktGrid;

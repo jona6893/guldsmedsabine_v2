@@ -12,7 +12,7 @@ export default function Smykker({ data }) {
 
 
   return (
-    <div className="text-lg flex gap-4 justify-center pt-32">
+    <div className="text-lg flex gap-8 justify-center pt-32 bg-grey-dark">
       <Galleri produkter={produkter}/>
     </div>
   );
