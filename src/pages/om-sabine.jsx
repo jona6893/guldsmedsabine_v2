@@ -5,6 +5,7 @@ import OmMig from "../components/DatoCMS/omSabine/OmMig";
 import Galleri from "../components/DatoCMS/omSabine/Galleri";
 import Informaioner from "../components/DatoCMS/omSabine/Informaioner";
 
+
 export default function OmSabine({ data }) {
   const { content } = data;
   console.log(content);
