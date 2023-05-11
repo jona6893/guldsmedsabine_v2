@@ -13,7 +13,7 @@ function PopupModal({ isOpen, onClose, children }) {
 
   return (
     <motion.div
-      className="modal-content fixed inset-0 bg-transparent flex items-center justify-center"
+      className="modal-content fixed inset-0 bg-transparent flex items-center justify-center p-16"
       onClick={onClose}
       initial="hidden"
       animate="visible"
@@ -25,7 +25,7 @@ function PopupModal({ isOpen, onClose, children }) {
         damping: 30,
       }}
     >
-      <div className="bg-white rounded-md p-4 shadow-md max-w-[1450px] mx-auto max-h-[80vh]">
+      <div className="bg-white rounded-md p-4 shadow-md max-w-[1450px] mx-auto">
         <button onClick={onClose}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

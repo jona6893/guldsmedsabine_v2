@@ -6,7 +6,7 @@ function IndholdModal({ produktInfo }) {
       className="grid grid-cols-2 box-border"
       onClick={(e) => e.stopPropagation()}
     >
-      <div>
+      <div className="">
         <h3>{produktInfo.produktNavn}</h3>
         <p>
           {produktInfo.beskrivelse}{" "}
@@ -16,13 +16,18 @@ function IndholdModal({ produktInfo }) {
         <p>{produktInfo.pris}</p>
       </div>
 
-      <div
-        style={{ backgroundImage: `url(${produktInfo.produktFoto[0].url})` }}
-        className="bg-cover bg-center aspect-[1/1.5] max-h-[80vh] w-auto"
-      ></div>
+      <div className="flex items-center justify-center">
+        <img
+          className="w-full h-auto"
+          src={produktInfo.produktFoto[0].url}
+          alt=""
+        />
+      </div>
     </div>
   );
 }
 
-{/* <img className='w-full' src={produktInfo.produktFoto[0].url} alt="" /> */}
 export default IndholdModal
+
+/* style={{ backgroundImage: `url(${produktInfo.produktFoto[0].url})` }}
+        className="bg-cover bg-center max-h-[80vh] w-auto" */ 
