@@ -1,23 +1,20 @@
 import { GraphQLClient } from "graphql-request";
 import { omSabineQuery } from "../modules/omSabineQuery";
-export default function omSabine({ data }) {
+import Hero from "../components/DatoCMS/omSabine/Hero";
+import OmMig from "../components/DatoCMS/omSabine/OmMig";
+import Galleri from "../components/DatoCMS/omSabine/Galleri";
+import Informaioner from "../components/DatoCMS/omSabine/Informaioner";
+
+
+export default function OmSabine({ data }) {
   const { content } = data;
   console.log(content);
   return (
-    <div>
-      <section>
-        <h1>{content[0].title}</h1>
-        <p>{content[0].paragraph}</p>
-        <img src={content[0].heroImage.url} alt="" />
-      </section>
-      <section>
-        <h3>{content[1].title}</h3>
-        <p>{content[1].paragraph}</p>
-        <h3>{content[1].title2}</h3>
-        <p>{content[1].paragraph2}</p>
-        <a href={content[1].knap[0].url}>{content[1].knap[0].text}</a>
-        <img src={content[1].sabinephoto.url} alt="" />
-      </section>
+    <div className="text-lg">
+      <Hero content={content} />
+      <OmMig content={content} />
+      <Galleri content={content} />
+      <Informaioner content={content} />
     </div>
   );
 }

@@ -31,6 +31,26 @@ export const omSabineQuery = gql`
             url
           }
         }
+        ... on OmSabineGalleriRecord {
+          id
+          galleri {
+            url
+          }
+        }
+        ... on OmSabineInformationRecord {
+          id
+          heading
+          subHeading
+          paragraph
+          knap {
+            text
+            url
+          }
+          lokation
+          lokationHeading
+          aabningstiderHeading
+          tider
+        }
       }
     }
   }
