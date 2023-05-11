@@ -3,15 +3,17 @@ import { omSabineQuery } from "../modules/omSabineQuery";
 import Hero from "../components/DatoCMS/omSabine/Hero";
 import OmMig from "../components/DatoCMS/omSabine/OmMig";
 import Galleri from "../components/DatoCMS/omSabine/Galleri";
+import Informaioner from "../components/DatoCMS/omSabine/Informaioner";
 
-export default function omSabine({ data }) {
+export default function OmSabine({ data }) {
   const { content } = data;
   console.log(content);
   return (
-    <div>
+    <div className="text-lg">
       <Hero content={content} />
-   <OmMig content={content} />
-     <Galleri content={content} />
+      <OmMig content={content} />
+      <Galleri content={content} />
+      <Informaioner content={content} />
     </div>
   );
 }
