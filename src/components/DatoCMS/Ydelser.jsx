@@ -6,7 +6,7 @@ function Ydelser({ content }) {
       {content.ydelser.map((ydelse, index) => {
         return (
           <section className="mx-auto bg-grey-dark grid justify-items-center">
-            <div className=" grid grid-cols-2 max-w-[1450px] ">
+            <div className=" grid md:grid-cols-2 max-w-[1450px] ">
               <div className="flex flex-col  justify-center items-center">
                 <article className="max-w-lg p-4 ">
                   <h2 className="text-gold-light text-4xl mb-4 font-light uppercase">{ydelse.title}</h2>
