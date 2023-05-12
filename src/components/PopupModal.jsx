@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 function PopupModal({ isOpen, onClose, children }) {
   // Define your animation variants
@@ -25,21 +25,10 @@ function PopupModal({ isOpen, onClose, children }) {
         damping: 30,
       }}
     >
-      <div className="bg-white rounded-md p-4 shadow-md max-w-[1450px] mx-auto">
+      <div className="bg-white rounded-md p-4 shadow-md max-w-4xl mx-auto">
         <button onClick={onClose}>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth={1.5}
-            stroke="currentColor"
-            className="w-6 h-6"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
 
@@ -49,5 +38,4 @@ function PopupModal({ isOpen, onClose, children }) {
   );
 }
 
-
-export default PopupModal
+export default PopupModal;
