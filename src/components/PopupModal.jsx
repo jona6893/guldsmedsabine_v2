@@ -25,9 +25,9 @@ function PopupModal({ isOpen, onClose, children }) {
         damping: 30,
       }}
     >
-      <div className="bg-white rounded-md p-4 shadow-md max-w-4xl mx-auto">
-        <button onClick={onClose}>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+      <div className="relative bg-white rounded-md shadow-md max-w-4xl mx-auto">
+        <button className="absolute p-2 right-2 top-2 rounded-md hover:bg-white/20 transition-colors" onClick={onClose}>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="white" className="w-8 h-8">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
