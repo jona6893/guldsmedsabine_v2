@@ -6,14 +6,13 @@ import Galleri from "../components/DatoCMS/smykker/Galleri";
 
 
 export default function Smykker({ data }) {
-  const { content } = data;
-  const produkter = content[0].produkter;
+  const { allProdukters } = data;
+  const produkter = allProdukters
   console.log(produkter);
-
 
   return (
     <div className="text-lg flex gap-8 justify-center pt-32 bg-grey-dark">
-      <Galleri produkter={produkter}/>
+      <Galleri produkter={produkter}/> 
     </div>
   );
 }
@@ -29,9 +28,8 @@ export async function getStaticProps() {
   });
 
   const graphQLData = await graphQLClient.request(smykkerQuery);
-  const filteredGraphQLData = graphQLData.allPages[0];
   //console.log(filteredGraphQLData);
   return {
-    props: { data: filteredGraphQLData },
+    props: { data: graphQLData },
   };
 }

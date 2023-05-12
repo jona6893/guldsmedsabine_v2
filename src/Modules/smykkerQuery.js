@@ -2,26 +2,22 @@ import { gql } from "graphql-request";
 
 //* Import af Inhold til siden "Smykker"
 export const smykkerQuery = gql`
-  query {
+    query {
     allPages(filter: { name: { eq: "Smykker" } }) {
       id
       name
-      content {
-        ... on SmykkerGalleriRecord {
-          id
-          produkter {
-            accessory
-            beskrivelse
-            id
-            kategori
-            materiale
-            pris
-            produktFoto {
-              url
-            }
-            produktNavn
-          }
+    }
+    allProdukters {
+      ... on ProdukterRecord {
+        id
+        materiale
+        pris
+        produktNavn
+        produktBillede {
+          url
         }
+        produktBeskrivelse
+        kategori
       }
     }
   }

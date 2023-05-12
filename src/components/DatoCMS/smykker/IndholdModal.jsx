@@ -2,17 +2,26 @@ import React from "react";
 
 function IndholdModal({ produktInfo }) {
   return (
-    <div className="grid grid-cols-2 box-border" onClick={(e) => e.stopPropagation()}>
+    <div
+      className="grid grid-cols-2 box-border"
+      onClick={(e) => e.stopPropagation()}
+    >
       <div className="p-4">
         <h3>{produktInfo.produktNavn}</h3>
         <p>
-          {produktInfo.beskrivelse} <span> Materiale: {produktInfo.materiale}</span> <span>kategori: {produktInfo.kategori}</span>
+          {produktInfo.beskrivelse}{" "}
+          <span> Materiale: {produktInfo.materiale}</span>{" "}
+          <span>kategori: {produktInfo.kategori}</span>
         </p>
         <p>{produktInfo.pris}</p>
       </div>
 
       <div className="flex items-center justify-center">
-        <img className="w-full h-auto rounded-r-md" src={produktInfo.produktFoto[0].url} alt="" />
+        <img
+          className="w-full h-auto rounded-r-md"
+          src={produktInfo.produktBillede[0].url}
+          alt=""
+        />
       </div>
     </div>
   );

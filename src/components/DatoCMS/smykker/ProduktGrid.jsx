@@ -14,7 +14,11 @@ function ProduktGrid({ produkter, filterValue, openModal, setProduktInfo }) {
             onClick={() => openNindex(produkt)}
             key={produkt.id}
           >
-            <img className="w-full" src={produkt.produktFoto[0].url} alt="" />
+            <img
+              className="w-full"
+              src={produkt.produktBillede[0].url}
+              alt=""
+            />
             <div className=" text-offWhite p-4">
               <h4 className="">{produkt.produktNavn}</h4>
               <p className="text-sm text-gray-300">{produkt.pris},- DKK</p>
