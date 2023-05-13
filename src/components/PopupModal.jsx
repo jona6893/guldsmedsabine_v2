@@ -13,7 +13,7 @@ function PopupModal({ isOpen, onClose, children }) {
 
   return (
     <motion.div
-      className="modal-content fixed inset-0 bg-transparent flex items-center justify-center sm:p-16 max-sm:p-2"
+      className="modal-content fixed inset-0 bg-transparent flex items-center justify-center lg:p-16 max-md:p-2 max-lg:p-8"
       onClick={onClose}
       initial="hidden"
       animate="visible"

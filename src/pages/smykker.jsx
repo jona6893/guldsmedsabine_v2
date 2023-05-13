@@ -11,9 +11,14 @@ export default function Smykker({ data }) {
   console.log(produkter);
 
   return (
-    <div className="text-lg flex gap-8 justify-center pt-32 bg-grey-dark">
-      <Galleri produkter={produkter}/> 
-    </div>
+    <>
+      <section className="flex items-center justify-center py-8">
+        <h1 className="text-gold-light">Smykker</h1>
+      </section>
+      <div className="text-lg flex gap-8 justify-center py-32 bg-grey-dark">
+        <Galleri produkter={produkter} />
+      </div>
+    </>
   );
 }
 
