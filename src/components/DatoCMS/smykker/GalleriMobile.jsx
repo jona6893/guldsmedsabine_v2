@@ -35,14 +35,15 @@ function GalleriMobile({ produkter, openModal, setProduktInfo }) {
   return (
     <>
       {" "}
-     {/*  <motion.div
+      {/*  <motion.div
         className="secondGrid grid gap-8"
         style={{ y: ySecond }}
         ref={refSecondGrid}
       >
         
       </motion.div> */}
-      <div className="thirdGrid grid gap-8 mt-16" ref={refThirdGrid}><ProduktGrid
+      <div className="thirdGrid flex flex-col gap-8 mt-16" ref={refThirdGrid}>
+        <ProduktGrid
           produkter={produkter}
           filterValue={0}
           openModal={openModal}

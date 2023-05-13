@@ -33,8 +33,8 @@ function GalleriTablet({ produkter, openModal, setProduktInfo }) {
   return (
     <>
       {" "}
-     <motion.div
-        className="secondGrid grid gap-8"
+      <motion.div
+        className="secondGrid flex flex-col gap-8"
         style={{ y: ySecond }}
         ref={refSecondGrid}
       >
@@ -44,8 +44,7 @@ function GalleriTablet({ produkter, openModal, setProduktInfo }) {
           openModal={openModal}
           setProduktInfo={setProduktInfo}
         />
-  
-      
+
         <ProduktGrid
           produkter={produkter}
           filterValue={1}
@@ -53,7 +52,7 @@ function GalleriTablet({ produkter, openModal, setProduktInfo }) {
           setProduktInfo={setProduktInfo}
         />
       </motion.div>
-      <div className="thirdGrid grid gap-8 mt-16" ref={refThirdGrid}>
+      <div className="thirdGrid flex flex-col gap-8 mt-16" ref={refThirdGrid}>
         <ProduktGrid
           produkter={produkter}
           filterValue={2}
