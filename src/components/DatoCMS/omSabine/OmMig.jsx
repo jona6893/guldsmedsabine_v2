@@ -1,7 +1,7 @@
 function OmMig({ content }) {
   return (
-    <section className="bg-grey-light text-offWhite h-full py-16">
-      <div className="max-w-[1450px] mx-auto grid md:grid-cols-2">
+    <section className="bg-grey-light text-offWhite max-h-[80vh] min-h-[600px] py-16">
+      <div className="max-w-[1450px] mx-auto grid md:grid-cols-2 h-full">
         <div className="flex flex-col gap-32 p-16 justify-around">
           <div className="flex flex-col gap-4">
             <h3 className="font-thin text-5xl text-gold-light">
@@ -25,7 +25,7 @@ function OmMig({ content }) {
           </div>
         </div>
         <div
-          className="grid grid-cols-1 p-16 w-full h-full bg-cover bg-center min-h-[600px]"
+          className=" p-16 w-full h-full bg-cover bg-center "
           style={{ backgroundImage: `url("${content[1].sabinephoto.url}")` }}
         >
           {/* <div

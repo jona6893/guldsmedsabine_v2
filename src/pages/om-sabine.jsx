@@ -8,7 +8,7 @@ import Informaioner from "../components/DatoCMS/omSabine/Informaioner";
 
 export default function OmSabine({ data }) {
   const { content } = data;
-  console.log(content);
+  
   return (
     <div className="text-lg">
       <Hero content={content} />
@@ -31,7 +31,7 @@ export async function getStaticProps() {
 
   const graphQLData = await graphQLClient.request(omSabineQuery);
   const filteredGraphQLData = graphQLData.allPages[0];
-  //console.log(filteredGraphQLData);
+ 
   return {
     props: { data: filteredGraphQLData },
   };
