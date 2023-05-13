@@ -23,7 +23,7 @@ function ProduktGrid({ produkter, filterValue, openModal, setProduktInfo }) {
             </div>
             <div className=" text-offWhite p-4">
               <h4 className="">{produkt.produktNavn}</h4>
-              <p className="text-sm text-gray-300">{produkt.pris},- DKK</p>
+              <p className="text-sm text-stone-400">{produkt.pris},- DKK</p>
             </div>
           </div>
         ))}
