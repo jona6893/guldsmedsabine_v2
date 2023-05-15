@@ -3,7 +3,7 @@ import Anchor from '../Anchor';
 
 function OmSabineForside({content}) {
   return (
-    <section className="mx-auto max-w-[1450px] flex justify-evenly items-center pb-36">
+    <section className="mx-auto max-w-[1450px] grid grid-cols-2 justify-items-center items-center pb-16">
       <div className="grid grid-cols-3 grid-rows-2 w-[500px] gap-4">
         <img className="col-start-1 row-span-1 object-cover h-full" src={content.fotos[1].url} alt="" />
         <img className="col-start-2 row-span-2 col-span-2 object-cover h-full" src={content.fotos[0].url} alt="" />

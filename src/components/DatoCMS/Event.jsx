@@ -2,7 +2,7 @@ import React from "react";
 
 function Event({ content }) {
   return (
-    <section className="grid sm:grid-cols-2 mx-auto max-w-[1450px] justify-items-center p-4 ">
+    <section className="grid sm:grid-cols-2 mx-auto max-w-[1450px] justify-items-center p-16 ">
       <div className=" flex flex-col gap-8  ">
         <article>
           <h2 className="text-gold-light text-5xl font-light mb-4">{content.title}</h2>
