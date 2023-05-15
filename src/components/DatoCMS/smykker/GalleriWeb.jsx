@@ -41,7 +41,7 @@ function GalleriWeb({ produkter, openModal, setProduktInfo }) {
         />
       </div>
       <motion.div
-        className="secondGrid flex flex-col gap-8 mt-[6.2rem]"
+        className="secondGrid flex flex-col gap-8 "
         style={{ y: ySecond }}
         ref={refSecondGrid}
       >
@@ -61,7 +61,7 @@ function GalleriWeb({ produkter, openModal, setProduktInfo }) {
         />
       </div>
       <motion.div
-        className="fourthGrid flex flex-col gap-8 mt-[6.2rem]"
+        className="fourthGrid flex flex-col gap-8 "
         style={{ y: yFourth }}
         ref={refFourthGrid}
       >
