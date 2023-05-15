@@ -44,7 +44,7 @@ function PopupModal({ isOpen, onClose, children }) {
     >
       <div className="relative bg-grey-light rounded-md shadow-md sm:max-w-4xl mx-auto">
         <button
-          className="absolute p-2 right-2 top-2 rounded-md hover:bg-white/20 transition-colors"
+          className="absolute p-2 right-2 top-2 rounded-md hover:bg-white/20 transition-colors z-10"
           onClick={onClose}
         >
           <svg
