@@ -13,11 +13,7 @@ export const forsideQuery = gql`
           title
           description
         }
-        
-      }
-      
-    }
-     ... on EventRecord {
+          ... on EventRecord {
           __typename
           id
           title
@@ -40,5 +36,8 @@ export const forsideQuery = gql`
           }
         }
       }
+      
+    }
+   
   }
 `;
