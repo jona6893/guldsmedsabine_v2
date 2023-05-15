@@ -13,6 +13,7 @@ export const forsideQuery = gql`
           title
           description
         }
+
         ... on EventRecord {
           __typename
           id
@@ -34,6 +35,20 @@ export const forsideQuery = gql`
             text
           }
           knapTwo {
+            url
+            text
+          }
+        }
+        ... on OmSabineForsideRecord {
+          __typename
+          id
+          fotos {
+            url
+          }
+          underOverskrift
+          overskrift
+          paragraph
+          knap {
             url
             text
           }
