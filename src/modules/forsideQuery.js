@@ -13,7 +13,32 @@ export const forsideQuery = gql`
           title
           description
         }
+        
       }
+      
     }
+     ... on EventRecord {
+          __typename
+          id
+          title
+          smallTitle
+          photo{
+            url
+          }
+          time
+          titleTwo
+          location
+          date
+          paragraph
+          knapOne {
+            url
+            text
+          }
+          knapTwo {
+            url
+            text
+          }
+        }
+      }
   }
 `;

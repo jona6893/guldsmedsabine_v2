@@ -4,7 +4,7 @@ import { forsideQuery } from "../modules/forsideQuery";
 
 // Frontend
 export default function HomePage({ data }) {
-  //console.log(data);
+  console.log(data);
 
   return (
     <div>
