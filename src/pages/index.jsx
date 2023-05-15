@@ -1,10 +1,12 @@
 import { GraphQLClient } from "graphql-request";
 import SimpleText from "../components/DatoCMS/SimpleText";
 import { forsideQuery } from "../modules/forsideQuery";
+import Event from "../components/DatoCMS/Event";
 
 // Frontend
 export default function HomePage({ data }) {
   console.log(data);
+  const event = data.content[2]
 
   return (
     <div>
@@ -14,6 +16,8 @@ export default function HomePage({ data }) {
         switch (content.__typename) {
           case "SimpleTextRecord":
             return <SimpleText key={content.title} title={content.title} level={1} description={content.description} />;
+          case "EventRecord":
+            return <Event content={content} />;
         }
       })}
     </div>

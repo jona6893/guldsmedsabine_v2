@@ -13,16 +13,19 @@ export const forsideQuery = gql`
           title
           description
         }
-          ... on EventRecord {
+        ... on EventRecord {
           __typename
           id
           title
           smallTitle
-          photo{
+          photo {
             url
           }
           time
           titleTwo
+          titleTid
+          titleLocation
+          titleDate
           location
           date
           paragraph
@@ -36,8 +39,6 @@ export const forsideQuery = gql`
           }
         }
       }
-      
     }
-   
   }
 `;
