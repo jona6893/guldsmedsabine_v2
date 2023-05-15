@@ -21,13 +21,8 @@ function Event({ content }) {
           <p className="flex gap-2 text-offWhite">
             {content.titleLocation} <span className="text-gold-light">{content.location}</span>
           </p>
-          {/*  <p>{content.date}</p> */}
-
-          {/*  <p>{content.time}</p>
-          <p>{content.titleTid}</p>
-          <p>{content.location}</p>
-          <p>{content.titleLocation}</p> */}
         </article>
+       
       </div>
       <img src={content.photo.url} alt="" className="w-full h-[500px] object-contain" />
     </section>

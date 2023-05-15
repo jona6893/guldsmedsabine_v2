@@ -2,6 +2,7 @@ import { GraphQLClient } from "graphql-request";
 import SimpleText from "../components/DatoCMS/SimpleText";
 import { forsideQuery } from "../modules/forsideQuery";
 import Event from "../components/DatoCMS/Event";
+import OmSabineForside from "../components/DatoCMS/OmSabineForside";
 
 // Frontend
 export default function HomePage({ data }) {
@@ -16,6 +17,8 @@ export default function HomePage({ data }) {
         switch (content.__typename) {
           case "SimpleTextRecord":
             return <SimpleText key={content.title} title={content.title} level={1} description={content.description} />;
+          case "OmSabineForsideRecord":
+            return <OmSabineForside content={content} />;
           case "EventRecord":
             return <Event content={content} />;
         }
