@@ -32,7 +32,7 @@ function GalleriWeb({ produkter, openModal, setProduktInfo }) {
   const yFourth = useParallax(scrollYProgressFourth, 100);
   return (
     <>
-      <div className="firstGrid flex flex-col gap-8 mt-16" ref={refFirstGrid}>
+      <div className="firstGrid flex flex-col gap-8 " ref={refFirstGrid}>
         <ProduktGrid
           produkter={produkter}
           filterValue={0}
@@ -41,7 +41,7 @@ function GalleriWeb({ produkter, openModal, setProduktInfo }) {
         />
       </div>
       <motion.div
-        className="secondGrid flex flex-col gap-8"
+        className="secondGrid flex flex-col gap-8 mt-[6.2rem]"
         style={{ y: ySecond }}
         ref={refSecondGrid}
       >
@@ -52,7 +52,7 @@ function GalleriWeb({ produkter, openModal, setProduktInfo }) {
           setProduktInfo={setProduktInfo}
         />
       </motion.div>
-      <div className="thirdGrid flex flex-col gap-8 mt-16" ref={refThirdGrid}>
+      <div className="thirdGrid flex flex-col gap-8" ref={refThirdGrid}>
         <ProduktGrid
           produkter={produkter}
           filterValue={2}
@@ -61,7 +61,7 @@ function GalleriWeb({ produkter, openModal, setProduktInfo }) {
         />
       </div>
       <motion.div
-        className="fourthGrid flex flex-col gap-8"
+        className="fourthGrid flex flex-col gap-8 mt-[6.2rem]"
         style={{ y: yFourth }}
         ref={refFourthGrid}
       >

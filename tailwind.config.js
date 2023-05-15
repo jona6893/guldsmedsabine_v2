@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         tangier: ["tangier"],
+        sagoe: ["SegoeUI"],
       },
       colors: {
         offWhite: "#E8DFD4",

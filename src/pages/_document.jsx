@@ -9,7 +9,9 @@ export default function Document() {
         <link
           rel="stylesheet"
           href="https://use.typekit.net/zof2uyg.css"
-        ></link>{" "}
+        ></link>
+        {/* <link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet"></link> */}
+                {" "}
       </Head>
       <body className="bg-grey-dark">
         <Main />
