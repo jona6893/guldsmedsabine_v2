@@ -12,6 +12,7 @@ function ImageModal({ images }) {
         spaceBetween={50}
         slidesPerView={1}
         modules={[Navigation, Pagination]}
+        loop={true}
         navigation
         pagination={{ clickable: true }}
         /*    onSlideChange={() => console.log("slide change")}
