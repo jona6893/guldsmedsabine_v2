@@ -3,6 +3,7 @@ import SimpleText from "../components/DatoCMS/SimpleText";
 import { forsideQuery } from "../modules/forsideQuery";
 import Event from "../components/DatoCMS/Event";
 import OmSabineForside from "../components/DatoCMS/OmSabineForside";
+import FindMigHer from "../components/DatoCMS/FindMigHer";
 
 // Frontend
 export default function HomePage({ data }) {
@@ -21,6 +22,8 @@ export default function HomePage({ data }) {
             return <OmSabineForside content={content} />;
           case "EventRecord":
             return <Event content={content} />;
+          case "FindMigHerRecord":
+            return <FindMigHer content={content} />;
         }
       })}
     </div>

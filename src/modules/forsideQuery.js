@@ -53,6 +53,20 @@ export const forsideQuery = gql`
             text
           }
         }
+        ... on FindMigHerRecord {
+          __typename
+          id
+          kort{latitude}
+        
+          overskrift
+         broedtekst
+          knap {
+            url
+            text
+          }
+         
+        }
+      
       }
     }
   }
