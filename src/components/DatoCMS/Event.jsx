@@ -2,7 +2,7 @@ import Anchor from "../Anchor";
 
 function Event({ content }) {
   return (
-    <section className="mx-auto max-w-[1450px] grid grid-cols-2 justify-items-center py-16 ">
+    <section className="mx-auto max-w-[1450px] grid grid-cols-2 justify-items-center items-center py-16 ">
       <div className=" flex flex-col gap-10  ">
         <article>
           <h2 className="text-gold-light text-4xl font-light mb-4">{content.title}</h2>
@@ -31,7 +31,7 @@ function Event({ content }) {
           </Anchor>
         </div>
       </div>
-      <img src={content.photo.url} alt="" className="w-full h-[500px] object-cover" />
+      <img src={content.photo.url} alt="" className="w-full h-[550px] object-cover" />
     </section>
   );
 }
