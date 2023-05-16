@@ -5,7 +5,7 @@ function UdvalgteSmykker({ content }) {
   return (
     <section>
       <div>
-        {content.UdvalgteSmykker.map((udvalgtSmykke, index) => (
+        {content.udvalgteSmykker.map((udvalgtSmykke, index) => (
           <div key={index} className="">
             <img src={udvalgtSmykke.produktBillede.url} alt="" />
             <h4>{udvalgtSmykke.produktNavn}</h4>

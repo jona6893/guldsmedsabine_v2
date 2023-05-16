@@ -81,13 +81,13 @@ export const forsideQuery = gql`
             url
           }
         }
-         ... on UdvalgteSmykkerRecord{
+        ... on UdvalgteSmykkerRecord {
           __typename
           id
-          udvalgtSmykke{
+          udvalgteSmykker {
             id
             produktNavn
-            produktBillede{
+            produktBillede {
               url
             }
             pris

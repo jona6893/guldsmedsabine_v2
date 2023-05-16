@@ -5,6 +5,7 @@ import Event from "../components/DatoCMS/Event";
 import OmSabineForside from "../components/DatoCMS/OmSabineForside";
 import FindMigHer from "../components/DatoCMS/FindMigHer";
 import UdvalgteYdelser from "../components/DatoCMS/UdvalgteYdelser";
+import UdvalgteSmykker from "../components/DatoCMS/UdvalgteSmykker";
 
 // Frontend
 export default function HomePage({ data }) {
@@ -17,7 +18,7 @@ export default function HomePage({ data }) {
       {data.content.map((content) => {
         // render content on the page
         switch (content.__typename) {
-         /*  case "SimpleTextRecord":
+          /*  case "SimpleTextRecord":
             return <SimpleText key={content.title} title={content.title} level={1} description={content.description} />; */
           case "OmSabineForsideRecord":
             return <OmSabineForside content={content} />;
@@ -27,7 +28,7 @@ export default function HomePage({ data }) {
             return <FindMigHer content={content} />;
           case "UdvalgteYdelserRecord":
             return <UdvalgteYdelser content={content} />;
-          case "UdvalgtSmykkeRecord":
+          case "UdvalgteSmykkerRecord":
             return <UdvalgteSmykker content={content} />;
         }
       })}
