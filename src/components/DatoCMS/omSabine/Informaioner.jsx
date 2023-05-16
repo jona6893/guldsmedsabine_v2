@@ -1,7 +1,7 @@
 function Informaioner({ content }) {
   return (
     <section className="bg-grey-dark text-offWhite py-16 ">
-      <div className="px-16 grid grid-cols-2 max-w-[1450px] mx-auto gap-4 justify-items-end">
+      <div className="px-16 grid md:grid-cols-2 max-md:gap-16 max-w-[1450px] mx-auto gap-4 justify-items-end">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-2">
             <h2 className="text-gold-light text-5xl">{content[3].heading}</h2>
