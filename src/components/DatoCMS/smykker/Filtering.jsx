@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { motion, AnimatePresence } from "framer-motion";
 
 function Filtering({
   Kategori,
@@ -57,8 +57,6 @@ setKategoriFilter("");
       </button>
       <div className=" flex flex-col gap-4 flex-wrap">
         <div className="flex gap-4 justify-center">
-         <button className="text-offWhite">Kategorier</button>
-
          
           {Kategori.map((kategori, index) => (
             
