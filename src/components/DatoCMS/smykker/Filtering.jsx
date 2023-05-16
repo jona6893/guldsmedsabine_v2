@@ -46,45 +46,54 @@ setKategoriFilter("");
 
 
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 items-center w-full justify-center ">
       <button
         onClick={() => resetAllValues()}
-        className={`bg-gold-dark border-gold-dark border border-2 hover:bg-transparent hover:text-gold-light hover:border-gold-light py-2 p-8 rounded-full ${
-          alle 
-            ? "bg-transparent text-gold-light"
-            : "text-offWhite"
+        className={`h-fit bg-gold-dark border-gold-dark border border-2 hover:bg-transparent hover:text-gold-light hover:border-gold-light py-2 p-8 rounded-full ${
+          alle ? "bg-transparent text-gold-light" : "text-offWhite"
         }`}
       >
         Alle
       </button>
-      {Kategori.map((kategori, index) => (
-        <button
-          onClick={() => {
-            opdateKategori(kategori, index);
-          }}
-          className={`bg-gold-dark border-gold-dark border border-2 hover:bg-transparent hover:text-gold-light hover:border-gold-light py-2 p-8 rounded-full ${
-            activeKategori === index
-              ? "bg-transparent text-gold-light"
-              : "text-offWhite"
-          }`}
-        >
-          {kategori}
-        </button>
-      ))}
-      {Materiale.map((materiale, index) => (
-        <button
-          onClick={() => {
-            opdateMatriale(materiale, index);
-          }}
-          className={`bg-gold-dark border-gold-dark border border-2 hover:bg-transparent hover:text-gold-light hover:border-gold-light py-2 p-8 rounded-full ${
-            activeMatriale === index
-              ? "bg-transparent text-gold-light"
-              : "text-offWhite"
-          }`}
-        >
-          {materiale}
-        </button>
-      ))}
+      <div className=" flex flex-col gap-4 flex-wrap">
+        <div className="flex gap-4 justify-center">
+         
+
+         
+          {Kategori.map((kategori, index) => (
+            
+            <button
+              onClick={() => {
+                opdateKategori(kategori, index);
+              }}
+              className={`bg-gold-dark border-gold-dark border border-2 hover:bg-transparent hover:text-gold-light hover:border-gold-light py-2 p-8 rounded-full ${
+                activeKategori === index
+                  ? "bg-transparent text-gold-light"
+                  : "text-offWhite"
+              }`}
+            >
+              {kategori}
+            </button>
+          ))}
+          
+        </div>
+        <div className="flex gap-4 justify-center flex-wrap">
+          {Materiale.map((materiale, index) => (
+            <button
+              onClick={() => {
+                opdateMatriale(materiale, index);
+              }}
+              className={`bg-gold-dark border-gold-dark border border-2 hover:bg-transparent hover:text-gold-light hover:border-gold-light py-2 p-8 rounded-full ${
+                activeMatriale === index
+                  ? "bg-transparent text-gold-light"
+                  : "text-offWhite"
+              }`}
+            >
+              {materiale}
+            </button>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
