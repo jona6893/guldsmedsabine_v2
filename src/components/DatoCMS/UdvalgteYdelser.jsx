@@ -1,15 +1,18 @@
-import React from 'react'
+import Anchor from "../Anchor";
 
-function UdvalgteYdelser() {
+function UdvalgteYdelser({content}) {
+    console.log("hej")
   return (
     <section>
+        <p>Hej</p>
       {content.udvalgteYdelser.map((udvalgtYdelse, index) => (
         <div key={index}>
-          <img src={udvalgtYdelse.foto.url} alt="" />
-          <h3>{udvalgtYdelse.overskrift}</h3>
+          <img src={udvalgtYdelse.foto.url} alt=""  />
+          <h3 className='text-white'>{udvalgtYdelse.overskrift}</h3>
           <p>{udvalgtYdelse.broedtekst}</p>
         </div>
       ))}
+      <Anchor></Anchor>
     </section>
   );
 }

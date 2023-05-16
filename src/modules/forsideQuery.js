@@ -67,19 +67,19 @@ export const forsideQuery = gql`
             text
           }
         }
-        ... on UdvalgtYdelseRecord{
-          __typename
-          id
-          overskrift
-          broedtekst
-          knap{
-            text
+        ... on UdvalgteYdelserRecord {
+          udvalgteYdelser {
+            overskrift
+            broedtekst
+
+            foto {
+              url
+            }
+          }
+          knap {
             url
           }
-         foto{
-          url}
         }
-        
       }
     }
   }
