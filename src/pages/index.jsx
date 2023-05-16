@@ -1,6 +1,6 @@
 import { GraphQLClient } from "graphql-request";
 import SimpleText from "../components/DatoCMS/SimpleText";
-import { forsideQuery } from "../modules/forsideQuery";
+import { forsideQuery } from "../Modules/forsideQuery";
 import Event from "../components/DatoCMS/Event";
 import OmSabineForside from "../components/DatoCMS/OmSabineForside";
 import FindMigHer from "../components/DatoCMS/FindMigHer";
@@ -9,7 +9,7 @@ import UdvalgteYdelser from "../components/DatoCMS/UdvalgteYdelser";
 // Frontend
 export default function HomePage({ data }) {
   console.log(data);
-  const event = data.content[2]
+  const event = data.content[2];
 
   return (
     <div>

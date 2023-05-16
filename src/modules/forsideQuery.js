@@ -68,15 +68,16 @@ export const forsideQuery = gql`
           }
         }
         ... on UdvalgteYdelserRecord {
+          __typename
           udvalgteYdelser {
             overskrift
             broedtekst
-
             foto {
               url
             }
           }
           knap {
+            text
             url
           }
         }
