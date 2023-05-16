@@ -4,7 +4,9 @@ export default function KontaktFormular({ formular }) {
   // TODO: forms functionality
   return (
     <form action="">
-      <div></div>
+      {for (field in formular) {
+      
+      }}
     </form>
   );
 }
