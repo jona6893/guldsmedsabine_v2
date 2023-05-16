@@ -1,6 +1,7 @@
 import Anchor from "../Anchor";
 
 function FindMigHer({content}) {
+  console.log(content.kort);
   return (
     <section>
       <h2 className="text-gold-light text-4xl font-light mb-4">{content.overskrift}</h2>

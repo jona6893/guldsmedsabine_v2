@@ -56,17 +56,30 @@ export const forsideQuery = gql`
         ... on FindMigHerRecord {
           __typename
           id
-          kort{latitude}
-        
+          kort {
+            latitude
+          }
+
           overskrift
-         broedtekst
+          broedtekst
           knap {
             url
             text
           }
-         
         }
-      
+        ... on UdvalgtYdelseRecord{
+          __typename
+          id
+          overskrift
+          broedtekst
+          knap{
+            text
+            url
+          }
+         foto{
+          url}
+        }
+        
       }
     }
   }
