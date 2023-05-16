@@ -9,7 +9,8 @@ import {
 import ProduktGrid from "./ProduktGrid";
 
 function useParallax(value, distance) {
-  return useTransform(value, [0, 1], [-distance, distance]);
+  const y = useTransform(value, [0, 2], [-distance, distance]);
+  return useSpring(y, { stiffness: 200, damping: 50 });
 }
 
 function GalleriWeb({ produkter, openModal, setProduktInfo }) {
@@ -28,8 +29,8 @@ function GalleriWeb({ produkter, openModal, setProduktInfo }) {
   });
 
   // Parallax effect for first and third grid
-  const ySecond = useParallax(scrollYProgressSecond, 100);
-  const yFourth = useParallax(scrollYProgressFourth, 100);
+  const ySecond = useParallax(scrollYProgressSecond, 75);
+  const yFourth = useParallax(scrollYProgressFourth, 75);
   return (
     <>
       <div className="firstGrid flex flex-col gap-8 " ref={refFirstGrid}>
