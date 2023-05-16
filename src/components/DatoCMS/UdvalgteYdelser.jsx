@@ -3,11 +3,11 @@ import Anchor from "../Anchor";
 function UdvalgteYdelser({content}) {
     console.log("hej")
   return (
-    <section className="bg-grey-light py-16   ">
+    <section className="bg-grey-light py-16 px-4  ">
       <div className="max-w-[1450px] mx-auto">
-        <div className="flex  justify-evenly ">
+        <div className="flex max-md:flex-col items-center md:justify-evenly gap-x-4 gap-y-8">
           {content.udvalgteYdelser.map((udvalgtYdelse, index) => (
-            <div key={index} className="w-72 h-96 bg-grey-dark  rounded">
+            <div key={index} className="w-72 h-96 bg-grey-darker  rounded">
               <img src={udvalgtYdelse.foto.url} alt="" className="w-full h-48 object-cover rounded-t" />
               <article className="p-4 flex flex-col justify-center h-48 ">
                 <h3 className="text-gold-light">{udvalgtYdelse.overskrift}</h3>

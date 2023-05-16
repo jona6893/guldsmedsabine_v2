@@ -27,6 +27,8 @@ export default function HomePage({ data }) {
             return <FindMigHer content={content} />;
           case "UdvalgteYdelserRecord":
             return <UdvalgteYdelser content={content} />;
+          case "UdvalgteSmykkerYdelserRecord":
+            return <UdvalgteSmykker content={content} />;
         }
       })}
     </div>
