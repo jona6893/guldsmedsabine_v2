@@ -13,12 +13,12 @@ export default function HomePage({ data }) {
 
   return (
     <div>
-      <h1>Hello {data.name}</h1>
+      {/* <h1>Hello {data.name}</h1> */}
       {data.content.map((content) => {
         // render content on the page
         switch (content.__typename) {
-          case "SimpleTextRecord":
-            return <SimpleText key={content.title} title={content.title} level={1} description={content.description} />;
+         /*  case "SimpleTextRecord":
+            return <SimpleText key={content.title} title={content.title} level={1} description={content.description} />; */
           case "OmSabineForsideRecord":
             return <OmSabineForside content={content} />;
           case "EventRecord":
@@ -27,6 +27,8 @@ export default function HomePage({ data }) {
             return <FindMigHer content={content} />;
           case "UdvalgteYdelserRecord":
             return <UdvalgteYdelser content={content} />;
+          case "UdvalgtSmykkeRecord":
+            return <UdvalgteSmykker content={content} />;
         }
       })}
     </div>

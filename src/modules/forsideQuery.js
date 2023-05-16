@@ -81,15 +81,18 @@ export const forsideQuery = gql`
             url
           }
         }
-      }
-    }
-    allProdukters {
-      ... on ProdukterRecord {
-        produktNavn
-        produktBillede {
-          url
+         ... on UdvalgteSmykkerRecord{
+          __typename
+          id
+          udvalgtSmykke{
+            id
+            produktNavn
+            produktBillede{
+              url
+            }
+            pris
+          }
         }
-        pris
       }
     }
   }
