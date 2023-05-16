@@ -44,7 +44,6 @@ setKategoriFilter("");
 
 
 
-
   return (
     <div className="flex gap-4 items-center w-full justify-center ">
       <button
@@ -55,11 +54,9 @@ setKategoriFilter("");
       >
         Alle
       </button>
-      <div className=" flex flex-col gap-4 flex-wrap">
-        <div className="flex gap-4 justify-center">
-         
+      <div className=" flex gap-4 flex-wrap">
+        <div className="grid grid-cols-2 gap-4 justify-center">
           {Kategori.map((kategori, index) => (
-            
             <button
               onClick={() => {
                 opdateKategori(kategori, index);
@@ -73,9 +70,8 @@ setKategoriFilter("");
               {kategori}
             </button>
           ))}
-          
         </div>
-        <div className="flex gap-4 justify-center flex-wrap">
+        <div className="grid grid-cols-2 gap-4 justify-center flex-wrap">
           {Materiale.map((materiale, index) => (
             <button
               onClick={() => {

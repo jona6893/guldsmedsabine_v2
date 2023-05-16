@@ -14,7 +14,7 @@ export default function Smykker({ data }) {
   return (
     <>
       <section className="flex items-center justify-center pt-32">
-        <Hero/>
+        <Hero />
       </section>
       <div className="text-lg flex flex-col gap-8 justify-center items-center py-32 bg-grey-dark">
         <Galleri produkter={produkter} />
