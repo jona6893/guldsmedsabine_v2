@@ -1,4 +1,4 @@
- import { useRef } from "react";
+ import { useEffect, useRef, useState } from "react";
  import {
    motion,
    useScroll,
@@ -10,7 +10,7 @@
  function useParallax(value, distance) {
    return useTransform(value, [0, 1], [-distance, distance]);
  }
-
+ 
 
 function Galleri({ content }) {
 
@@ -28,9 +28,11 @@ function Galleri({ content }) {
 
 
 
+
   return (
     <section className="bg-grey-dark ">
-      <div className="max-w-[1450px] mx-auto flex overflow-x-scroll overflow-y-hidden scrollbar-hide gap-4 items-center justify-around px-4 py-16">
+      
+      <div className="max-md:hidden max-w-[1450px] mx-auto flex overflow-x-scroll overflow-y-hidden scrollbar-hide gap-4 items-center justify-around px-4 py-16">
         {content[2].galleri.map((img, index) => {
 
           return index % 2 == 0 ? (
@@ -54,6 +56,22 @@ function Galleri({ content }) {
           );
         })}
       </div>
+      :
+      <div className="md:hidden grid grid-cols-2 grid-rows-2 justify-items-center">
+        {content[2].galleri.map((img, index) => {
+
+          return  (
+            
+            <img
+              className={"w-full"}
+              src={img.url}
+              alt=""
+            />
+          )
+        })}
+      </div> 
+
+    
     </section>
   );
 }

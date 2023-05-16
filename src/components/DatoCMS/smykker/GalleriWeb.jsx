@@ -8,8 +8,8 @@ import {
 } from "framer-motion";
 import ProduktGrid from "./ProduktGrid";
 
-function useParallax(value, distance) {
-  const y = useTransform(value, [0, 2], [-distance, distance]);
+function useParallax(value, distance, delay) {
+  const y = useTransform(value, [delay, delay + 1], [0, distance]);
   return useSpring(y, { stiffness: 200, damping: 50 });
 }
 
@@ -29,50 +29,83 @@ function GalleriWeb({ produkter, openModal, setProduktInfo }) {
   });
 
   // Parallax effect for first and third grid
-  const ySecond = useParallax(scrollYProgressSecond, 75);
-  const yFourth = useParallax(scrollYProgressFourth, 75);
+const ySecond = useParallax(scrollYProgressSecond, 100, 0.2);
+const yFourth = useParallax(scrollYProgressFourth, 100, 0.4);
   return (
     <>
-      <div className="firstGrid flex flex-col gap-8 " ref={refFirstGrid}>
-        <ProduktGrid
-          produkter={produkter}
-          filterValue={0}
-          openModal={openModal}
-          setProduktInfo={setProduktInfo}
-        />
-      </div>
-      <motion.div
-        className="secondGrid flex flex-col gap-8 "
-        style={{ y: ySecond }}
-        ref={refSecondGrid}
-      >
-        <ProduktGrid
-          produkter={produkter}
-          filterValue={1}
-          openModal={openModal}
-          setProduktInfo={setProduktInfo}
-        />
-      </motion.div>
-      <div className="thirdGrid flex flex-col gap-8" ref={refThirdGrid}>
-        <ProduktGrid
-          produkter={produkter}
-          filterValue={2}
-          openModal={openModal}
-          setProduktInfo={setProduktInfo}
-        />
-      </div>
-      <motion.div
-        className="fourthGrid flex flex-col gap-8 "
-        style={{ y: yFourth }}
-        ref={refFourthGrid}
-      >
-        <ProduktGrid
-          filterValue={3}
-          produkter={produkter}
-          openModal={openModal}
-          setProduktInfo={setProduktInfo}
-        />
-      </motion.div>
+      <AnimatePresence>
+        <motion.div
+          className="firstGrid flex flex-col gap-8"
+          ref={refFirstGrid}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          key="firstGrid"
+        >
+          <ProduktGrid
+            produkter={produkter}
+            filterValue={0}
+            openModal={openModal}
+            setProduktInfo={setProduktInfo}
+          />
+        </motion.div>
+      </AnimatePresence>
+
+      <AnimatePresence>
+        <motion.div
+          className="secondGrid flex flex-col gap-8"
+          style={{ y: ySecond }}
+          ref={refSecondGrid}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          key="secondGrid"
+        >
+          <ProduktGrid
+            produkter={produkter}
+            filterValue={1}
+            openModal={openModal}
+            setProduktInfo={setProduktInfo}
+          />
+        </motion.div>
+      </AnimatePresence>
+
+      <AnimatePresence>
+        <motion.div
+          className="thirdGrid flex flex-col gap-8"
+          ref={refThirdGrid}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          key="thirdGrid"
+        >
+          <ProduktGrid
+            produkter={produkter}
+            filterValue={2}
+            openModal={openModal}
+            setProduktInfo={setProduktInfo}
+          />
+        </motion.div>
+      </AnimatePresence>
+
+      <AnimatePresence>
+        <motion.div
+          className="fourthGrid flex flex-col gap-8"
+          style={{ y: yFourth }}
+          ref={refFourthGrid}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          key="fourthGrid"
+        >
+          <ProduktGrid
+            produkter={produkter}
+            filterValue={3}
+            openModal={openModal}
+            setProduktInfo={setProduktInfo}
+          />
+        </motion.div>
+      </AnimatePresence>
     </>
   );
 }
