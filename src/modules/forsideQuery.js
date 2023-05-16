@@ -83,5 +83,14 @@ export const forsideQuery = gql`
         }
       }
     }
+    allProdukters {
+      ... on ProdukterRecord {
+        produktNavn
+        produktBillede {
+          url
+        }
+        pris
+      }
+    }
   }
 `;

@@ -3,16 +3,23 @@ import Anchor from "../Anchor";
 function UdvalgteYdelser({content}) {
     console.log("hej")
   return (
-    <section>
-        <p>Hej</p>
-      {content.udvalgteYdelser.map((udvalgtYdelse, index) => (
-        <div key={index}>
-          <img src={udvalgtYdelse.foto.url} alt=""  />
-          <h3 className='text-white'>{udvalgtYdelse.overskrift}</h3>
-          <p>{udvalgtYdelse.broedtekst}</p>
+    <section className="bg-grey-light py-16   ">
+      <div className="max-w-[1450px] mx-auto">
+        <div className="flex  justify-evenly ">
+          {content.udvalgteYdelser.map((udvalgtYdelse, index) => (
+            <div key={index} className="w-72 h-96 bg-grey-dark  rounded">
+              <img src={udvalgtYdelse.foto.url} alt="" className="w-full h-48 object-cover rounded-t" />
+              <article className="p-4 flex flex-col justify-center h-48 ">
+                <h3 className="text-gold-light">{udvalgtYdelse.overskrift}</h3>
+                <p className="text-offWhite ">{udvalgtYdelse.broedtekst}</p>
+              </article>
+            </div>
+          ))}
         </div>
-      ))}
-      <Anchor></Anchor>
+        <Anchor className="bg-gold-dark text-offWhite w-max mx-auto rounded-full px-4 flex items-center justify-center py-1.5 mt-8" href={content.knap[0].url}>
+          {content.knap[0].text}
+        </Anchor>
+      </div>
     </section>
   );
 }
