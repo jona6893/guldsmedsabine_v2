@@ -8,11 +8,10 @@ import FindMigHer from "../components/DatoCMS/FindMigHer";
 // Frontend
 export default function HomePage({ data }) {
   console.log(data);
-  const event = data.content[2]
+  const event = data.content[2];
 
   return (
     <div>
-      <h1>Hello {data.name}</h1>
       {data.content.map((content) => {
         // render content on the page
         switch (content.__typename) {

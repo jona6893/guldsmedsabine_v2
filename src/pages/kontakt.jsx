@@ -1,4 +1,6 @@
-import { gql, GraphQLClient } from "graphql-request";
+import { GraphQLClient } from "graphql-request";
+import { kontaktQuery } from "../Modules/kontaktQuery";
+import Kontakt from "../components/DatoCMS/kontakt/Kontakt";
 
 // Frontend
 export default function KontaktPage({ data }) {
@@ -6,29 +8,16 @@ export default function KontaktPage({ data }) {
 
   return (
     <div>
-      <h1>Hello {data.name}</h1>
+      {data.content.map((content) => {
+        // render content on the page
+        switch (content.__typename) {
+          case "KontaktRecord":
+            return <Kontakt content={content} />;
+        }
+      })}
     </div>
   );
 }
-
-// GraphQL Query
-const page = "Kontakt";
-const query = gql`
-  query {
-    allPages(filter: { name: { eq: ${page} } }) {
-      id
-      name
-      content {
-        ... on SimpleTextRecord {
-          __typename
-          id
-          title
-          description
-        }
-      }
-    }
-  }
-`;
 
 // GET Request
 export async function getStaticProps() {
@@ -40,7 +29,7 @@ export async function getStaticProps() {
     },
   });
 
-  const graphQLData = await graphQLClient.request(query);
+  const graphQLData = await graphQLClient.request(kontaktQuery);
   const filteredGraphQLData = graphQLData.allPages[0];
   //console.log(filteredGraphQLData);
   return {
