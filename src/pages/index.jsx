@@ -14,7 +14,7 @@ export default function HomePage({ data }) {
   const event = data.content[2];
 
   return (
-    <div>
+    <main>
       {/* <h1>Hello {data.name}</h1> */}
       {data.content.map((content) => {
         // render content on the page
@@ -35,7 +35,7 @@ export default function HomePage({ data }) {
             return <Parallax content={content} />;
         }
       })}
-    </div>
+    </main>
   );
 }
 

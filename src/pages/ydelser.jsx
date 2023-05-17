@@ -7,7 +7,7 @@ import { ydelserQuery } from "../modules/ydelserQuery";
 export default function YdelserPage({ data }) {
   console.log(data);
   return (
-    <div>
+    <main>
       {data.content.map((content) => {
         // render content on the page
         switch (content.__typename) {
@@ -20,7 +20,7 @@ export default function YdelserPage({ data }) {
             return <Question content={content} />;
         }
       })}
-    </div>
+    </main>
   );
 }
 
