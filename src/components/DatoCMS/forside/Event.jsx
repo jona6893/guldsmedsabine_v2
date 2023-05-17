@@ -2,7 +2,7 @@ import Anchor from "../../Anchor";
 
 function Event({ content }) {
   return (
-    <section className="mx-auto max-w-[1450px] grid md:grid-cols-2 justify-items-center items-center    ">
+    <section id="events" className="mx-auto max-w-[1450px] grid md:grid-cols-2 justify-items-center items-center    ">
       <div className=" flex flex-col gap-10  px-4 py-8">
         <article className="">
           <h2 className="text-gold-light text-4xl font-light mb-4">{content.title}</h2>
