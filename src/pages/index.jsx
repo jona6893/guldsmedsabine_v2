@@ -11,12 +11,10 @@ export default function HomePage({ data }) {
   const event = data.content[2];
 
   return (
-    <div>
+    <main>
       {data.content.map((content) => {
         // render content on the page
         switch (content.__typename) {
-          case "SimpleTextRecord":
-            return <SimpleText key={content.title} title={content.title} level={1} description={content.description} />;
           case "OmSabineForsideRecord":
             return <OmSabineForside content={content} />;
           case "EventRecord":
@@ -25,7 +23,7 @@ export default function HomePage({ data }) {
             return <FindMigHer content={content} />;
         }
       })}
-    </div>
+    </main>
   );
 }
 

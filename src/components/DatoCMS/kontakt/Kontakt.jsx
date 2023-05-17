@@ -10,7 +10,7 @@ export default function Kontakt({ content }) {
         <p className="text-offWhite text-lg">{paragraf}</p>
         <KontaktFormular formular={formular[0]} />
       </div>
-      <div style={{ backgroundImage: `url("${billede?.url}")` }} className="hidden lg:block bg-cover h-screen" role="img" />
+      <div style={{ backgroundImage: `url("${billede?.url}")` }} className="hidden lg:block bg-cover h-screen bg-[66%]" role="img" />
     </section>
   );
 }

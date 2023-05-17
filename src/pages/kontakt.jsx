@@ -1,5 +1,6 @@
 import { GraphQLClient } from "graphql-request";
-import { kontaktQuery } from "../Modules/kontaktQuery";
+import { kontaktQuery } from "../modules/kontaktQuery";
+import KontaktInformation from "../components/DatoCMS/kontakt/KontaktInformation";
 import Kontakt from "../components/DatoCMS/kontakt/Kontakt";
 
 // Frontend
@@ -7,15 +8,17 @@ export default function KontaktPage({ data }) {
   //console.log(data);
 
   return (
-    <div>
+    <main>
       {data.content.map((content) => {
         // render content on the page
         switch (content.__typename) {
-          case "KontaktRecord":
+          case "KontaktInformationRecord":
+            return <KontaktInformation content={content} />;
+          case "-KontaktRecord":
             return <Kontakt content={content} />;
         }
       })}
-    </div>
+    </main>
   );
 }
 

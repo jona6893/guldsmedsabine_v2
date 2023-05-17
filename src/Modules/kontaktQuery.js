@@ -7,6 +7,18 @@ export const kontaktQuery = gql`
       id
       name
       content {
+        ... on KontaktInformationRecord {
+          __typename
+          overskrift
+          adresse
+          telefon
+          email
+          cvr
+          kort {
+            latitude
+            longitude
+          }
+        }
         ... on KontaktRecord {
           __typename
           overskrift
