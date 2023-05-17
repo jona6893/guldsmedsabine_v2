@@ -93,6 +93,14 @@ export const forsideQuery = gql`
             pris
           }
         }
+        ... on ParallaxRecord {
+          __typename
+          id
+
+          fotoParallax {
+            url
+          }
+        }
       }
     }
   }

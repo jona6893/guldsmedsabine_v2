@@ -6,6 +6,7 @@ import OmSabineForside from "../components/DatoCMS/OmSabineForside";
 import FindMigHer from "../components/DatoCMS/FindMigHer";
 import UdvalgteYdelser from "../components/DatoCMS/UdvalgteYdelser";
 import UdvalgteSmykker from "../components/DatoCMS/UdvalgteSmykker";
+import { Parallax } from "swiper";
 
 // Frontend
 export default function HomePage({ data }) {
@@ -30,6 +31,8 @@ export default function HomePage({ data }) {
             return <UdvalgteYdelser content={content} />;
           case "UdvalgteSmykkerRecord":
             return <UdvalgteSmykker content={content} />;
+          case "ParallaxRecord":
+            return <Parallax content={content} />;
         }
       })}
     </div>
