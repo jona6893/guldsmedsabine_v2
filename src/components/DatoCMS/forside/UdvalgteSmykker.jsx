@@ -5,9 +5,9 @@ function UdvalgteSmykker({ content }) {
   return (
     <section className="py-16 max-w-[1450px] mx-auto grid gap-12">
       <h2 className="text-gold-light text-4xl font-light  text-center">{content.overskriften}</h2>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 justify-items-center">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 max-sm:gap-8 justify-items-center">
         {content.udvalgteSmykker.map((udvalgtSmykke, index) => (
-          <div key={index} className={index % 2 === 1 ? "mt-16" : ""}>
+          <div key={index} className={index % 2 === 1 ? "sm:mt-16" : ""}>
             <img src={udvalgtSmykke.produktBillede[0].url} alt="" className="w-64 h-80 object-cover" />
             <article className="flex justify-between text-offWhite text-sm mt-2">
               <p>{udvalgtSmykke.produktNavn}</p>
