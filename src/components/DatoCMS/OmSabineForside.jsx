@@ -14,7 +14,7 @@ function OmSabineForside({content}) {
         <h1 className="text-gold-light text-8xl font-tangier mb-4">{content.overskrift}</h1>
         <h3 className="text-gold-light uppercase text-2xl font-light mb-4">{content.underOverskrift}</h3>
         <p className="mb-8 text-offWhite max-w-lg">{content.paragraph}</p>
-        <Anchor className="bg-gold-dark text-offWhite rounded-full px-4 w-44 flex items-center justify-center py-1.5" href={content.knap[0].url}>
+        <Anchor className="bg-gold-dark text-offWhite rounded-full px-4  w-max  flex items-center justify-center py-1.5" href={content.knap[0].url}>
           {content.knap[0].text}
         </Anchor>
       </article>

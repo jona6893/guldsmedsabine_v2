@@ -80,6 +80,7 @@ export const forsideQuery = gql`
             text
             url
           }
+          overskriften
         }
         ... on UdvalgteSmykkerRecord {
           __typename
@@ -92,6 +93,11 @@ export const forsideQuery = gql`
             }
             pris
           }
+          knap {
+            text
+            url
+          }
+          overskriften
         }
         ... on ParallaxRecord {
           __typename

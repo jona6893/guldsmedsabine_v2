@@ -4,7 +4,8 @@ function UdvalgteYdelser({content}) {
     console.log("hej")
   return (
     <section className="bg-grey-light py-16 px-4  ">
-      <div className="max-w-[1450px] mx-auto">
+      <div className="max-w-[1450px] mx-auto grid gap-12">
+        <h2 className="text-gold-light text-4xl font-light  text-center">{content.overskriften}</h2>
         <div className="flex max-md:flex-col items-center md:justify-evenly gap-x-4 gap-y-8">
           {content.udvalgteYdelser.map((udvalgtYdelse, index) => (
             <div key={index} className="w-72 h-96 bg-grey-darker  ">
@@ -16,7 +17,7 @@ function UdvalgteYdelser({content}) {
             </div>
           ))}
         </div>
-        <Anchor className="bg-gold-dark text-offWhite w-max mx-auto rounded-full px-4 flex items-center justify-center py-1.5 mt-8" href={content.knap[0].url}>
+        <Anchor className="bg-gold-dark text-offWhite w-max mx-auto rounded-full px-4 flex items-center justify-center py-1.5 " href={content.knap[0].url}>
           {content.knap[0].text}
         </Anchor>
       </div>
