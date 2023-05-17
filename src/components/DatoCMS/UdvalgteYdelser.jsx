@@ -7,8 +7,8 @@ function UdvalgteYdelser({content}) {
       <div className="max-w-[1450px] mx-auto">
         <div className="flex max-md:flex-col items-center md:justify-evenly gap-x-4 gap-y-8">
           {content.udvalgteYdelser.map((udvalgtYdelse, index) => (
-            <div key={index} className="w-72 h-96 bg-grey-darker  rounded">
-              <img src={udvalgtYdelse.foto.url} alt="" className="w-full h-48 object-cover rounded-t" />
+            <div key={index} className="w-72 h-96 bg-grey-darker  ">
+              <img src={udvalgtYdelse.foto.url} alt="" className="w-full h-48 object-cover " />
               <article className="p-4 flex flex-col justify-center h-48 ">
                 <h3 className="text-gold-light">{udvalgtYdelse.overskrift}</h3>
                 <p className="text-offWhite ">{udvalgtYdelse.broedtekst}</p>
