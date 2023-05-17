@@ -7,7 +7,7 @@ function UdvalgteSmykker({ content }) {
       <div>
         {content.udvalgteSmykker.map((udvalgtSmykke, index) => (
           <div key={index} className="">
-            <img src={udvalgtSmykke.produktBillede.url} alt="" />
+            <img src={udvalgtSmykke.produktBillede[0].url} alt="" />
             <h4>{udvalgtSmykke.produktNavn}</h4>
             <p>{udvalgtSmykke.pris}</p>
           </div>
