@@ -6,7 +6,7 @@ import OmSabineForside from "../components/DatoCMS/OmSabineForside";
 import FindMigHer from "../components/DatoCMS/FindMigHer";
 import UdvalgteYdelser from "../components/DatoCMS/UdvalgteYdelser";
 import UdvalgteSmykker from "../components/DatoCMS/UdvalgteSmykker";
-import { Parallax } from "swiper";
+import Parallax from "../components/DatoCMS/Parallax";
 
 // Frontend
 export default function HomePage({ data }) {
