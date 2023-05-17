@@ -21,7 +21,7 @@ export default function Navigation() {
     },
     {
       name: "Events",
-      path: "events",
+      path: "/#event",
     },
     {
       name: "Kontakt",
