@@ -85,7 +85,7 @@ function Galleri({ produkter }) {
         setKategoriFilter={setKategoriFilter}
         setMaterialeFilter={setMaterialeFilter}
       />
-      <div className="flex items-flex-start gap-8 mt-32 w-[1000px]">
+      <div className="grid grid-cols-4 items-flex-start gap-8 mt-32">
         <Galleri
           produkter={filteredProducts}
           openModal={openModal}
