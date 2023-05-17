@@ -3,9 +3,9 @@ import Anchor from "../../Anchor";
 function UdvalgteSmykker({ content }) {
   console.log(content.UdvalgteSmykker);
   return (
-    <section className="py-16 max-w-[1450px] mx-auto grid gap-12">
+    <section className="py-16 max-w-[1450px] mx-auto grid gap-12 max-xl:justify-items-center px-4">
       <h2 className="text-gold-light text-4xl font-light  text-center">{content.overskriften}</h2>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 max-sm:gap-8 justify-items-center">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
         {content.udvalgteSmykker.map((udvalgtSmykke, index) => (
           <div key={index} className={index % 2 === 1 ? "sm:mt-16" : ""}>
             <img src={udvalgtSmykke.produktBillede[0].url} alt="" className="w-64 h-80 object-cover" />
