@@ -1,5 +1,5 @@
 import React from "react";
-import Anchor from "../Anchor";
+import Anchor from "../../Anchor";
 
 function Question({ content }) {
   console.log(content);
@@ -12,7 +12,10 @@ function Question({ content }) {
           <Anchor className="bg-gold-dark text-offWhite rounded-full min-w-[180px] flex items-center justify-center" href={content.buttonOne[0].url}>
             {content.buttonOne[0].text}
           </Anchor>
-          <Anchor className="text-gold-light border-gold-dark border-2 rounded-full min-w-[180px] flex items-center justify-center py-1.5" href={content.buttonTwo[0].url}>
+          <Anchor
+            className="text-gold-light border-gold-dark border-2 rounded-full min-w-[180px] flex items-center justify-center py-1.5"
+            href={content.buttonTwo[0].url}
+          >
             {content.buttonTwo[0].text}
           </Anchor>
         </div>

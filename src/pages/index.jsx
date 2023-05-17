@@ -1,12 +1,12 @@
 import { GraphQLClient } from "graphql-request";
 import SimpleText from "../components/DatoCMS/SimpleText";
 import { forsideQuery } from "../Modules/forsideQuery";
-import Event from "../components/DatoCMS/Event";
-import OmSabineForside from "../components/DatoCMS/OmSabineForside";
-import FindMigHer from "../components/DatoCMS/FindMigHer";
-import UdvalgteYdelser from "../components/DatoCMS/UdvalgteYdelser";
-import UdvalgteSmykker from "../components/DatoCMS/UdvalgteSmykker";
-import Parallax from "../components/DatoCMS/Parallax";
+import Event from "../components/DatoCMS/forside/Event";
+import OmSabineForside from "../components/DatoCMS/forside/OmSabineForside";
+import FindMigHer from "../components/DatoCMS/forside/FindMigHer";
+import UdvalgteYdelser from "../components/DatoCMS/forside/UdvalgteYdelser";
+import UdvalgteSmykker from "../components/DatoCMS/forside/UdvalgteSmykker";
+import Parallax from "../components/DatoCMS/forside/Parallax";
 
 // Frontend
 export default function HomePage({ data }) {

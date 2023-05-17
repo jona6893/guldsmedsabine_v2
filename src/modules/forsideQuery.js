@@ -57,6 +57,7 @@ export const forsideQuery = gql`
           __typename
           id
           kort {
+            longitude
             latitude
           }
 

@@ -1,4 +1,4 @@
-import Anchor from "../Anchor";
+import Anchor from "../../Anchor";
 
 function Event({ content }) {
   return (
@@ -26,7 +26,10 @@ function Event({ content }) {
           <Anchor className="bg-gold-dark text-offWhite rounded-full px-4 flex items-center justify-center py-1.5" href={content.knapOne[0].url}>
             {content.knapOne[0].text}
           </Anchor>
-          <Anchor className="text-gold-light border-gold-dark border-2 rounded-full px-4 flex items-center justify-center py-1.5" href={content.knapTwo[0].url}>
+          <Anchor
+            className="text-gold-light border-gold-dark border-2 rounded-full px-4 flex items-center justify-center py-1.5"
+            href={content.knapTwo[0].url}
+          >
             {content.knapTwo[0].text}
           </Anchor>
         </div>

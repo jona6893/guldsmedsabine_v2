@@ -1,7 +1,7 @@
-import React from 'react'
-import Anchor from '../Anchor';
+import React from "react";
+import Anchor from "../../Anchor";
 
-function OmSabineForside({content}) {
+function OmSabineForside({ content }) {
   return (
     <section className="mx-auto max-w-[1450px] grid grid-cols-2 justify-items-center items-center pb-16">
       <div className="grid grid-cols-2 grid-rows-2 gap-4 p-8 aspect-square h-[500px]">
@@ -22,4 +22,4 @@ function OmSabineForside({content}) {
   );
 }
 
-export default OmSabineForside
+export default OmSabineForside;

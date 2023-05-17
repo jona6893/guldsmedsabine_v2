@@ -1,7 +1,7 @@
-import Anchor from "../Anchor";
+import Anchor from "../../Anchor";
 
-function UdvalgteYdelser({content}) {
-    console.log("hej")
+function UdvalgteYdelser({ content }) {
+  console.log("hej");
   return (
     <section className="bg-grey-light py-16 px-4  ">
       <div className="max-w-[1450px] mx-auto grid gap-12">
@@ -17,7 +17,10 @@ function UdvalgteYdelser({content}) {
             </div>
           ))}
         </div>
-        <Anchor className="bg-gold-dark text-offWhite w-max mx-auto rounded-full px-4 flex items-center justify-center py-1.5 " href={content.knap[0].url}>
+        <Anchor
+          className="bg-gold-dark text-offWhite w-max mx-auto rounded-full px-4 flex items-center justify-center py-1.5 "
+          href={content.knap[0].url}
+        >
           {content.knap[0].text}
         </Anchor>
       </div>
@@ -25,7 +28,7 @@ function UdvalgteYdelser({content}) {
   );
 }
 
-export default UdvalgteYdelser
+export default UdvalgteYdelser;
 /* {content.ydelser.map((ydelse, index) => (
             <section
               key={index}
