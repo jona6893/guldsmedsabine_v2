@@ -2,7 +2,7 @@ function OmMig({ content }) {
   return (
     <section className="bg-grey-light text-offWhite  py-16">
       <div className="max-w-[1450px] mx-auto grid md:grid-cols-2 max-m:grid-rows-2 h-full">
-        <div className="flex flex-col md:gap-32 max-md:gap-4 md:p-16 justify-around">
+        <div className="flex flex-col md:gap-16 max-md:gap-4 md:p-16 justify-around">
           <div className="flex flex-col gap-4 max-md:p-8">
             <h3 className="font-thin text-5xl text-gold-light">
               {content[1].title}

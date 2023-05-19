@@ -80,7 +80,7 @@ setKategoriFilter("");
               }}
               className={`bg-gold-light border-gold-light border border-2 hover:bg-transparent hover:text-gold-light hover:border-gold-light py-2 p-8 rounded-full ${
                 activeMatriale === index
-                  ? "bg-[#ff000000] text-gold-light"
+                  ? "bg-[#ff000000] text-offWhite"
                   : "text-offWhite"
               }`}
             >
