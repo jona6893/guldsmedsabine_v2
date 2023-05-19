@@ -1,6 +1,6 @@
 import Layout from "../layouts/Layout";
 import "../styles/globals.css";
-import "../styles/HideScrollbars.css";
+import "../styles/hideScrollBars.css";
 
 // Frontend
 export default function MyApp({ Component, pageProps }) {

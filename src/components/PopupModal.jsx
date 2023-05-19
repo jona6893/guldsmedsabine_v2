@@ -30,7 +30,7 @@ function PopupModal({ isOpen, onClose, children }) {
 
   return (
     <motion.div
-      className={`modal-content fixed inset-0 flex items-center justify-center lg:p-16 max-md:p-2 max-lg:p-8`}
+      className={`modal-content fixed inset-0 flex items-center justify-center lg:p-16 max-md:p-2 max-lg:p-8 z-[200]`}
       onClick={onClose}
       initial="hidden"
       animate="visible"
@@ -53,7 +53,7 @@ function PopupModal({ isOpen, onClose, children }) {
             viewBox="0 0 24 24"
             strokeWidth={2}
             stroke="white"
-            className="w-8 h-8 max-sm:stroke-black"
+            className="w-8 h-8"
           >
             <path
               strokeLinecap="round"

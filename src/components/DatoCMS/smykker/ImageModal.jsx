@@ -9,6 +9,7 @@ function ImageModal({ images }) {
   return (
     <>
       <Swiper
+        className=""
         spaceBetween={50}
         slidesPerView={1}
         modules={[Navigation, Pagination]}
