@@ -17,10 +17,10 @@ function OmMig({ content }) {
           <div className="px-5 max-md:py-16 md:pb-16 grid gap-8 justify-items-center">
             <article>
               <h3 className="font-thin text-4xl text-gold-light mb-4">{content[1].title2}</h3>
-              <p className="max-w-lg">{content[1].paragraph2}</p>
+              <p className="max-w-xl">{content[1].paragraph2}</p>
             </article>
 
-            <div className="w-full ">
+            <div className="w-full max-w-xl">
               <Anchor className="bg-gold-dark text-offWhite rounded-full px-4 flex items-center justify-center w-max py-2" href={content[1].knap[0].url}>
                 {content[1].knap[0].text}
               </Anchor>
