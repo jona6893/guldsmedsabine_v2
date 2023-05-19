@@ -1,9 +1,14 @@
-import Anchor from "../Anchor";
+import Anchor from "../../Anchor";
 
 function Event({ content }) {
   return (
+<<<<<<< HEAD:src/components/DatoCMS/Event.jsx
     <section id="event" className="mx-auto max-w-[1450px] grid md:grid-cols-2 justify-items-center items-center pb-16   ">
       <div className=" flex flex-col gap-10  p-4">
+=======
+    <section id="events" className="mx-auto max-w-[1450px] grid md:grid-cols-2 justify-items-center items-center    ">
+      <div className=" flex flex-col gap-10  px-4 py-8">
+>>>>>>> master:src/components/DatoCMS/forside/Event.jsx
         <article className="">
           <h2 className="text-gold-light text-4xl font-light mb-4">{content.title}</h2>
 

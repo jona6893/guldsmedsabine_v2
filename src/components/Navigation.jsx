@@ -21,7 +21,7 @@ export default function Navigation() {
     },
     {
       name: "Events",
-      path: "/#event",
+      path: "#events",
     },
     {
       name: "Kontakt",
@@ -30,16 +30,19 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="mx-auto max-w-[1450px]">
+    <nav className="mx-auto max-w-[1450px] relative">
+      <div className="flex items-center justify-between p-4 w-full">
+       <Anchor href={`/`}><img className="w-20" src="/images/sabineLogo.svg" alt="" /></Anchor>
       <ul className="flex justify-end gap-4 p-4 text-offWhite">
         {navData.map((item) => {
           return (
-            <li key={item.name}>
+            <li key={item.name} className="text-gold-light">
               <Anchor href={`/${item.path}`}>{item.name}</Anchor>
             </li>
           );
         })}
-      </ul>
+      </ul>  
+      </div>
     </nav>
   );
 }

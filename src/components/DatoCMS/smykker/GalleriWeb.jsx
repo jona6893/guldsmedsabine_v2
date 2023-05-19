@@ -29,8 +29,8 @@ function GalleriWeb({ produkter, openModal, setProduktInfo }) {
   });
 
   // Parallax effect for first and third grid
-const ySecond = useParallax(scrollYProgressSecond, 100, 0.4);
-const yFourth = useParallax(scrollYProgressFourth, 100, 0.4);
+const ySecond = useParallax(scrollYProgressSecond, 100, 0.1);
+const yFourth = useParallax(scrollYProgressFourth, 100, 0.1);
   return (
     <>
       <AnimatePresence>

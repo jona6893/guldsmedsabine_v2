@@ -1,11 +1,12 @@
 import { GraphQLClient } from "graphql-request";
 import SimpleText from "../components/DatoCMS/SimpleText";
 import { forsideQuery } from "../Modules/forsideQuery";
-import Event from "../components/DatoCMS/Event";
-import OmSabineForside from "../components/DatoCMS/OmSabineForside";
-import FindMigHer from "../components/DatoCMS/FindMigHer";
-import UdvalgteYdelser from "../components/DatoCMS/UdvalgteYdelser";
-import UdvalgteSmykker from "../components/DatoCMS/UdvalgteSmykker";
+import Event from "../components/DatoCMS/forside/Event";
+import OmSabineForside from "../components/DatoCMS/forside/OmSabineForside";
+import FindMigHer from "../components/DatoCMS/forside/FindMigHer";
+import UdvalgteYdelser from "../components/DatoCMS/forside/UdvalgteYdelser";
+import UdvalgteSmykker from "../components/DatoCMS/forside/UdvalgteSmykker";
+import Parallax from "../components/DatoCMS/forside/Parallax";
 
 // Frontend
 export default function HomePage({ data }) {
@@ -13,7 +14,7 @@ export default function HomePage({ data }) {
   const event = data.content[2];
 
   return (
-    <div>
+    <main>
       {/* <h1>Hello {data.name}</h1> */}
       {data.content.map((content) => {
         // render content on the page
@@ -30,9 +31,11 @@ export default function HomePage({ data }) {
             return <UdvalgteYdelser content={content} />;
           case "UdvalgteSmykkerRecord":
             return <UdvalgteSmykker content={content} />;
+          case "ParallaxRecord":
+            return <Parallax content={content} />;
         }
       })}
-    </div>
+    </main>
   );
 }
 

@@ -1,13 +1,13 @@
 import { GraphQLClient } from "graphql-request";
-import YdelserHero from "../components/DatoCMS/YdelserHero";
-import Ydelser from "../components/DatoCMS/Ydelser";
-import Question from "../components/DatoCMS/Question";
+import YdelserHero from "../components/DatoCMS/ydelser/YdelserHero";
+import Ydelser from "../components/DatoCMS/ydelser/Ydelser";
+import Question from "../components/DatoCMS/ydelser/Question";
 import { ydelserQuery } from "../modules/ydelserQuery";
 
 export default function YdelserPage({ data }) {
   console.log(data);
   return (
-    <div>
+    <main>
       {data.content.map((content) => {
         // render content on the page
         switch (content.__typename) {
@@ -20,7 +20,7 @@ export default function YdelserPage({ data }) {
             return <Question content={content} />;
         }
       })}
-    </div>
+    </main>
   );
 }
 

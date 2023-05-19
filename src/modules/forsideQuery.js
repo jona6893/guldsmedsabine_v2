@@ -57,6 +57,7 @@ export const forsideQuery = gql`
           __typename
           id
           kort {
+            longitude
             latitude
           }
 
@@ -80,6 +81,7 @@ export const forsideQuery = gql`
             text
             url
           }
+          overskriften
         }
         ... on UdvalgteSmykkerRecord {
           __typename
@@ -91,6 +93,19 @@ export const forsideQuery = gql`
               url
             }
             pris
+          }
+          knap {
+            text
+            url
+          }
+          overskriften
+        }
+        ... on ParallaxRecord {
+          __typename
+          id
+
+          fotoParallax {
+            url
           }
         }
       }
