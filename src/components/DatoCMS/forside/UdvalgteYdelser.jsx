@@ -12,7 +12,7 @@ function UdvalgteYdelser({ content }) {
               <img src={udvalgtYdelse.foto.url} alt="" className="w-full h-48 object-cover " />
               <article className="p-4 flex flex-col justify-center h-48 ">
                 <h3 className="text-gold-light">{udvalgtYdelse.overskrift}</h3>
-                <p className="text-offWhite ">{udvalgtYdelse.broedtekst}</p>
+                <p className="text-offWhite leading-7">{udvalgtYdelse.broedtekst}</p>
               </article>
             </div>
           ))}
