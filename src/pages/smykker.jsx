@@ -13,10 +13,10 @@ export default function Smykker({ data }) {
 
   return (
     <>
-      <section className="flex items-center justify-center pt-32">
+      <section className="flex items-center justify-center pt-12">
         <Hero />
       </section>
-      <div className="text-lg flex flex-col gap-8 justify-center items-center py-32 bg-grey-dark">
+      <div className="text-lg flex flex-col gap-8 justify-center items-center py-20 bg-grey-dark">
         <Galleri produkter={produkter} />
       </div>
     </>

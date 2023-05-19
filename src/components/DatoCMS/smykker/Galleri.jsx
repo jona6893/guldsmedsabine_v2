@@ -58,16 +58,21 @@ function Galleri({ produkter }) {
   }
 
   const size = useWindowSize();
-
-  let Galleri;
-  if (size.width <= 640) {
+  
+   let Galleri;
+  if (size.width <= 640 +22) {
+    console.log("mobile = " + size.width)
     Galleri = GalleriMobile;
   } else if (size.width <= 768) {
+      console.log("Tablet = " + size.width);
     Galleri = GalleriTablet;
   } else {
+      console.log("web = " + size.width);
     Galleri = GalleriWeb;
-  }
+  } 
 
+
+ 
   // filter function
 
   const filteredProducts = produkter.filter((produkt) => {
@@ -85,7 +90,9 @@ function Galleri({ produkter }) {
         setKategoriFilter={setKategoriFilter}
         setMaterialeFilter={setMaterialeFilter}
       />
-      <div className="grid grid-cols-4 items-flex-start gap-8 mt-4">
+      <div
+        className="grid md:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 items-flex-start gap-8 mt-4 mb-8"
+      >
         <Galleri
           produkter={filteredProducts}
           openModal={openModal}

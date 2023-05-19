@@ -44,6 +44,7 @@ setKategoriFilter("");
 }
 
 
+console.log(activeMatriale)
 
   return (
     <div className="flex gap-4 items-start w-full justify-center ">
@@ -80,7 +81,7 @@ setKategoriFilter("");
               }}
               className={`bg-gold-light border-gold-light border border-2 hover:bg-transparent hover:text-gold-light hover:border-gold-light py-2 p-8 rounded-full ${
                 activeMatriale === index
-                  ? "bg-[#ff000000] text-offWhite"
+                  ? "bg-transparent text-gold-light"
                   : "text-offWhite"
               }`}
             >

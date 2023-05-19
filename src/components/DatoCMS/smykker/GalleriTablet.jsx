@@ -32,9 +32,9 @@ function GalleriTablet({ produkter, openModal, setProduktInfo }) {
   const yFourth = useParallax(scrollYProgressFourth, 100);
   return (
     <>
-      {" "}
+      
       <motion.div
-        className="secondGrid flex flex-col gap-8"
+        className="secondGrid flex flex-col gap-8 mt-20"
         style={{ y: ySecond }}
         ref={refSecondGrid}
       >
