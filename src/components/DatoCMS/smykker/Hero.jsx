@@ -2,7 +2,7 @@
 
 function Hero() {
   return (
-    <div className="flex flex-col items-center justify-center gap-4">
+    <div className="flex flex-col items-center justify-center gap-4 px-4">
       <h1 className="text-gold-light text-7xl font-thin font-sagoe">Smykker</h1>
       <p className="text-center text-offWhite max-w-2xl">
         Her på siden kan se hvilke smykker jeg producere og designer, hvis du er
