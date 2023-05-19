@@ -21,7 +21,7 @@ function UdvalgteSmykker({ content }) {
     });
 
     // Parallax effect for first and third grid
-    const ySecond = useParallax(scrollYProgressSecond, -100);
+    const ySecond = useParallax(scrollYProgressSecond, 30);
 
   return (
     <section className="py-16 max-w-[1450px] mx-auto grid gap-12 max-xl:justify-items-center px-4">
@@ -30,7 +30,7 @@ function UdvalgteSmykker({ content }) {
         {content.udvalgteSmykker.map((udvalgtSmykke, index) => {
            return index % 2 == 0 ? (
              <motion.div
-               className="secondGrid grid gap-8 mb-16"
+               className="secondGrid grid gap-8 mb-4 "
                style={{ y: ySecond }}
                ref={refImage}
              >
