@@ -4,7 +4,7 @@ function YdelserHero({ content }) {
   return (
     <section
       style={{ backgroundImage: `url("${content.heroImage.url}")` }}
-      className="w-full bg-cover h-[80vh] bg-no-repeat bg-center    p-4 mx-auto max-w-1450"
+      className="w-full bg-cover h-[70vh] bg-no-repeat bg-center    p-4 mx-auto max-w-1450"
     >
       <div className="h-full grid md:grid-cols-2 justify-items-center items-center">
         <article className="p-4 max-w-[1450px] mx-auto">
