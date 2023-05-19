@@ -1,22 +1,24 @@
 import { gql } from "graphql-request";
 
 //* Import af Inhold til siden "Kontakt"
-export const kontaktQuery = gql`
+export const kontaktFormularQuery = gql`
   query {
     allPages(filter: { name: { eq: "Kontakt" } }) {
       id
       name
       content {
-        ... on KontaktInformationRecord {
+        ... on KontaktRecord {
           __typename
           overskrift
-          adresse
-          telefon
-          email
-          cvr
-          kort {
-            latitude
-            longitude
+          paragraf
+          billede {
+            url
+          }
+          formular {
+            navn
+            email
+            telefon
+            besked
           }
         }
       }

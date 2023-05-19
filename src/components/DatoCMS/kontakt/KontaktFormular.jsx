@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function KontaktFormular({ formular }) {
+  const router = useRouter();
+
   const [formData, setFormData] = useState({
     navn: "",
     email: "",
@@ -24,6 +27,7 @@ export default function KontaktFormular({ formular }) {
   async function submitForm(e) {
     e.preventDefault();
     //console.log(formData);
+    router.push("/kontakt-feedback");
   }
 
   return (

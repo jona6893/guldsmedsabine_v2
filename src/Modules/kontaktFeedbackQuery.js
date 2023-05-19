@@ -1,23 +1,16 @@
 import { gql } from "graphql-request";
 
 //* Import af Inhold til siden "Kontakt"
-export const kontaktQuery = gql`
+export const kontaktFeedbackQuery = gql`
   query {
     allPages(filter: { name: { eq: "Kontakt" } }) {
       id
       name
       content {
-        ... on KontaktInformationRecord {
+        ... on KontaktFeedbackRecord {
           __typename
           overskrift
-          adresse
-          telefon
-          email
-          cvr
-          kort {
-            latitude
-            longitude
-          }
+          tekst
         }
       }
     }
