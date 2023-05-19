@@ -42,7 +42,7 @@ function GalleriMobile({ produkter, openModal, setProduktInfo }) {
       >
         
       </motion.div> */}
-      <div className="thirdGrid flex flex-col gap-8 mt-16" ref={refThirdGrid}>
+      <div className="thirdGrid flex flex-col gap-8 " ref={refThirdGrid}>
         <ProduktGrid
           produkter={produkter}
           filterValue={0}

@@ -23,7 +23,7 @@ function Galleri({ content }) {
   
 
   // Parallax effect for first and third grid
-  const ySecond = useParallax(scrollYProgressSecond, 10);
+  const ySecond = useParallax(scrollYProgressSecond, 30);
 
 
 
@@ -32,7 +32,7 @@ function Galleri({ content }) {
   return (
     <section className="bg-grey-dark ">
       
-      <div className="max-md:hidden max-w-[1450px] mx-auto flex overflow-x-scroll overflow-y-hidden scrollbar-hide gap-4 items-center justify-around px-4 py-16">
+      <div className="max-md:hidden max-w-[1450px] mx-auto grid grid-cols-4 overflow-x-scroll overflow-y-hidden scrollbar-hide gap-4 items-center justify-around px-4 py-16">
         {content[2].galleri.map((img, index) => {
 
           return index % 2 == 0 ? (
