@@ -9,55 +9,24 @@ function OmSabineForside({ content }) {
   return (
     <section className="mx-auto max-w-[1450px] grid gap-4 md:grid-cols-2 justify-items-center items-center pb-16">
       <div className="max-md:hidden grid grid-cols-2 grid-rows-2 gap-4 p-8 aspect-square h-[500px]">
-        <img
-          className="col-start-1 row-span-1 object-cover h-full aspect-square"
-          src={content.fotos[1].url}
-          alt=""
-        />
-        <img
-          className="col-start-2 row-span-2 col-span-2 object-cover h-full "
-          src={content.fotos[0].url}
-          alt=""
-        />
-        <img
-          className="col-start-1 row-span-1 object-cover h-full aspect-square"
-          src={content.fotos[2].url}
-          alt=""
-        />
+        <img className="col-start-1 row-span-1 object-cover h-full aspect-square" src={content.fotos[1].url} alt="" />
+        <img className="col-start-2 row-span-2 col-span-2 object-cover h-full " src={content.fotos[0].url} alt="" />
+        <img className="col-start-1 row-span-1 object-cover h-full aspect-square" src={content.fotos[2].url} alt="" />
       </div>
-      <div className="md:hidden w-screen max-w-[500px] order-1">
-        <Swiper
-          spaceBetween={50}
-          slidesPerView={1}
-          modules={[Navigation, Pagination]}
-          loop={true}
-          navigation
-          pagination={{ clickable: true }}
-        >
+      <div className="md:hidden w-screen  order-1">
+        <Swiper spaceBetween={50} slidesPerView={1} modules={[Navigation, Pagination]} loop={true} navigation pagination={{ clickable: true }}>
           <SwiperSlide>
             {/* <div
               style={{ backgroundImage: `url("${content.fotos[2].url}")` }}
               className="h-full bg-cover bg-center"
             ></div> */}
-            <img
-              className="w-full h-auto  object-cover "
-              src={content.fotos[0].url}
-              alt=""
-            />
+            <img className="w-full h-96  object-cover " src={content.fotos[0].url} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img
-              className="w-full h-auto object-cover "
-              src={content.fotos[1].url}
-              alt=""
-            />
+            <img className="w-full h-96 object-cover " src={content.fotos[1].url} alt="" />
           </SwiperSlide>
           <SwiperSlide>
-            <img
-              className="w-full h-auto object-cover "
-              src={content.fotos[2].url}
-              alt=""
-            />
+            <img className="w-full h-96 object-cover " src={content.fotos[2].url} alt="" />
           </SwiperSlide>
         </Swiper>
         <style>
@@ -72,17 +41,10 @@ function OmSabineForside({ content }) {
       </div>
 
       <article className="p-4">
-        <h1 className="text-gold-light text-8xl font-tangier mb-4">
-          {content.overskrift}
-        </h1>
-        <h3 className="text-gold-light uppercase text-2xl font-light mb-4">
-          {content.underOverskrift}
-        </h3>
+        <h1 className="text-gold-light text-8xl font-tangier mb-4">{content.overskrift}</h1>
+        <h3 className="text-gold-light uppercase text-2xl font-light mb-4">{content.underOverskrift}</h3>
         <p className="mb-8 text-offWhite max-w-lg">{content.paragraph}</p>
-        <Anchor
-          className="bg-gold-dark text-offWhite rounded-full px-4  w-max  flex items-center justify-center py-1.5"
-          href={content.knap[0].url}
-        >
+        <Anchor className="bg-gold-dark text-offWhite rounded-full px-4  w-max  flex items-center justify-center py-1.5" href={content.knap[0].url}>
           {content.knap[0].text}
         </Anchor>
       </article>
