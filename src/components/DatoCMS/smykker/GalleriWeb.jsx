@@ -10,7 +10,7 @@ import ProduktGrid from "./ProduktGrid";
 
 function useParallax(value, distance, delay) {
   const y = useTransform(value, [delay, delay + 1], [0, distance]);
-  return useSpring(y, { stiffness: 200, damping: 50 });
+  return useSpring(y, { stiffness: 150, damping: 40 });
 }
 
 function GalleriWeb({ produkter, openModal, setProduktInfo }) {
