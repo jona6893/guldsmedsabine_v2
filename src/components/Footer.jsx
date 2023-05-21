@@ -3,7 +3,7 @@
 function Footer() {
   return (
     <footer className="text-offWhite">
-      <div className="grid p-8 gap-8">
+      <div className="grid p-8 gap-8 max-w-[1450px] mx-auto">
         <div className="flex w-full gap-8 justify-between">
           <img className="w-24" src="/images/sabineLogo.svg" alt="" />
           <div className="flex">
@@ -23,7 +23,7 @@ function Footer() {
             </svg>
           </div>
         </div>
-        <div className="flex justify-between">
+        <div className="flex max-sm:flex-col gap-4 justify-between">
           <address className="grid">
             Jernbanegade 24, Fredensborg, Denmark
             <a href="tel:23434567">Telefon: 23 43 45 67</a>
