@@ -2,7 +2,7 @@
 
 function GotoTop() {
   return (
-    <div className="text-offWhite fixed top-[80%] right-0 mr-4 bg-gold-light p-2 rounded-full">
+    <div className="text-offWhite fixed top-[80%] right-0 mr-8 bg-gold-light hover:bg-gold-dark p-2 rounded-full shadow-md">
       <a href="#top">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -10,7 +10,7 @@ function GotoTop() {
           viewBox="0 0 24 24"
           stroke-width="1.5"
           stroke="currentColor"
-          class="w-6 h-6 stroke-offWhite"
+          class="w-8 h-8 stroke-offWhite"
         >
           <path
             stroke-linecap="round"
@@ -20,6 +20,7 @@ function GotoTop() {
         </svg>
       </a>
     </div>
+
   );
 }
 
