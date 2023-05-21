@@ -6,7 +6,7 @@ function Footer() {
       <div className="grid p-8 gap-8 max-w-[1450px] mx-auto">
         <div className="flex w-full gap-8 justify-between">
           <img className="w-24" src="/images/sabineLogo.svg" alt="" />
-          <div className="flex">
+          <div className="flex gap-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"

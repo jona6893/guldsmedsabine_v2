@@ -3,7 +3,7 @@
 function GotoTop() {
   return (
     <div className="text-offWhite fixed top-[80%] right-0 mr-8 bg-gold-light hover:bg-gold-dark p-2 rounded-full shadow-md">
-      <a href="#top">
+      <a href="#">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
