@@ -13,10 +13,7 @@ export default function KontaktInformation({ content }) {
           <p>{email}</p>
           <p>{cvr}</p>
         </address>
-        <Anchor
-          className="bg-gold-dark px-8 py-2 uppercase w-max rounded-full text-offWhite hover:bg-gold-light transition-colors"
-          href="/kontakt-formular"
-        >
+        <Anchor className="button-primary" href="/kontakt-formular">
           Kontakt formular
         </Anchor>
       </div>

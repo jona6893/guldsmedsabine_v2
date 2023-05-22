@@ -23,7 +23,6 @@ export default function Navigation() {
   // Add state to track if the menu is open or not
   const [isOpen, setIsOpen] = useState(false);
 
-
   const navData = [
     {
       name: "Forside",
@@ -70,32 +69,21 @@ export default function Navigation() {
             class="w-8 h-8 stroke-offWhite "
             onClick={() => setIsOpen(!isOpen)} // Toggle isOpen when the icon is clicked
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </div>
 
-        <Anchor href={`/`}>
-          <img
-            onClick={() => setIsOpen(!isOpen)}
-            className="w-20"
-            src="/images/sabineLogo.svg"
-            alt=""
-          />
+        <Anchor href="/">
+          <img onClick={() => setIsOpen(!isOpen)} className="w-20" src="/images/sabineLogo.svg" alt="" />
         </Anchor>
 
-        <ul className="flex flex-col justify-center items-center gap-4 text-offWhite">
+        <ul className="flex flex-col justify-center items-center gap-4">
           {navData.map((item) => {
             return (
-              <li
-                key={item.name}
-                className="text-gold-light"
-                onClick={() => setIsOpen(!isOpen)}
-              >
-                <Anchor href={`/${item.path}`}>{item.name}</Anchor>
+              <li key={item.name} onClick={() => setIsOpen(!isOpen)}>
+                <Anchor className="text-gold-light hover:text-gold-dark transition-colors" href={`/${item.path}`}>
+                  {item.name}
+                </Anchor>
               </li>
             );
           })}
@@ -108,14 +96,16 @@ export default function Navigation() {
     <div className="w-full bg-grey-dark sticky top-0 z-[100]">
       <nav className="mx-auto max-w-[1450px]">
         <div className="max-md:hidden flex items-center justify-between p-4 w-full">
-          <Anchor href={`/`}>
+          <Anchor href="/">
             <img className="w-16" src="/images/sabineLogo.svg" alt="" />
           </Anchor>
-          <ul className="flex justify-end gap-4 p-4 text-offWhite">
+          <ul className="flex justify-end gap-4 p-4">
             {navData.map((item) => {
               return (
-                <li key={item.name} className="text-gold-light">
-                  <Anchor href={`/${item.path}`}>{item.name}</Anchor>
+                <li key={item.name}>
+                  <Anchor className="text-gold-light hover:text-gold-dark transition-colors" href={`/${item.path}`}>
+                    {item.name}
+                  </Anchor>
                 </li>
               );
             })}
@@ -131,11 +121,7 @@ export default function Navigation() {
             class="w-8 h-8 stroke-offWhite"
             onClick={() => setIsOpen(!isOpen)} // Toggle isOpen when the icon is clicked
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
 
           <AnimatePresence>{isOpen && <Hamburger />}</AnimatePresence>

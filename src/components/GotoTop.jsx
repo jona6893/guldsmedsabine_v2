@@ -28,7 +28,7 @@ export default function GotoTop() {
         scrolltop ? "" : "opacity-0 pointer-events-none"
       }  text-offWhite w-full flex justify-end relative max-w-[1450px] mx-auto transition-opacity`}
     >
-      <div className="fixed top-[75%] right-[5%] bg-gold-light hover:bg-gold-dark p-2 rounded-full shadow-md z-[50]">
+      <div className="fixed top-[75%] right-[5%] bg-gold-light hover:bg-gold-dark p-2 rounded-full shadow-md z-[50] transition-colors">
         <a href="#">
           <svg
             xmlns="http://www.w3.org/2000/svg"

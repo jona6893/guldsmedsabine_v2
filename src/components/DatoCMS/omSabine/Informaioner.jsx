@@ -1,6 +1,5 @@
 import Anchor from "../../Anchor";
 
-
 function Informaioner({ content }) {
   return (
     <section className="bg-grey-dark text-offWhite px-5 py-16">
@@ -11,7 +10,7 @@ function Informaioner({ content }) {
 
           <p className="max-w-xl mb-4">{content[3].paragraph}</p>
 
-          <Anchor className="bg-gold-dark text-offWhite rounded-full px-4 w-max flex items-center justify-center py-2" href={content[3].knap[0].url}>
+          <Anchor className="button-primary" href={content[3].knap[0].url}>
             {content[3].knap[0].text}
           </Anchor>
         </article>

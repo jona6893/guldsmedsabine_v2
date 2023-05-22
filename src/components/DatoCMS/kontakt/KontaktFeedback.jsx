@@ -22,10 +22,7 @@ export default function KontaktFeedback({ content }) {
 
       <h1 className="uppercase text-gold-light text-2xl md:text-4xl font-light mb-4">{overskrift}</h1>
       <p className="text-lg text-offWhite">{tekst}</p>
-      <Anchor
-        href="/"
-        className="block bg-gold-dark px-8 py-2 uppercase w-max rounded-full text-offWhite hover:bg-gold-light transition-colors mx-auto mt-8 md:mt-12"
-      >
+      <Anchor href="/" className="button-primary w-max rounded-full mt-8 md:mt-12">
         Tilbage til hjemmesiden
       </Anchor>
     </div>
