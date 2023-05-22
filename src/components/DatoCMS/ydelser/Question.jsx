@@ -12,7 +12,7 @@ function Question({ content }) {
           <Anchor className="button-primary w-full sm:w-max" href={content.buttonOne[0].url}>
             {content.buttonOne[0].text}
           </Anchor>
-          <Anchor className="button-primary w-full sm:w-max" href={content.buttonTwo[0].url}>
+          <Anchor className="button-secondary w-full sm:w-max" href={content.buttonTwo[0].url}>
             {content.buttonTwo[0].text}
           </Anchor>
         </div>

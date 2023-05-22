@@ -8,7 +8,6 @@ import GalleriTablet from "./GalleriTablet";
 import GalleriMobile from "./GalleriMobile";
 import Filtering from "./Filtering";
 
-
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
     width: undefined,
@@ -31,9 +30,6 @@ function useWindowSize() {
   return windowSize;
 }
 
-
-
-
 function Galleri({ produkter }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [produktInfo, setProduktInfo] = useState(null);
@@ -41,13 +37,9 @@ function Galleri({ produkter }) {
   const [materialeFilter, setMaterialeFilter] = useState("");
 
   // Get an array of unique categories
-  const uniqueKategorier = [
-    ...new Set(produkter.map((produkt) => produkt.kategori)),
-  ];
+  const uniqueKategorier = [...new Set(produkter.map((produkt) => produkt.kategori))];
   // Get an array of unique materiale
-  const uniqueMaterialer = [
-    ...new Set(produkter.map((produkt) => produkt.materiale)),
-  ];
+  const uniqueMaterialer = [...new Set(produkter.map((produkt) => produkt.materiale))];
 
   function openModal() {
     setIsModalOpen(true);
@@ -58,46 +50,35 @@ function Galleri({ produkter }) {
   }
 
   const size = useWindowSize();
-  
-   let Galleri;
-  if (size.width <= 640 +22) {
-    console.log("mobile = " + size.width)
+
+  let Galleri;
+  if (size.width <= 640 + 22) {
+    console.log("mobile = " + size.width);
     Galleri = GalleriMobile;
   } else if (size.width <= 768) {
-      console.log("Tablet = " + size.width);
+    console.log("Tablet = " + size.width);
     Galleri = GalleriTablet;
   } else {
-      console.log("web = " + size.width);
+    console.log("web = " + size.width);
     Galleri = GalleriWeb;
-  } 
+  }
 
-
- 
   // filter function
 
   const filteredProducts = produkter.filter((produkt) => {
-    return (
-      (kategoriFilter ? produkt.kategori === kategoriFilter : true) &&
-      (materialeFilter ? produkt.materiale === materialeFilter : true)
-    );
+    return (kategoriFilter ? produkt.kategori === kategoriFilter : true) && (materialeFilter ? produkt.materiale === materialeFilter : true);
   });
 
   return (
     <>
-       <Filtering
+      {/* <Filtering
         Kategori={uniqueKategorier}
         Materiale={uniqueMaterialer}
         setKategoriFilter={setKategoriFilter}
         setMaterialeFilter={setMaterialeFilter}
-      /> 
-      <div
-        className="grid md:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 items-flex-start gap-8 mt-4 mb-8"
-      >
-        <Galleri
-          produkter={filteredProducts}
-          openModal={openModal}
-          setProduktInfo={setProduktInfo}
-        />
+      /> */}
+      <div className="grid md:grid-cols-4 max-md:grid-cols-2 max-sm:grid-cols-1 items-flex-start gap-8 mt-4 mb-8">
+        <Galleri produkter={filteredProducts} openModal={openModal} setProduktInfo={setProduktInfo} />
         <AnimatePresence>
           {isModalOpen && (
             <PopupModal isOpen={isModalOpen} onClose={closeModal}>
