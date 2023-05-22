@@ -81,7 +81,10 @@ export default function Navigation() {
           {navData.map((item) => {
             return (
               <li key={item.name} onClick={() => setIsOpen(!isOpen)}>
-                <Anchor className="text-gold-light hover:text-gold-dark transition-colors" href={`/${item.path}`}>
+                <Anchor
+                  className="text-offWhite hover:text-gold-light transition-colors"
+                  href={`/${item.path}`}
+                >
                   {item.name}
                 </Anchor>
               </li>
@@ -103,7 +106,10 @@ export default function Navigation() {
             {navData.map((item) => {
               return (
                 <li key={item.name}>
-                  <Anchor className="text-gold-light hover:text-gold-dark transition-colors" href={`/${item.path}`}>
+                  <Anchor
+                    className="text-offWhite hover:text-gold-light transition-colors"
+                    href={`/${item.path}`}
+                  >
                     {item.name}
                   </Anchor>
                 </li>

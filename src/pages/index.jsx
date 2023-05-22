@@ -15,6 +15,7 @@ export default function HomePage({ data }) {
 
   return (
     <main>
+  
       {/* <h1>Hello {data.name}</h1> */}
       {data.content.map((content) => {
         // render content on the page
