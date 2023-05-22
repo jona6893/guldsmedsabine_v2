@@ -13,8 +13,8 @@ export default function Navigation() {
       },
     },
     closed: {
-      opacity: 1,
-      x: "100%",
+      opacity: 0,
+      x: 0,
       transition: {
         duration: 0.3, // change this to whatever value you prefer
       },
