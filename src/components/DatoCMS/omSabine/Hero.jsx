@@ -8,7 +8,7 @@ function Hero({ content }) {
       <div className="grid  h-full  items-center  max-w-[1450px] mx-auto">
         <div className="px-4 ">
           <h1 className="text-gold-light font-tangier">{content[0].title}</h1>
-          <p className="text-offWhite max-w-md">{content[0].paragraph}</p>
+          <p className="text-offWhite max-w-xl">{content[0].paragraph}</p>
         </div>
       </div>
     </section>
