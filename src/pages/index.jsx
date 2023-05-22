@@ -1,6 +1,6 @@
 import { GraphQLClient } from "graphql-request";
 import SimpleText from "../components/DatoCMS/SimpleText";
-import { forsideQuery } from "../Modules/forsideQuery";
+import { forsideQuery } from "../modules/forsideQuery";
 import Event from "../components/DatoCMS/forside/Event";
 import OmSabineForside from "../components/DatoCMS/forside/OmSabineForside";
 import FindMigHer from "../components/DatoCMS/forside/FindMigHer";
