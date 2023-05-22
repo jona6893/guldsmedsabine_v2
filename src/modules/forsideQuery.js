@@ -30,13 +30,15 @@ export const forsideQuery = gql`
           location
           date
           paragraph
-          knapOne {
-            url
-            text
-          }
-          knapTwo {
-            url
-            text
+          knapper {
+            ... on KnapRecord {
+              text
+              url
+            }
+            ... on EksternLinkRecord {
+              text
+              url
+            }
           }
         }
         ... on OmSabineForsideRecord {

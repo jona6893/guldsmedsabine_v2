@@ -23,11 +23,11 @@ function Event({ content }) {
           </p>
         </article>
         <div className="flex max-sm:flex-col md:flex-col min-[915px]:flex-row gap-y-8 justify-between">
-          <Anchor className="button-primary" href={content.knapOne[0].url}>
-            {content.knapOne[0].text}
+          <Anchor className="button-primary" target="_blank" href={content.knapper[0]?.url}>
+            {content.knapper[0]?.text}
           </Anchor>
-          <Anchor className="button-secondary" href={content.knapTwo[0].url}>
-            {content.knapTwo[0].text}
+          <Anchor className="button-secondary" target="_blank" href={content.knapper[1]?.url}>
+            {content.knapper[1]?.text}
           </Anchor>
         </div>
       </div>
