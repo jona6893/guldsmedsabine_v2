@@ -17,7 +17,7 @@ export default function KontaktInformation({ content }) {
           Kontakt formular
         </Anchor>
       </div>
-      <div className="lg:order-first">
+      <div className="lg:order-first grayscale">
         <iframe
           width="100%"
           height="600"
