@@ -3,12 +3,9 @@ import { smykkerQuery } from "../modules/smykkerQuery";
 import Galleri from "../components/DatoCMS/smykker/Galleri";
 import Hero from "../components/DatoCMS/smykker/Hero";
 
-
-
-
 export default function Smykker({ data }) {
   const { allProdukters } = data;
-  const produkter = allProdukters
+  const produkter = allProdukters;
   console.log(produkter);
 
   return (

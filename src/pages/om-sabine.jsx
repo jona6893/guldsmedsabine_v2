@@ -5,10 +5,9 @@ import OmMig from "../components/DatoCMS/omSabine/OmMig";
 import Galleri from "../components/DatoCMS/omSabine/Galleri";
 import Informaioner from "../components/DatoCMS/omSabine/Informaioner";
 
-
 export default function OmSabine({ data }) {
   const { content } = data;
-  
+
   return (
     <div className="text-lg">
       <Hero content={content} />
@@ -31,7 +30,7 @@ export async function getStaticProps() {
 
   const graphQLData = await graphQLClient.request(omSabineQuery);
   const filteredGraphQLData = graphQLData.allPages[0];
- 
+
   return {
     props: { data: filteredGraphQLData },
   };
