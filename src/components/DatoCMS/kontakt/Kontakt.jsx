@@ -12,7 +12,7 @@ export default function Kontakt({ content }) {
         </button>
         <div>
           <h1 className="text-gold-light uppercase text-4xl font-light mb-2">{overskrift}</h1>
-          <p className="text-offWhite text-lg">{paragraf}</p>
+          <p className="text-offWhite">{paragraf}</p>
         </div>
         <KontaktFormular formular={formular[0]} />
       </div>

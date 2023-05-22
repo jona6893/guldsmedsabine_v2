@@ -16,11 +16,11 @@
   }
 
   .button-primary {
-    @apply bg-gold-dark px-8 py-2 uppercase w-max rounded-full text-offWhite hover:bg-gold-light transition-colors;
+    @apply bg-gold-dark px-8 py-2 uppercase w-max rounded-full text-center text-offWhite hover:bg-gold-light transition-colors;
   }
 
   .button-secondary {
-    @apply bg-transparent px-8 py-2 uppercase w-max rounded-full border-2 border-gold-dark text-gold-light hover:bg-gold-light hover:border-gold-light hover:text-offWhite transition-colors;
+    @apply bg-transparent px-8 py-2 uppercase w-max rounded-full text-center border-2 border-gold-dark text-gold-light hover:bg-gold-light hover:border-gold-light hover:text-offWhite transition-colors;
   }
 }
 
