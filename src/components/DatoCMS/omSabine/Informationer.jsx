@@ -1,8 +1,8 @@
 import Anchor from "../../Anchor";
 
-function Informaioner({ content }) {
+function Informationer({ content }) {
   return (
-    <section className="bg-grey-dark text-offWhite px-5 py-16">
+    <section className="bg-grey-dark text-offWhite px-4 py-16">
       <div className=" grid lg:flex lg:justify-evenly  max-w-[1450px] mx-auto gap-8 justify-items-center content-center items-center ">
         <article className=" grid gap-6">
           <h2 className="text-gold-light text-5xl font-extralight">{content[3].heading}</h2>
@@ -30,4 +30,4 @@ function Informaioner({ content }) {
   );
 }
 
-export default Informaioner;
+export default Informationer;
