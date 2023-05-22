@@ -17,10 +17,7 @@ function UdvalgteYdelser({ content }) {
             </div>
           ))}
         </div>
-        <Anchor
-          className="bg-gold-dark text-offWhite w-max mx-auto rounded-full px-4 flex items-center justify-center py-1.5 "
-          href={content.knap[0].url}
-        >
+        <Anchor className="button-primary mx-auto" href={content.knap[0].url}>
           {content.knap[0].text}
         </Anchor>
       </div>

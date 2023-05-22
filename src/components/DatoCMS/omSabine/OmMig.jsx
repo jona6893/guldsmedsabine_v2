@@ -12,7 +12,10 @@ function OmMig({ content }) {
             </article>
           </div>
 
-          <div className="md:hidden w-full h-full bg-cover bg-center max-md:min-h-[500px]" style={{ backgroundImage: `url("${content[1].sabinephoto.url}")` }}></div>
+          <div
+            className="md:hidden w-full h-full bg-cover bg-center max-md:min-h-[500px]"
+            style={{ backgroundImage: `url("${content[1].sabinephoto.url}")` }}
+          ></div>
 
           <div className="px-5 max-md:py-16 md:pb-16 grid gap-8 justify-items-center">
             <article>
@@ -21,13 +24,16 @@ function OmMig({ content }) {
             </article>
 
             <div className="w-full max-w-lg">
-              <Anchor className="bg-gold-dark text-offWhite rounded-full px-4 flex items-center justify-center w-max py-2" href={content[1].knap[0].url}>
+              <Anchor className="button-primary" href={content[1].knap[0].url}>
                 {content[1].knap[0].text}
               </Anchor>
             </div>
           </div>
         </div>
-        <div className="max-md:hidden w-full h-full bg-cover bg-center max-md:min-h-[400px]" style={{ backgroundImage: `url("${content[1].sabinephoto.url}")` }}>
+        <div
+          className="max-md:hidden w-full h-full bg-cover bg-center max-md:min-h-[400px]"
+          style={{ backgroundImage: `url("${content[1].sabinephoto.url}")` }}
+        >
           {/* <div
             style={{ backgroundImage: `url("${content[1].sabinephoto.url}")` }}
             className="bg-gold-dark/40 col-start-1 row-start-1 z-10 bg-cover aspect-[1/1.4]"

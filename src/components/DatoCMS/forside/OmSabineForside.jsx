@@ -45,7 +45,7 @@ function OmSabineForside({ content }) {
         <h3 className="text-gold-light uppercase text-2xl font-light mb-4">{content.underOverskrift}</h3>
         <p className="mb-8 text-offWhite max-w-lg">{content.paragraph}</p>
         <div className="grid max-sm:justify-items-center">
-          <Anchor className="bg-gold-dark text-offWhite rounded-full px-4  w-max  flex items-center justify-center py-1.5" href={content.knap[0].url}>
+          <Anchor className="button-primary" href={content.knap[0].url}>
             {content.knap[0].text}
           </Anchor>
         </div>
