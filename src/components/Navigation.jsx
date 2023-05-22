@@ -59,32 +59,34 @@ export default function Navigation() {
         animate="open"
         exit="closed"
         variants={variants}
-      > 
-      <div className="flex w-full justify-end">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-8 h-8 stroke-offWhite "
-          onClick={() => setIsOpen(!isOpen)} // Toggle isOpen when the icon is clicked
+      >
+        <div className="flex w-full justify-end">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8 stroke-offWhite "
+            onClick={() => setIsOpen(!isOpen)} // Toggle isOpen when the icon is clicked
           >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M6 18L18 6M6 6l12 12"
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
             />
-        </svg>
-            </div>
+          </svg>
+        </div>
 
-  
- 
         <Anchor href={`/`}>
-          <img className="w-20" src="/images/sabineLogo.svg" alt="" />
+          <img
+            onClick={() => setIsOpen(!isOpen)}
+            className="w-20"
+            src="/images/sabineLogo.svg"
+            alt=""
+          />
         </Anchor>
-        
-    
+
         <ul className="flex flex-col justify-center items-center gap-4 text-offWhite">
           {navData.map((item) => {
             return (
