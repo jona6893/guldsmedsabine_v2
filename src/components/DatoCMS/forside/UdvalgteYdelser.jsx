@@ -3,20 +3,20 @@ import Anchor from "../../Anchor";
 function UdvalgteYdelser({ content }) {
   console.log("hej");
   return (
-    <section className="bg-grey-light py-16 px-4  ">
+    <section className="bg-grey-light py-16 px-4">
       <div className="max-w-[1450px] mx-auto grid gap-12">
-        <h2 className="text-gold-light text-4xl font-light  text-center">{content.overskriften}</h2>
-        <div className="flex max-md:flex-col flex-wrap items-center md:justify-evenly gap-x-4 gap-y-8">
+        <h2 className="text-gold-light text-4xl font-light text-center">{content.overskriften}</h2>
+        <ul className="grid md:grid-cols-3 items-center md:justify-evenly gap-x-4 gap-y-12">
           {content.udvalgteYdelser.map((udvalgtYdelse, index) => (
-            <div key={index} className="w-72 h-[420px] bg-grey-darker  ">
+            <li key={index} className="bg-grey-darker max-w-xs h-full mx-auto">
               <img src={udvalgtYdelse.foto.url} alt="" className="w-full h-48 object-cover " />
-              <article className="p-4 flex flex-col justify-center h- ">
+              <article className="p-4 flex flex-col justify-center">
                 <h3 className="text-gold-light text-xl">{udvalgtYdelse.overskrift}</h3>
                 <p className="text-offWhite leading-7">{udvalgtYdelse.broedtekst}</p>
               </article>
-            </div>
+            </li>
           ))}
-        </div>
+        </ul>
         <Anchor className="button-primary mx-auto" href={content.knap[0].url}>
           {content.knap[0].text}
         </Anchor>
