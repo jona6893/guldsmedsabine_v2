@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination} from "swiper";
+import { Navigation, Pagination } from "swiper";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -9,7 +9,7 @@ function ImageModal({ images }) {
   return (
     <>
       <Swiper
-        className=""
+        className="h-full"
         spaceBetween={50}
         slidesPerView={1}
         modules={[Navigation, Pagination]}
@@ -21,11 +21,7 @@ function ImageModal({ images }) {
       >
         {images.map((image) => (
           <SwiperSlide>
-            <img
-              className="w-full h-auto aspect-[3/4] sm:rounded-r-md max-sm:rounded-b-md object-cover "
-              src={image.url}
-              alt=""
-            />
+            <img className="w-full h-full sm:rounded-r-md max-sm:rounded-b-md object-cover" src={image.url} alt="" />
           </SwiperSlide>
         ))}
       </Swiper>
