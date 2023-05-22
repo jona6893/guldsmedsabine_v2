@@ -8,14 +8,15 @@ function GotoTop() {
   const [scrolltop, setScrolltop] = useState(false);
 
   // animation variations
-  const variants ={
-    show:{
-      opacity: 1
-    },
-    hide:{
-      opacity:0
-    }
-  }
+const variants = {
+  show: {
+    opacity: 1,
+  },
+  hide: {
+    opacity: 0,
+  },
+};
+
 
   //update client window height
 const handleScroll = () => {
@@ -49,6 +50,7 @@ const handleScroll = () => {
   const ScrollButton =() =>{
     return (
       <motion.div
+      key="scrollButton"
         initial="hide"
         animate={scrolltop ? "show" : "hide"}
         exit="hide"
