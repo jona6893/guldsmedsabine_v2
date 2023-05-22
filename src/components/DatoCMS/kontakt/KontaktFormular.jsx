@@ -75,9 +75,9 @@ function FormField({ field, label, formData, setFormData }) {
 
   return (
     <label>
-      <span className="block text-lg uppercase text-gold-light font-thin">{label + ":"}</span>
+      <span className="block uppercase text-gold-light font-thin">{label + ":"}</span>
       {inputField(
-        "w-full px-2 py-1 bg-grey-light text-offWhite text-lg rounded-md outline-0 border border-gold-dark focus:border-gold-light transition-colors"
+        "w-full px-2 py-1 bg-grey-light text-offWhite text-lg rounded-md outline-none border border-gold-dark focus:border-gold-light transition-colors"
       )}
     </label>
   );
