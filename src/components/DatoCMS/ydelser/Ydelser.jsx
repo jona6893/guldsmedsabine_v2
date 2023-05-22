@@ -1,3 +1,5 @@
+
+
 function Ydelser({ content }) {
   return (
     <>
@@ -8,7 +10,9 @@ function Ydelser({ content }) {
               <div className="flex flex-col  justify-center items-center">
                 <article className="max-w-lg px-4 py-16 sm:p-4 ">
                   <h2 className="text-gold-light text-4xl mb-4 font-light uppercase">{ydelse.title}</h2>
+
                   <p className="text-offWhite mb-4">{ydelse.paragraph}</p>
+                  <p className="text-offWhite mb-4">{ydelse.broedtekst}</p>
                   <p className="text-gold-light text-xl font-light ">{ydelse.price}</p>
                 </article>
               </div>
