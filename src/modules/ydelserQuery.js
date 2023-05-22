@@ -22,6 +22,7 @@ export const ydelserQuery = gql`
           ydelser {
             title
             paragraph
+            broedtekst
             price
             photo {
               url
