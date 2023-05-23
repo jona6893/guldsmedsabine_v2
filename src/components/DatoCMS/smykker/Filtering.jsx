@@ -64,7 +64,7 @@ function Filtering({ kategori, materiale, setKategoriFilter, setMaterialeFilter 
           ))}
         </div>
         <div className="flex gap-x-4 justify-center flex-wrap">
-          <p className="text-offWhite w-full text-center mb-2">Materialer</p>
+          <p className="text-offWhite w-full text-center mb-2">Materiale</p>
           {materiale.map((materiale, index) => (
             <button
               onClick={() => {
