@@ -15,7 +15,7 @@ export default function KontaktPage({ data }) {
           // render content on the page
           switch (content.__typename) {
             case "KontaktInformationRecord":
-              return <KontaktInformation content={content} />;
+              return <KontaktInformation key={content.id} content={content} />;
           }
         })}
       </main>
