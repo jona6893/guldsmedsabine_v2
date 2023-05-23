@@ -16,7 +16,7 @@ export default function KontaktFormular({ formular }) {
 
     for (let field in formular) {
       if (formular.hasOwnProperty(field)) {
-        components.push(<FormField field={field} label={formular[field]} formData={formData} setFormData={setFormData} />);
+        components.push(<FormField key={field} field={field} label={formular[field]} formData={formData} setFormData={setFormData} />);
       }
     }
 

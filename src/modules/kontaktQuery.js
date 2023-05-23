@@ -9,6 +9,7 @@ export const kontaktQuery = gql`
       content {
         ... on KontaktInformationRecord {
           __typename
+          id
           overskrift
           adresse
           telefon

@@ -16,7 +16,7 @@ export default function YdelserPage({ data }) {
           // render content on the page
           switch (content.__typename) {
             case "YdelserHeroRecord":
-              return <YdelserHero content={content} />;
+              return <YdelserHero key={content.id} content={content} />;
 
             case "YdelserRecord":
               return <Ydelser key={content.id} content={content} />;

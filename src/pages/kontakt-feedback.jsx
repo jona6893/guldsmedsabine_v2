@@ -15,7 +15,7 @@ export default function KontaktPage({ data }) {
           // render content on the page
           switch (content.__typename) {
             case "KontaktFeedbackRecord":
-              return <KontaktFeedback content={content} />;
+              return <KontaktFeedback key={content.id} content={content} />;
           }
         })}
       </main>
