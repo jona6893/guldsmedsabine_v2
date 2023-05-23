@@ -34,7 +34,7 @@ function Galleri({ content }) {
       </div>
       :
       <div className="md:hidden grid grid-cols-2 grid-rows-2 justify-items-center">
-        {content[2].galleri.map((img, index) => {
+        {content.galleri.map((img, index) => {
           return <Image className={"w-full"} src={img.url} alt={img.alt} width={img.width} height={img.height} loading="lazy" />;
         })}
       </div>
