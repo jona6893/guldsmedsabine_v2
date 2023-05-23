@@ -11,19 +11,19 @@ function OmSabineForside({ content }) {
     <section className="mx-auto max-w-[1450px] grid gap-4  md:grid-cols-2 justify-items-center items-center pb-16 md:px-4 ">
       <div className="max-md:hidden xl:grid xl:grid-cols-2 xl:grid-rows-2 xl:gap-4 xl:aspect-square h-[500px]">
         <Image
-          className="col-start-1 row-span-1 object-cover h-full aspect-square max-xl:hidden"
-          width={content.fotos[0].width}
-          height={content.fotos[0].height}
-          src={content.fotos[0].url}
-          alt={content.fotos[0].alt}
-          loading="lazy"
-        />
-        <Image
-          className="col-start-2 row-span-2 col-span-2 object-cover h-full "
+          className="col-start-1 row-span-1 object-cover h-full w-full aspect-square max-xl:hidden"
           width={content.fotos[1].width}
           height={content.fotos[1].height}
           src={content.fotos[1].url}
           alt={content.fotos[1].alt}
+          loading="lazy"
+        />
+        <Image
+          className="col-start-2 row-span-2 col-span-2 object-cover h-full "
+          width={content.fotos[0].width}
+          height={content.fotos[0].height}
+          src={content.fotos[0].url}
+          alt={content.fotos[0].alt}
           loading="lazy"
         />
         <Image
@@ -51,20 +51,20 @@ function OmSabineForside({ content }) {
             ></div> */}
             <Image
               className="w-full h-96  object-cover"
-              width={content.fotos[0].width}
-              height={content.fotos[0].height}
-              src={content.fotos[0].url}
-              alt={content.fotos[0].alt}
+              width={content.fotos[1].width}
+              height={content.fotos[1].height}
+              src={content.fotos[1].url}
+              alt={content.fotos[1].alt}
               loading="lazy"
             />
           </SwiperSlide>
           <SwiperSlide>
             <Image
               className="w-full h-96  object-cover"
-              width={content.fotos[1].width}
-              height={content.fotos[1].height}
-              src={content.fotos[1].url}
-              alt={content.fotos[1].alt}
+              width={content.fotos[0].width}
+              height={content.fotos[0].height}
+              src={content.fotos[0].url}
+              alt={content.fotos[0].alt}
               loading="lazy"
             />
           </SwiperSlide>
