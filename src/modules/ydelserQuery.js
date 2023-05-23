@@ -14,6 +14,9 @@ export const ydelserQuery = gql`
           paragraph
           heroImage {
             url
+            width
+            height
+            alt
           }
         }
         ... on YdelserRecord {
@@ -26,6 +29,9 @@ export const ydelserQuery = gql`
             price
             photo {
               url
+              width
+              height
+              alt
             }
           }
         }

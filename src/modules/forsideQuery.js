@@ -21,6 +21,9 @@ export const forsideQuery = gql`
           smallTitle
           photo {
             url
+            width
+            height
+            alt
           }
           time
           titleTwo
@@ -46,6 +49,9 @@ export const forsideQuery = gql`
           id
           fotos {
             url
+            width
+            height
+            alt
           }
           underOverskrift
           overskrift
@@ -77,6 +83,9 @@ export const forsideQuery = gql`
             broedtekst
             foto {
               url
+              width
+              height
+              alt
             }
           }
           knap {
@@ -93,6 +102,9 @@ export const forsideQuery = gql`
             produktNavn
             produktBillede {
               url
+              width
+              height
+              alt
             }
             pris
           }
@@ -108,6 +120,9 @@ export const forsideQuery = gql`
 
           fotoParallax {
             url
+            width
+            height
+            alt
           }
         }
       }
