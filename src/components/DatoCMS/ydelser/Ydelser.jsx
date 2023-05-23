@@ -13,7 +13,7 @@ function Ydelser({ content }) {
           >
             <div className=" grid sm:grid-cols-2 max-w-[1450px] mx-auto">
               <div className="flex flex-col  justify-center items-center">
-                <article className="max-w-lg px-4 py-16 sm:p-4 ">
+                <article className="max-w-xl px-4 py-16 sm:p-4 ">
                   <h2 className="text-gold-light text-4xl mb-4 font-light uppercase">
                     {ydelse.title}
                   </h2>
