@@ -3,7 +3,7 @@ import Anchor from "../../Anchor";
 function FindMigHer({ content }) {
   console.log(content.kort);
   return (
-    <section className=" grid md:grid-cols-2 items-center mx-auto max-w-[1450px] justify-items-center pb-8">
+    <section className=" grid md:grid-cols-2 items-center mx-auto max-w-[1450px] justify-items-center ">
       <div className="max-md:h-[300px] h-[500px] w-full  grayscale">
         <iframe
           width="100%"
