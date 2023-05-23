@@ -7,7 +7,7 @@ import Informationer from "../components/DatoCMS/omSabine/Informationer";
 import Footer from "../components/Footer";
 
 export default function OmSabine({ data }) {
-  //console.log(data);
+  console.log(data);
   const { main, footer } = data;
 
   return (
@@ -17,13 +17,13 @@ export default function OmSabine({ data }) {
           // render content on the page
           switch (content.__typename) {
             case "OmSabineHeroRecord":
-              return <Hero content={content} />;
+              return <Hero key={content.id} content={content} />;
             case "MinHistorieRecord":
-              return <OmMig content={content} />;
+              return <OmMig key={content.id} content={content} />;
             case "OmSabineGalleriRecord":
-              return <Galleri content={content} />;
+              return <Galleri key={content.id} content={content} />;
             case "OmSabineInformationRecord":
-              return <Informationer content={content} />;
+              return <Informationer key={content.id} content={content} />;
           }
         })}
       </main>
