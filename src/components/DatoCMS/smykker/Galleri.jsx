@@ -6,7 +6,7 @@ import IndholdModal from "./IndholdModal";
 import GalleriWeb from "./GalleriWeb";
 import GalleriTablet from "./GalleriTablet";
 import GalleriMobile from "./GalleriMobile";
-import Filtering from "./Filtering";
+import Filtrering from "./Filtrering";
 
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
@@ -71,7 +71,7 @@ function Galleri({ produkter }) {
 
   return (
     <>
-      <Filtering
+      <Filtrering
         kategori={uniqueKategorier}
         materiale={uniqueMaterialer}
         setKategoriFilter={setKategoriFilter}
