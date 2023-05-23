@@ -3,7 +3,7 @@ import Anchor from "../../Anchor";
 export default function KontaktFeedback({ content }) {
   const { overskrift, tekst } = content;
   return (
-    <div className="text-center p-8 lg:p-12 min-h-[60vh] flex flex-col justify-center items-center">
+    <div className="text-center p-8 lg:p-12 min-h-[70vh] h-full flex flex-col justify-center items-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178.987 178.987" className="w-24 md:w-32 mb-8 md:mb-12 text-gold-light">
         <path
           d="M4.5,46.582,37.566,79.648l49.6-74.4"
