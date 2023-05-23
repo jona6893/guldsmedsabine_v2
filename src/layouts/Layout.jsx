@@ -5,17 +5,16 @@ import { useRouter } from "next/router";
 
 // Frontend
 export default function Layout({ children, navData }) {
- const router = useRouter();
- const currentUrl = router.asPath;
- console.log(currentUrl);
+  const router = useRouter();
+  const currentUrl = router.asPath;
+  console.log(currentUrl);
   return (
     <>
-    {currentUrl !== '/kontakt-feedback' &&  <Navigation navData={navData} />}
-     
+      {currentUrl !== "/kontakt-feedback" && <Navigation navData={navData} />}
+
       {children}
-      <GotoTop/>
-      <Footer/>
-      
+      <GotoTop />
+      {/* <Footer/> */}
     </>
   );
 }

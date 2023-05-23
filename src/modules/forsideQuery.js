@@ -3,7 +3,7 @@ import { gql } from "graphql-request";
 //* Import af Inhold til forsiden
 export const forsideQuery = gql`
   query {
-    allPages(filter: { name: { eq: "Forside" } }) {
+    main: allPages(filter: { name: { eq: "Forside" } }) {
       id
       name
       content {
@@ -124,6 +124,36 @@ export const forsideQuery = gql`
             width
             height
             alt
+          }
+        }
+      }
+    }
+    footer: allPages(filter: { name: { eq: "Footer" } }) {
+      id
+      name
+      content {
+        ... on FooterIndholdRecord {
+          __typename
+          logo {
+            url
+          }
+          adresse
+          telefonNummer
+          email
+          cvr
+          socialMedie {
+            icon {
+              url
+            }
+            title
+            link
+          }
+          undersider {
+            overskrift
+            link {
+              titleLink
+              link
+            }
           }
         }
       }

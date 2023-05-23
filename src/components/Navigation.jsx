@@ -59,7 +59,7 @@ export default function Navigation() {
         exit="closed"
         variants={variants}
       >
-        <div className="flex w-full justify-end">
+        <button className="flex w-full justify-end cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -69,31 +69,19 @@ export default function Navigation() {
             className="w-8 h-8 stroke-offWhite "
             onClick={() => setIsOpen(!isOpen)} // Toggle isOpen when the icon is clicked
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
-        </div>
+        </button>
 
         <Anchor href="/">
-          <img
-            onClick={() => setIsOpen(!isOpen)}
-            className="w-20"
-            src="/images/sabineLogo.svg"
-            alt=""
-          />
+          <img onClick={() => setIsOpen(!isOpen)} className="w-20" src="/images/sabineLogo.svg" alt="" />
         </Anchor>
 
         <ul className="flex flex-col justify-center items-center gap-4">
           {navData.map((item) => {
             return (
               <li key={item.name} onClick={() => setIsOpen(!isOpen)}>
-                <Anchor
-                  className="text-offWhite hover:text-gold-light transition-colors"
-                  href={`/${item.path}`}
-                >
+                <Anchor className="text-offWhite hover:text-gold-light transition-colors" href={`/${item.path}`}>
                   {item.name}
                 </Anchor>
               </li>
@@ -115,10 +103,7 @@ export default function Navigation() {
             {navData.map((item) => {
               return (
                 <li key={item.name}>
-                  <Anchor
-                    className="text-offWhite hover:text-gold-light transition-colors"
-                    href={`/${item.path}`}
-                  >
+                  <Anchor className="text-offWhite hover:text-gold-light transition-colors" href={`/${item.path}`}>
                     {item.name}
                   </Anchor>
                 </li>
@@ -134,13 +119,10 @@ export default function Navigation() {
             strokeWidth="1.5"
             stroke="currentColor"
             className="w-8 h-8 stroke-offWhite"
+            className="w-8 h-8 stroke-offWhite"
             onClick={() => setIsOpen(!isOpen)} // Toggle isOpen when the icon is clicked
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
 
           <AnimatePresence>{isOpen && <Hamburger />}</AnimatePresence>

@@ -4,17 +4,31 @@ import Hero from "../components/DatoCMS/omSabine/Hero";
 import OmMig from "../components/DatoCMS/omSabine/OmMig";
 import Galleri from "../components/DatoCMS/omSabine/Galleri";
 import Informationer from "../components/DatoCMS/omSabine/Informationer";
+import Footer from "../components/Footer";
 
 export default function OmSabine({ data }) {
-  const { content } = data;
+  //console.log(data);
+  const { main, footer } = data;
 
   return (
-    <div className="">
-      <Hero content={content} />
-      <OmMig content={content} />
-      <Galleri content={content} />
-      <Informationer content={content} />
-    </div>
+    <>
+      <main>
+        {main[0].content.map((content) => {
+          // render content on the page
+          switch (content.__typename) {
+            case "OmSabineHeroRecord":
+              return <Hero content={content} />;
+            case "MinHistorieRecord":
+              return <OmMig content={content} />;
+            case "OmSabineGalleriRecord":
+              return <Galleri content={content} />;
+            case "OmSabineInformationRecord":
+              return <Informationer content={content} />;
+          }
+        })}
+      </main>
+      <Footer content={footer[0].content[0]} />
+    </>
   );
 }
 
@@ -29,9 +43,8 @@ export async function getStaticProps() {
   });
 
   const graphQLData = await graphQLClient.request(omSabineQuery);
-  const filteredGraphQLData = graphQLData.allPages[0];
-
+  //console.log(graphQLData);
   return {
-    props: { data: filteredGraphQLData },
+    props: { data: graphQLData },
   };
 }

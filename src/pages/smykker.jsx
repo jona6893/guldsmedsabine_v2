@@ -2,20 +2,24 @@ import { GraphQLClient } from "graphql-request";
 import { smykkerQuery } from "../modules/smykkerQuery";
 import Galleri from "../components/DatoCMS/smykker/Galleri";
 import Hero from "../components/DatoCMS/smykker/Hero";
+import Footer from "../components/Footer";
 
 export default function Smykker({ data }) {
-  const { allProdukters } = data;
-  const produkter = allProdukters;
-  console.log(produkter);
+  const { main, products, footer } = data;
+  const produkter = products;
+  //console.log(produkter);
 
   return (
     <>
-      <section className="flex items-center justify-center pt-12">
-        <Hero />
-      </section>
-      <div className="text-lg flex flex-col gap-8 justify-center items-center py-20 bg-grey-dark">
-        <Galleri produkter={produkter} />
-      </div>
+      <main>
+        <section className="flex items-center justify-center pt-12">
+          <Hero />
+        </section>
+        <div className="text-lg flex flex-col gap-8 justify-center items-center py-20 bg-grey-dark">
+          <Galleri produkter={produkter} />
+        </div>
+      </main>
+      <Footer content={footer[0].content[0]} />
     </>
   );
 }
@@ -31,7 +35,7 @@ export async function getStaticProps() {
   });
 
   const graphQLData = await graphQLClient.request(smykkerQuery);
-  //console.log(filteredGraphQLData);
+  //console.log(graphQLData);
   return {
     props: { data: graphQLData },
   };

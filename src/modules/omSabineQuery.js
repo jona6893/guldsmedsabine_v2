@@ -3,7 +3,7 @@ import { gql } from "graphql-request";
 //* Import af Inhold til siden "Om Sabine"
 export const omSabineQuery = gql`
   query {
-    allPages(filter: { name: { eq: "Om Sabine" } }) {
+    main: allPages(filter: { name: { eq: "Om Sabine" } }) {
       id
       name
       content {
@@ -38,6 +38,7 @@ export const omSabineQuery = gql`
           }
         }
         ... on OmSabineGalleriRecord {
+          __typename
           id
           galleri {
             id
@@ -48,6 +49,7 @@ export const omSabineQuery = gql`
           }
         }
         ... on OmSabineInformationRecord {
+          __typename
           id
           heading
           subHeading
@@ -60,6 +62,36 @@ export const omSabineQuery = gql`
           lokationHeading
           aabningstiderHeading
           tider
+        }
+      }
+    }
+    footer: allPages(filter: { name: { eq: "Footer" } }) {
+      id
+      name
+      content {
+        ... on FooterIndholdRecord {
+          __typename
+          logo {
+            url
+          }
+          adresse
+          telefonNummer
+          email
+          cvr
+          socialMedie {
+            icon {
+              url
+            }
+            title
+            link
+          }
+          undersider {
+            overskrift
+            link {
+              titleLink
+              link
+            }
+          }
         }
       }
     }
