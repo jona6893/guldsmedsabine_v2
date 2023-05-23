@@ -8,7 +8,7 @@ function OmMig({ content }) {
           <div className=" px-5 py-16 grid justify-items-center">
             <article>
               <h2 className="font-thin text-5xl text-gold-light mb-4">{content.title}</h2>
-              <p className="max-w-lg text-base">{content.paragraph}</p>
+              <p className="max-w-xl text-base">{content.paragraph}</p>
             </article>
           </div>
 
@@ -20,10 +20,10 @@ function OmMig({ content }) {
           <div className="px-5 max-md:py-16 md:pb-16 grid gap-8 justify-items-center">
             <article>
               <h3 className="font-thin text-4xl text-gold-light mb-4">{content.title2}</h3>
-              <p className="max-w-lg text-base">{content.paragraph2}</p>
+              <p className="max-w-xl text-base">{content.paragraph2}</p>
             </article>
 
-            <div className="w-full max-w-lg">
+            <div className="w-full max-w-xl">
               <Anchor className="button-primary" href={content.knap[0].url}>
                 {content.knap[0].text}
               </Anchor>

@@ -4,7 +4,7 @@ function FindMigHer({ content }) {
   console.log(content.kort);
   return (
     <section className=" grid md:grid-cols-2  mx-auto max-w-[1450px]  ">
-      <div className="max-md:h-[300px] h-[500px] w-full  grayscale">
+      <div className="max-md:h-[300px] h-[500px] w-full grayscale">
         <iframe width="100%" height="100%" src={"https://maps.google.com/maps?q=" + content.kort.latitude + "," + content.kort.longitude + "&t=&z=19&ie=UTF8&iwloc=&output=embed"}></iframe>
       </div>
       <article className="max-md:order-first px-4 py-16 md:px-6 bg-no-repeat bg-contain grid justify-items-center items-center" style={{ backgroundImage: `url("/images/gren_ti.svg")`, backgroundPosition: "0% 100%", backgroundSize: "" }}>
