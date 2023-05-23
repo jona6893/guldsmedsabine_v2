@@ -18,8 +18,8 @@ export default function GotoTop() {
   };
   //update scroll info when user scrolls
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
   });
 
   return (
@@ -34,11 +34,15 @@ export default function GotoTop() {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="currentColor"
-            class="w-8 h-8 stroke-offWhite"
+            className="w-8 h-8 stroke-offWhite"
           >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75"
+            />
           </svg>
         </a>
       </div>

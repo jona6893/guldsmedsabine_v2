@@ -1,6 +1,8 @@
 import Anchor from "../../Anchor";
-import { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useSpring, useTransform, MotionValue } from "framer-motion";
+import { useRef,  } from "react";
+import { motion, useScroll, useTransform, } from "framer-motion";
+import Image from "next/image";
+
 
 function useParallax(value, distance) {
   return useTransform(value, [0, 0.5], [-distance, distance]);
@@ -8,6 +10,7 @@ function useParallax(value, distance) {
 
 function UdvalgteSmykker({ content }) {
   const refImage = useRef(null);
+
 
   // Scroll progress for each grid
   const { scrollYProgress: scrollYProgressSecond } = useScroll({
@@ -23,9 +26,20 @@ function UdvalgteSmykker({ content }) {
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
         {content.udvalgteSmykker.map((udvalgtSmykke, index) => {
           return index % 2 == 0 ? (
-            <motion.div className="secondGrid grid gap-8 mb-4 " style={{ y: ySecond }} ref={refImage}>
-              <div key={index} className="">
-                <img src={udvalgtSmykke.produktBillede[0].url} alt="" className="w-64 h-80 object-cover" />
+            <motion.div
+              key={udvalgtSmykke.id}
+              className="secondGrid grid gap-8 mb-4 "
+              style={{ y: ySecond }}
+              ref={refImage}
+            >
+              <div className="">
+                <Image
+                  width={udvalgtSmykke.produktBillede[0].width}
+                  height={udvalgtSmykke.produktBillede[0].height}
+                  src={udvalgtSmykke.produktBillede[0].url}
+                  alt={udvalgtSmykke.produktBillede[0].alt}
+                  className="w-64 h-80 object-cover"
+                />
                 <article className="flex justify-between text-offWhite text-sm mt-2">
                   <p>{udvalgtSmykke.produktNavn}</p>
                   <p>{udvalgtSmykke.pris + " kr"}</p>
@@ -34,7 +48,13 @@ function UdvalgteSmykker({ content }) {
             </motion.div>
           ) : (
             <div key={index} className="">
-              <img src={udvalgtSmykke.produktBillede[0].url} alt="" className="w-64 h-80 object-cover" />
+              <Image
+                width={udvalgtSmykke.produktBillede[0].width}
+                height={udvalgtSmykke.produktBillede[0].height}
+                src={udvalgtSmykke.produktBillede[0].url}
+                alt={udvalgtSmykke.produktBillede[0].alt}
+                className="w-64 h-80 object-cover"
+              />
               <article className="flex justify-between text-offWhite text-sm mt-2">
                 <p>{udvalgtSmykke.produktNavn}</p>
                 <p>{udvalgtSmykke.pris + " kr"}</p>
