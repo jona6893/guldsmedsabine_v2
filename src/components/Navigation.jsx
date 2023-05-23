@@ -65,8 +65,9 @@ export default function Navigation() {
             fill="none"
             viewBox="0 0 24 24"
             strokeWidth="1.5"
+            strokeWidth="1.5"
             stroke="currentColor"
-            class="w-8 h-8 stroke-offWhite "
+            className="w-8 h-8 stroke-offWhite "
             onClick={() => setIsOpen(!isOpen)} // Toggle isOpen when the icon is clicked
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -118,6 +119,7 @@ export default function Navigation() {
             viewBox="0 0 24 24"
             strokeWidth="1.5"
             stroke="currentColor"
+            className="w-8 h-8 stroke-offWhite"
             className="w-8 h-8 stroke-offWhite"
             onClick={() => setIsOpen(!isOpen)} // Toggle isOpen when the icon is clicked
           >

@@ -14,6 +14,9 @@ export const omSabineQuery = gql`
           paragraph
           heroImage {
             url
+            width
+            height
+            alt
           }
         }
         ... on MinHistorieRecord {
@@ -29,13 +32,20 @@ export const omSabineQuery = gql`
           }
           sabinephoto {
             url
+            width
+            height
+            alt
           }
         }
         ... on OmSabineGalleriRecord {
           __typename
           id
           galleri {
+            id
             url
+            width
+            height
+            alt
           }
         }
         ... on OmSabineInformationRecord {

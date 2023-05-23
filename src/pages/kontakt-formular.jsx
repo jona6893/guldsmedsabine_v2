@@ -4,15 +4,15 @@ import Kontakt from "../components/DatoCMS/kontakt/Kontakt";
 
 // Frontend
 export default function KontaktPage({ data }) {
-  //console.log(data);
+  console.log(data);
 
   return (
     <main>
-      {data.content.map((content) => {
+      {data.content.map((content, index) => {
         // render content on the page
         switch (content.__typename) {
           case "KontaktRecord":
-            return <Kontakt content={content} />;
+            return <Kontakt key={content.id} content={content} />;
         }
       })}
     </main>

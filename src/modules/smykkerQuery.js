@@ -15,6 +15,9 @@ export const smykkerQuery = gql`
         produktNavn
         produktBillede {
           url
+          width
+          height
+          alt
         }
         produktBeskrivelse
         kategori

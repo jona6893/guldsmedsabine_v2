@@ -18,15 +18,13 @@ export default function YdelserPage({ data }) {
             case "YdelserHeroRecord":
               return <YdelserHero content={content} />;
 
-            case "YdelserRecord":
-              return <Ydelser content={content} />;
-            case "SpoergsmaalRecord":
-              return <Question content={content} />;
-          }
-        })}
-      </main>
-      <Footer content={footer[0].content[0]} />
-    </>
+          case "YdelserRecord":
+            return <Ydelser key={content.id} content={content} />;
+          case "SpoergsmaalRecord":
+            return <Question key={content.id} content={content} />;
+        }
+      })}
+    </main>
   );
 }
 

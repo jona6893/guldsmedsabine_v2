@@ -14,18 +14,25 @@ export const ydelserQuery = gql`
           paragraph
           heroImage {
             url
+            width
+            height
+            alt
           }
         }
         ... on YdelserRecord {
           __typename
           id
           ydelser {
+            id
             title
             paragraph
             broedtekst
             price
             photo {
               url
+              width
+              height
+              alt
             }
           }
         }
