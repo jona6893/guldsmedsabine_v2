@@ -3,24 +3,30 @@ import YdelserHero from "../components/DatoCMS/ydelser/YdelserHero";
 import Ydelser from "../components/DatoCMS/ydelser/Ydelser";
 import Question from "../components/DatoCMS/ydelser/Question";
 import { ydelserQuery } from "../modules/ydelserQuery";
+import Footer from "../components/Footer";
 
 export default function YdelserPage({ data }) {
   console.log(data);
-  return (
-    <main>
-      {data.content.map((content) => {
-        // render content on the page
-        switch (content.__typename) {
-          case "YdelserHeroRecord":
-            return <YdelserHero content={content} />;
+  const { main, footer } = data;
 
-          case "YdelserRecord":
-            return <Ydelser content={content} />;
-          case "SpoergsmaalRecord":
-            return <Question content={content} />;
-        }
-      })}
-    </main>
+  return (
+    <>
+      <main>
+        {main[0].content.map((content) => {
+          // render content on the page
+          switch (content.__typename) {
+            case "YdelserHeroRecord":
+              return <YdelserHero content={content} />;
+
+            case "YdelserRecord":
+              return <Ydelser content={content} />;
+            case "SpoergsmaalRecord":
+              return <Question content={content} />;
+          }
+        })}
+      </main>
+      <Footer content={footer[0].content[0]} />
+    </>
   );
 }
 
@@ -35,9 +41,8 @@ export async function getStaticProps() {
   });
 
   const graphQLData = await graphQLClient.request(ydelserQuery);
-  const filteredGraphQLData = graphQLData.allPages[0];
-  //console.log(filteredGraphQLData);
+  //console.log(graphQLData);
   return {
-    props: { data: filteredGraphQLData },
+    props: { data: graphQLData },
   };
 }

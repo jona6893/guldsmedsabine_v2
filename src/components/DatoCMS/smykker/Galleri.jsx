@@ -53,13 +53,13 @@ function Galleri({ produkter }) {
 
   let Galleri;
   if (size.width <= 640 + 22) {
-    console.log("mobile = " + size.width);
+    //console.log("mobile = " + size.width);
     Galleri = GalleriMobile;
   } else if (size.width <= 768) {
-    console.log("Tablet = " + size.width);
+    //console.log("Tablet = " + size.width);
     Galleri = GalleriTablet;
   } else {
-    console.log("web = " + size.width);
+    //console.log("web = " + size.width);
     Galleri = GalleriWeb;
   }
 

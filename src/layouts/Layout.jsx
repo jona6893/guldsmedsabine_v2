@@ -8,8 +8,8 @@ export default function Layout({ children, navData }) {
     <>
       <Navigation navData={navData} />
       {children}
-      <GotoTop/>
-      <Footer/>
+      <GotoTop />
+      {/* <Footer/> */}
     </>
   );
 }

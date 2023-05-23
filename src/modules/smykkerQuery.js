@@ -2,12 +2,12 @@ import { gql } from "graphql-request";
 
 //* Import af Inhold til siden "Smykker"
 export const smykkerQuery = gql`
-    query {
-    allPages(filter: { name: { eq: "Smykker" } }) {
+  query {
+    main: allPages(filter: { name: { eq: "Smykker" } }) {
       id
       name
     }
-    allProdukters {
+    products: allProdukters {
       ... on ProdukterRecord {
         id
         materiale
@@ -18,6 +18,36 @@ export const smykkerQuery = gql`
         }
         produktBeskrivelse
         kategori
+      }
+    }
+    footer: allPages(filter: { name: { eq: "Footer" } }) {
+      id
+      name
+      content {
+        ... on FooterIndholdRecord {
+          __typename
+          logo {
+            url
+          }
+          adresse
+          telefonNummer
+          email
+          cvr
+          socialMedie {
+            icon {
+              url
+            }
+            title
+            link
+          }
+          undersider {
+            overskrift
+            link {
+              titleLink
+              link
+            }
+          }
+        }
       }
     }
   }

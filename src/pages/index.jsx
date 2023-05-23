@@ -7,36 +7,40 @@ import FindMigHer from "../components/DatoCMS/forside/FindMigHer";
 import UdvalgteYdelser from "../components/DatoCMS/forside/UdvalgteYdelser";
 import UdvalgteSmykker from "../components/DatoCMS/forside/UdvalgteSmykker";
 import Parallax from "../components/DatoCMS/forside/Parallax";
+import Footer from "../components/Footer";
 
 // Frontend
 export default function HomePage({ data }) {
-  console.log(data);
-  const event = data.content[2];
+  //console.log(data);
+  const { main, footer } = data;
+  const event = main[0].content[2];
 
   return (
-    <main>
-  
-      {/* <h1>Hello {data.name}</h1> */}
-      {data.content.map((content) => {
-        // render content on the page
-        switch (content.__typename) {
-          /*  case "SimpleTextRecord":
+    <>
+      <main>
+        {/* <h1>Hello {data.name}</h1> */}
+        {main[0].content.map((content) => {
+          // render content on the page
+          switch (content.__typename) {
+            /*  case "SimpleTextRecord":
             return <SimpleText key={content.title} title={content.title} level={1} description={content.description} />; */
-          case "OmSabineForsideRecord":
-            return <OmSabineForside content={content} />;
-          case "EventRecord":
-            return <Event content={content} />;
-          case "FindMigHerRecord":
-            return <FindMigHer content={content} />;
-          case "UdvalgteYdelserRecord":
-            return <UdvalgteYdelser content={content} />;
-          case "UdvalgteSmykkerRecord":
-            return <UdvalgteSmykker content={content} />;
-          case "ParallaxRecord":
-            return <Parallax content={content} />;
-        }
-      })}
-    </main>
+            case "OmSabineForsideRecord":
+              return <OmSabineForside content={content} />;
+            case "EventRecord":
+              return <Event content={content} />;
+            case "FindMigHerRecord":
+              return <FindMigHer content={content} />;
+            case "UdvalgteYdelserRecord":
+              return <UdvalgteYdelser content={content} />;
+            case "UdvalgteSmykkerRecord":
+              return <UdvalgteSmykker content={content} />;
+            case "ParallaxRecord":
+              return <Parallax content={content} />;
+          }
+        })}
+      </main>
+      <Footer content={footer[0].content[0]} />
+    </>
   );
 }
 
@@ -51,9 +55,8 @@ export async function getStaticProps() {
   });
 
   const graphQLData = await graphQLClient.request(forsideQuery);
-  const filteredGraphQLData = graphQLData.allPages[0];
-  //console.log(filteredGraphQLData);
+  //console.log(graphQLData);
   return {
-    props: { data: filteredGraphQLData },
+    props: { data: graphQLData },
   };
 }
