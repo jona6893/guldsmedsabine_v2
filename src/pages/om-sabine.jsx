@@ -7,7 +7,7 @@ import Informationer from "../components/DatoCMS/omSabine/Informationer";
 import Footer from "../components/Footer";
 
 export default function OmSabine({ data }) {
-  //console.log(data);
+  console.log(data);
   const { main, footer } = data;
 
   return (
