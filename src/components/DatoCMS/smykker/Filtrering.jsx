@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 export default function Filtrering({ kategori, materiale, setKategoriFilter, setMaterialeFilter }) {
   console.log(kategori);
 
