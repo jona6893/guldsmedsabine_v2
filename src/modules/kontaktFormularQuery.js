@@ -13,6 +13,9 @@ export const kontaktFormularQuery = gql`
           paragraf
           billede {
             url
+            width
+            height
+            alt
           }
           formular {
             navn
