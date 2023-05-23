@@ -11,7 +11,11 @@ function Footer({ content }) {
           <ul className="flex gap-4">
             {content.socialMedie.map((item) => {
               return (
-                <li className="block h-12 w-12 bg-cover hover:brightness-125 transition-all" style={{ backgroundImage: `url("${item.icon?.url}")` }}>
+                <li
+                  key={item.title}
+                  className="block h-12 w-12 bg-cover hover:brightness-125 transition-all"
+                  style={{ backgroundImage: `url("${item.icon?.url}")` }}
+                >
                   <Anchor href={item.link} target="_blank" className="block h-full w-full" />
                 </li>
               );
@@ -28,11 +32,11 @@ function Footer({ content }) {
 
           {content.undersider.map((underside) => {
             return (
-              <div className="flex flex-col gap-y-2">
+              <div key={underside.overskrift} className="flex flex-col gap-y-2">
                 <h4 className="text-xl font-bold pb-2">{underside.overskrift}</h4>
                 {underside.link.map((link) => {
                   return (
-                    <a href={link.link} className="transition-colors hover:text-gold-light">
+                    <a key={link.titleLink} href={link.link} className="transition-colors hover:text-gold-light">
                       {link.titleLink}
                     </a>
                   );
