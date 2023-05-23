@@ -14,7 +14,7 @@ export default function Layout({ children, navData }) {
      
       {children}
       <GotoTop/>
-      {currentUrl !== '/kontakt-feedback' && <Footer/>}
+      <Footer/>
       
     </>
   );
