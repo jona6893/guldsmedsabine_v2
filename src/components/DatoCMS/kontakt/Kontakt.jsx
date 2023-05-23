@@ -6,7 +6,7 @@ export default function Kontakt({ content }) {
 
   return (
     <section className="grid lg:grid-cols-2 max-w-[1450px] mx-auto  ">
-      <div className="relative px-6 sm:px-12 lg:px-16 xl:px-24  py-16 flex flex-col gap-8  mx-auto bg-no-repeat bg-cover bg-center" style={{ backgroundImage: `url("/images/sabineLogoBaground.svg")` }}>
+      <div className="relative px-6 sm:px-12 lg:px-16 xl:px-24  py-16 flex flex-col gap-8  mx-auto bg-no-repeat bg-cover lg:bg-contain bg-center" style={{ backgroundImage: `url("/images/sabineLogoBaground.svg")` }}>
         <button className="absolute top-0 lg:top-4 left-6 sm:left-12 lg:left-16 xl:left-24 text-offWhite text-4xl" onClick={() => Router.back()}>
           ←
         </button>
