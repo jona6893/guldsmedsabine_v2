@@ -40,6 +40,7 @@ export const omSabineQuery = gql`
         ... on OmSabineGalleriRecord {
           id
           galleri {
+            id
             url
             width
             height

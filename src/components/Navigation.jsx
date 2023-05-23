@@ -64,17 +64,26 @@ export default function Navigation() {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="currentColor"
-            class="w-8 h-8 stroke-offWhite "
+            className="w-8 h-8 stroke-offWhite "
             onClick={() => setIsOpen(!isOpen)} // Toggle isOpen when the icon is clicked
           >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </div>
 
         <Anchor href="/">
-          <img onClick={() => setIsOpen(!isOpen)} className="w-20" src="/images/sabineLogo.svg" alt="" />
+          <img
+            onClick={() => setIsOpen(!isOpen)}
+            className="w-20"
+            src="/images/sabineLogo.svg"
+            alt=""
+          />
         </Anchor>
 
         <ul className="flex flex-col justify-center items-center gap-4">
@@ -122,12 +131,16 @@ export default function Navigation() {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth="1.5"
             stroke="currentColor"
-            class="w-8 h-8 stroke-offWhite"
+            className="w-8 h-8 stroke-offWhite"
             onClick={() => setIsOpen(!isOpen)} // Toggle isOpen when the icon is clicked
           >
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
           </svg>
 
           <AnimatePresence>{isOpen && <Hamburger />}</AnimatePresence>

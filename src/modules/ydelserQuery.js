@@ -23,6 +23,7 @@ export const ydelserQuery = gql`
           __typename
           id
           ydelser {
+            id
             title
             paragraph
             broedtekst

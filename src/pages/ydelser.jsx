@@ -8,16 +8,16 @@ export default function YdelserPage({ data }) {
   console.log(data);
   return (
     <main>
-      {data.content.map((content) => {
+      {data.content.map((content,) => {
         // render content on the page
         switch (content.__typename) {
           case "YdelserHeroRecord":
-            return <YdelserHero content={content} />;
+            return <YdelserHero key={content.id} content={content} />;
 
           case "YdelserRecord":
-            return <Ydelser content={content} />;
+            return <Ydelser key={content.id} content={content} />;
           case "SpoergsmaalRecord":
-            return <Question content={content} />;
+            return <Question key={content.id} content={content} />;
         }
       })}
     </main>

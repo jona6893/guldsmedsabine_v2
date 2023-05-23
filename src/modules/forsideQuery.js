@@ -81,6 +81,7 @@ export const forsideQuery = gql`
           udvalgteYdelser {
             overskrift
             broedtekst
+            id
             foto {
               url
               width
