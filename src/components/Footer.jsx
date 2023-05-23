@@ -4,7 +4,7 @@ function Footer({ content }) {
   //console.log(content);
 
   return (
-    <footer className="text-offWhite bg-black py-4">
+    <footer className="text-offWhite bg-black py-4 mt-auto">
       <div className="grid p-8 gap-8 max-w-[1450px] mx-auto">
         <div className="flex w-full gap-8 justify-between">
           <img className="w-24" src={content.logo.url} alt="" />
