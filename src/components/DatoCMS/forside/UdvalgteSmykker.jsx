@@ -38,6 +38,7 @@ function UdvalgteSmykker({ content }) {
                   height={udvalgtSmykke.produktBillede[0].height}
                   src={udvalgtSmykke.produktBillede[0].url}
                   alt={udvalgtSmykke.produktBillede[0].alt}
+                  loading="lazy"
                   className="w-64 h-80 object-cover"
                 />
                 <article className="flex justify-between text-offWhite text-sm mt-2">
@@ -53,6 +54,7 @@ function UdvalgteSmykker({ content }) {
                 height={udvalgtSmykke.produktBillede[0].height}
                 src={udvalgtSmykke.produktBillede[0].url}
                 alt={udvalgtSmykke.produktBillede[0].alt}
+                loading="lazy"
                 className="w-64 h-80 object-cover"
               />
               <article className="flex justify-between text-offWhite text-sm mt-2">

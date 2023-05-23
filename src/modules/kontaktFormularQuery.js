@@ -9,9 +9,11 @@ export const kontaktFormularQuery = gql`
       content {
         ... on KontaktRecord {
           __typename
+          id
           overskrift
           paragraf
           billede {
+            id
             url
             width
             height

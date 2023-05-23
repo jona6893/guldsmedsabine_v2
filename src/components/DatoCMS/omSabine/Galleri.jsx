@@ -1,11 +1,10 @@
- import { useEffect, useRef, useState } from "react";
+ import { useRef } from "react";
  import {
    motion,
    useScroll,
-   useSpring,
    useTransform,
-   MotionValue,
  } from "framer-motion";
+import Image from "next/image";
 
  function useParallax(value, distance) {
    return useTransform(value, [0, 1], [-distance, distance]);
@@ -27,7 +26,7 @@ function Galleri({ content }) {
 
 
 
-
+console.log(content)
 
   return (
     <section className="bg-grey-dark ">
@@ -41,18 +40,17 @@ function Galleri({ content }) {
               style={{ y: ySecond }}
               ref={refImage}
             >
-              <img
+              <Image
                 className={"mb-16"}
                 src={img.url}
-                alt=""
+                alt={img.alt}
+                width={img.width}
+                height={img.height}
+                loading="lazy"
               />
             </motion.div>
           ) : (
-            <img
-              className={"mt-16"}
-              src={img.url}
-              alt=""
-            />
+            <img className={"mt-16"} src={img.url} alt="" />
           );
         })}
       </div>
@@ -60,14 +58,16 @@ function Galleri({ content }) {
       <div className="md:hidden grid grid-cols-2 grid-rows-2 justify-items-center">
         {content[2].galleri.map((img, index) => {
 
-          return  (
-            
-            <img
+          return (
+            <Image
               className={"w-full"}
               src={img.url}
-              alt=""
+              alt={img.alt}
+              width={img.width}
+              height={img.height}
+              loading="lazy"
             />
-          )
+          );
         })}
       </div> 
 

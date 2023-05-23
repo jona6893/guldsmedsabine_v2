@@ -20,6 +20,7 @@ function UdvalgteYdelser({ content }) {
                 height={udvalgtYdelse.foto.height}
                 src={udvalgtYdelse.foto.url}
                 alt={udvalgtYdelse.foto.alt}
+                loading="lazy"
                 className="w-full h-48 object-cover "
               />
               <article className="p-4 flex flex-col justify-center">
