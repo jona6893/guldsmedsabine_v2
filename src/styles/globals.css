@@ -27,20 +27,3 @@
 html {
   scroll-behavior: smooth;
 }
-
-@font-face {
-  font-family: 'tangier';
-  src: url('path_to_your_font/your_font.woff2') format('woff2'),
-       url('path_to_your_font/your_font.woff') format('woff');
-  font-weight: 400; /* Use the weight that's appropriate for your font */
-  font-style: normal; /* Use the style that's appropriate for your font */
-  font-display: swap; /* This is the key line you're interested in */
-}
-@font-face {
-  font-family: 'Open sans';
-  src: url('path_to_your_font/your_font.woff2') format('woff2'),
-       url('path_to_your_font/your_font.woff') format('woff');
-  font-weight: 400; /* Use the weight that's appropriate for your font */
-  font-style: normal; /* Use the style that's appropriate for your font */
-  font-display: swap; /* This is the key line you're interested in */
-}
