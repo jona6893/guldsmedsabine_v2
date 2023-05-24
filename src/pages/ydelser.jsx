@@ -11,6 +11,9 @@ export default function YdelserPage({ data }) {
 
   return (
     <>
+      <Head>
+        <title>Ydelser</title>
+      </Head>
       <main>
         {main[0].content.map((content) => {
           // render content on the page

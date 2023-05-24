@@ -12,6 +12,13 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
           rel="stylesheet"
         />
+        <meta
+          name="description"
+          content="Opdag unikke, håndlavede smykker fra Sabine Sørensen. 
+          Jeg tilbyder skræddersyede designs, smykke reparationer og personlig service i Fredensborg. 
+          Lad din passion for æstetik møde min ekspertise i smykkedesign og giv dine gamle smykker nyt liv. 
+          Besøg mig og oplev en uforglemmelig smykkeoplevelse."
+        ></meta>
       </Head>
       <body className="bg-grey-dark">
         <Main />

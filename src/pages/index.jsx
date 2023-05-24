@@ -8,6 +8,7 @@ import UdvalgteYdelser from "../components/DatoCMS/forside/UdvalgteYdelser";
 import UdvalgteSmykker from "../components/DatoCMS/forside/UdvalgteSmykker";
 import Parallax from "../components/DatoCMS/forside/Parallax";
 import Footer from "../components/Footer";
+import Head from "next/head";
 
 // Frontend
 export default function HomePage({ data }) {
@@ -17,6 +18,9 @@ export default function HomePage({ data }) {
 
   return (
     <>
+      <Head>
+        <title>Guldsmed Sabine - Håndlavet Smykker</title>
+      </Head>
       <main>
         {/* <h1>Hello {data.name}</h1> */}
         {main[0].content.map((content) => {

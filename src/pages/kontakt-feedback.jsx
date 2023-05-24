@@ -2,6 +2,7 @@ import { GraphQLClient } from "graphql-request";
 import { kontaktFeedbackQuery } from "../modules/kontaktFeedbackQuery";
 import KontaktFeedback from "../components/DatoCMS/kontakt/KontaktFeedback";
 import Footer from "../components/Footer";
+import Head from "next/head";
 
 // Frontend
 export default function KontaktPage({ data }) {
@@ -10,6 +11,9 @@ export default function KontaktPage({ data }) {
 
   return (
     <>
+      <Head>
+        <title>Kontakt Formular Bekræftigelse</title>
+      </Head>
       <main>
         {main[0].content.map((content) => {
           // render content on the page

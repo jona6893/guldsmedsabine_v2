@@ -10,6 +10,9 @@ export default function KontaktPage({ data }) {
 
   return (
     <>
+      <Head>
+        <title>Kontakt | Kontakt mig her</title>
+      </Head>
       <main>
         {main[0].content.map((content) => {
           // render content on the page

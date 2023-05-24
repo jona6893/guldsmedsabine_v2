@@ -12,6 +12,9 @@ export default function OmSabine({ data }) {
 
   return (
     <>
+      <Head>
+        <title>Om Sabine | Lidt om mig</title>
+      </Head>
       <main>
         {main[0].content.map((content) => {
           // render content on the page

@@ -11,6 +11,9 @@ export default function Smykker({ data }) {
 
   return (
     <>
+      <Head>
+        <title>Smykker | Galleri</title>
+      </Head>
       <main>
         <section className="flex items-center justify-center pt-12">
           <Hero />
