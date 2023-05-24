@@ -10,7 +10,6 @@ export const smykkerQuery = gql`
     products: allProdukters {
       ... on ProdukterRecord {
         id
-        materiale
         pris
         produktNavn
         produktBillede {
@@ -20,7 +19,14 @@ export const smykkerQuery = gql`
           alt
         }
         produktBeskrivelse
-        kategori
+        kategori {
+          kategori
+          id
+        }
+        materiale {
+          materiale
+          id
+        }
       }
     }
     footer: allPages(filter: { name: { eq: "Footer" } }) {
