@@ -16,7 +16,7 @@ function Footer({ content }) {
                   className="block h-12 w-12 bg-cover hover:brightness-125 transition-all"
                   style={{ backgroundImage: `url("${item.icon?.url}")` }}
                 >
-                  <Anchor href={item.link} target="_blank" className="block h-full w-full" />
+                  <Anchor href={item.link} role="Link" target="_blank" className="block h-full w-full" />
                 </li>
               );
             })}
@@ -36,9 +36,9 @@ function Footer({ content }) {
                 <h4 className="text-xl font-bold pb-2">{underside.overskrift}</h4>
                 {underside.link.map((link) => {
                   return (
-                    <a key={link.titleLink} href={link.link} className="transition-colors hover:text-gold-light">
+                    <Anchor key={link.titleLink} href={link.link} className="transition-colors hover:text-gold-light">
                       {link.titleLink}
-                    </a>
+                    </Anchor>
                   );
                 })}
               </div>

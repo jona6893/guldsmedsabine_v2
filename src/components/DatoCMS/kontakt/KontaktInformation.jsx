@@ -7,10 +7,14 @@ export default function KontaktInformation({ content }) {
     <section className="grid lg:grid-cols-2 max-w-[1450px] mx-auto">
       <div className="px-6 sm:px-12 py-16  flex flex-col justify-center lg:items-center">
         <article>
-          <h1 className="text-offWhite uppercase text-4xl mb-8 font-semibold">{overskrift}</h1>
+          <h1 className="text-offWhite uppercase text-4xl mb-8 font-semibold">
+            {overskrift}
+          </h1>
           <address className="text-transform not-italic text-gold-light text-lg grid gap-y-8 mb-8">
             <p>{"Adresse: " + adresse}</p>
-            <a href={"tel:+45" + telefon.replaceAll(" ", "")}>{"Telefon: " + telefon}</a>
+            <a href={"tel:+45" + telefon.replaceAll(" ", "")}>
+              {"Telefon: " + telefon}
+            </a>
             <a href={"mailto:" + email}>{"Email: " + email}</a>
             <p>{"CVR: " + cvr}</p>
           </address>
@@ -21,9 +25,16 @@ export default function KontaktInformation({ content }) {
       </div>
       <div className="lg:order-first grayscale">
         <iframe
+          title="Google maps, Fredensborg Briller"
           width="100%"
           height="600"
-          src={"https://maps.google.com/maps?q=" + kort.latitude + "," + kort.longitude + "&t=&z=19&ie=UTF8&iwloc=&output=embed"}
+          src={
+            "https://maps.google.com/maps?q=" +
+            kort.latitude +
+            "," +
+            kort.longitude +
+            "&t=&z=19&ie=UTF8&iwloc=&output=embed"
+          }
         ></iframe>
       </div>
     </section>

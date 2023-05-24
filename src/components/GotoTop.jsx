@@ -20,8 +20,10 @@ export default function GotoTop() {
   // update scroll info when user scrolls
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  });
+    return () =>
+      window.removeEventListener("scroll", handleScroll, { passive: true });
+  }, []);
+
 
   return (
     <div
