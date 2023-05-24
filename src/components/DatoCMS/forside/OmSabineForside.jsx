@@ -32,7 +32,7 @@ function OmSabineForside({ content }) {
             height={content.fotos[0].height}
             src={content.fotos[0].url}
             alt={content.fotos[0].alt}
-            priority={false}
+            priority={true}
           />
           <Image
             className="col-start-1 row-span-1 object-cover h-full aspect-square max-xl:hidden"
@@ -40,7 +40,7 @@ function OmSabineForside({ content }) {
             height={content.fotos[2].height}
             src={content.fotos[2].url}
             alt={content.fotos[2].alt}
-            priority={false}
+            priority={true}
           />
         </div>
         <div className="md:hidden w-screen  order-1">
@@ -63,7 +63,7 @@ function OmSabineForside({ content }) {
                 height={content.fotos[0].height}
                 src={content.fotos[0].url}
                 alt={content.fotos[0].alt}
-                priority={false}
+                priority={true}
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -73,7 +73,7 @@ function OmSabineForside({ content }) {
                 height={content.fotos[1].height}
                 src={content.fotos[1].url}
                 alt={content.fotos[1].alt}
-                loading="lazy"
+                priority={true}
               />
             </SwiperSlide>
             <SwiperSlide>
@@ -83,7 +83,7 @@ function OmSabineForside({ content }) {
                 height={content.fotos[2].height}
                 src={content.fotos[2].url}
                 alt={content.fotos[2].alt}
-                loading="lazy"
+                priority={true}
               />
             </SwiperSlide>
           </Swiper>
