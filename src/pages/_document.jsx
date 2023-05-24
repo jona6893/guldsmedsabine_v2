@@ -19,6 +19,20 @@ export default function Document() {
           Lad din passion for æstetik møde min ekspertise i smykkedesign og giv dine gamle smykker nyt liv. 
           Besøg mig og oplev en uforglemmelig smykkeoplevelse."
         ></meta>
+        <meta
+          name="keywords"
+          content="Sabine Sørensen,
+Unikke smykker,
+Håndlavede smykker,
+Smykkedesign,
+Skræddersyede smykker,
+Smykke reparation,
+Fredensborg guldsmed,
+Ædelsten,
+Perlesmykker,
+Kvalitetssmykker
+"
+        ></meta>
       </Head>
       <body className="bg-grey-dark">
         <Main />
