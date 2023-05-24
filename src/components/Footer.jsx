@@ -16,7 +16,7 @@ function Footer({ content }) {
                   className="block h-12 w-12 bg-cover hover:brightness-125 transition-all"
                   style={{ backgroundImage: `url("${item.icon?.url}")` }}
                 >
-                  <Anchor href={item.link} role="Link" target="_blank" className="block h-full w-full" />
+                  <Anchor href={item.link} role="link" target="_blank" className="block h-full w-full" />
                 </li>
               );
             })}
