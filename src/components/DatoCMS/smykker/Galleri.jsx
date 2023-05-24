@@ -36,10 +36,12 @@ function Galleri({ produkter }) {
   const [kategoriFilter, setKategoriFilter] = useState("");
   const [materialeFilter, setMaterialeFilter] = useState("");
 
+  //console.log(produkter);
+
   // Get an array of unique categories
-  const uniqueKategorier = [...new Set(produkter.map((produkt) => produkt.kategori))];
+  const uniqueKategorier = [...new Set(produkter.map((produkt) => produkt.kategori.kategori))];
   // Get an array of unique materiale
-  const uniqueMaterialer = [...new Set(produkter.map((produkt) => produkt.materiale))];
+  const uniqueMaterialer = [...new Set(produkter.map((produkt) => produkt.materiale[0].materiale))];
 
   function openModal() {
     setIsModalOpen(true);
