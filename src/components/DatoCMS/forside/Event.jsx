@@ -9,7 +9,7 @@ function Event({ content }) {
           <h2 className="text-gold-light text-4xl font-light mb-4">{content.title}</h2>
 
           <p className="text-offWhite max-w-lg mb-4">{content.paragraph}</p>
-          <h4 className="text-offWhite font-tangier text-4xl">{content.smallTitle}</h4>
+          <h4 className="text-offWhite font-italianno text-4xl">{content.smallTitle}</h4>
         </article>
         <article className="grid gap-2">
           <h3 className="text-gold-light text-2xl font-light"> {content.titleTwo}</h3>
@@ -32,14 +32,7 @@ function Event({ content }) {
           </Anchor>
         </div>
       </div>
-      <Image
-        width={content.photo.width}
-        height={content.photo.height}
-        alt={content.photo.alt}
-        loading="lazy"
-        src={content.photo.url}
-        className="w-full max-md:h-[500px] h-full lg:h-[650px] object-cover max-md:order-first"
-      />
+      <Image width={content.photo.width} height={content.photo.height} alt={content.photo.alt} loading="lazy" src={content.photo.url} className="w-full max-md:h-[500px] h-full lg:h-[650px] object-cover max-md:order-first" />
     </section>
   );
 }

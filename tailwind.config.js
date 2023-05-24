@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        tangier: ["tangier"],
+        italianno: ["Italianno"],
         opensans: ["Open sans"],
       },
       colors: {
@@ -21,9 +21,9 @@ module.exports = {
         },
       },
       backgroundSize: {
-        "str": "40%",
+        str: "40%",
         "str-to": "70%",
-        "str-tre": "90%"
+        "str-tre": "90%",
       },
       backgroundPosition: {
         "position-et": "150% 30%",

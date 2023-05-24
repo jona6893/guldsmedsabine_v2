@@ -6,7 +6,7 @@ function Informationer({ content }) {
       <div className=" grid lg:flex lg:justify-evenly  max-w-[1450px] mx-auto gap-8 justify-items-center content-center items-center ">
         <article className=" grid gap-6">
           <h2 className="text-gold-light text-5xl font-extralight">{content.heading}</h2>
-          <h3 className="text-gold-light text-4xl font-tangier ">{content.subHeading}</h3>
+          <h3 className="text-gold-light text-4xl font-italianno ">{content.subHeading}</h3>
 
           <p className="max-w-xl mb-4">{content.paragraph}</p>
 

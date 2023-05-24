@@ -43,7 +43,7 @@ function OmSabineForside({ content }) {
         </div>
 
         <article className="px-4 ">
-          <h1 className="text-gold-light text-8xl font-tangier mb-4">{content.overskrift}</h1>
+          <h1 className="text-gold-light text-8xl font-italianno mb-4">{content.overskrift}</h1>
           <h3 className="text-gold-light uppercase text-2xl font-light mb-4">{content.underOverskrift}</h3>
           <p className="mb-8 text-offWhite max-w-lg">{content.paragraph}</p>
           <div className="grid max-sm:justify-items-center">
