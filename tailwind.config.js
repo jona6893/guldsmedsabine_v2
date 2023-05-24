@@ -20,9 +20,16 @@ module.exports = {
           darker: "#0F0F11",
         },
       },
-      /*  gridTemplateRows: {
-        popupMobile: "50% 50%"
-      }, */
+      backgroundSize: {
+        "str": "40%",
+        "str-to": "70%",
+        "str-tre": "90%"
+      },
+      backgroundPosition: {
+        "position-et": "150% 30%",
+        "position-to": "150% 30%",
+        "position-tre": "100% 50%",
+      },
     },
   },
   plugins: [],

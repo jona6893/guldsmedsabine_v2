@@ -5,7 +5,7 @@ function UdvalgteYdelser({ content }) {
 
   return (
     <section className="bg-grey-light py-16 px-4 ">
-      <div className="max-w-[1450px] mx-auto grid gap-12 bg-no-repeat bg-contain " style={{ backgroundImage: `url("/images/gren_ni.svg")`, backgroundPosition: "100% 50%", backgroundSize:""  }}>
+      <div className="max-w-[1450px] mx-auto grid gap-12  " >
         <h2 className="text-gold-light text-4xl font-light text-center">{content.overskriften}</h2>
         <ul className="grid md:grid-cols-3 items-center md:justify-evenly gap-x-4 gap-y-12">
           {content.udvalgteYdelser.map((udvalgtYdelse, index) => (
