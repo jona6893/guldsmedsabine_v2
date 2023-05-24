@@ -13,11 +13,17 @@ function IndholdModal({ produktInfo }) {
         <div className="flex flex-col gap-2 mb-4">
           <p>
             <span className="text-stone-400 text-sm">Materiale: </span>
-            {produktInfo.materiale}
+            {[
+              produktInfo.materiale.map((materiale) => {
+                return materiale.materiale;
+              }),
+            ]
+              .flat()
+              .join(", ")}
           </p>
           <p>
             <span className="text-stone-400 text-sm">kategori: </span>
-            {produktInfo.kategori}
+            {produktInfo.kategori.kategori}
           </p>
           <p>
             <span className="text-stone-400 text-sm">Pris: </span>
