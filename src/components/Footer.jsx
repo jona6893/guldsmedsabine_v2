@@ -19,7 +19,7 @@ function Footer({ content }) {
                   <Anchor
                     href={item.link}
                     role="link"
-                    aria-label="Link til social Media"
+                    ariaLabel="Link til social Media"
                     target="_blank"
                     className="block h-full w-full"
                   />

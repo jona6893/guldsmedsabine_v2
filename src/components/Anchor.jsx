@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 
 // Frontend
-export default function Anchor({ children, href, className, target, role,  aria-label }) {
+export default function Anchor({ children, href, className, target, role,  ariaLabel }) {
   const router = useRouter();
 
   function handleClick(e) {
@@ -12,7 +12,7 @@ export default function Anchor({ children, href, className, target, role,  aria-
   }
 
   return (
-    <a href={href} role={role} aria-label={ aria-label} className={className} target={target} onClick={handleClick}>
+    <a href={href} role={role} aria-label={ ariaLabel} className={className} target={target} onClick={handleClick}>
       {children}
     </a>
   );
