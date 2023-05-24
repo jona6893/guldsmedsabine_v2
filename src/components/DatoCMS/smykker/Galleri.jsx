@@ -72,8 +72,8 @@ function Galleri({ produkter }) {
   return (
     <>
       <Filtrering
-        kategori={uniqueKategorier}
-        materiale={uniqueMaterialer}
+        kategorier={uniqueKategorier}
+        materialer={uniqueMaterialer}
         setKategoriFilter={setKategoriFilter}
         setMaterialeFilter={setMaterialeFilter}
       />
