@@ -22,17 +22,7 @@ export default function Document() {
         ></meta>
         <meta
           name="keywords"
-          content="Sabine Sørensen,
-Unikke smykker,
-Håndlavede smykker,
-Smykkedesign,
-Skræddersyede smykker,
-Smykke reparation,
-Fredensborg guldsmed,
-Ædelsten,
-Perlesmykker,
-Kvalitetssmykker
-"
+          content="Sabine Sørensen, Unikke smykker, Håndlavede smykker, Smykkedesign, Skræddersyede smykker, Smykke reparation, Fredensborg guldsmed, Ædelsten, Perlesmykker, Kvalitetssmykker"
         ></meta>
       </Head>
       <body className="bg-grey-dark">
