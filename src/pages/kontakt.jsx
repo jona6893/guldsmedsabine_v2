@@ -2,6 +2,7 @@ import { GraphQLClient } from "graphql-request";
 import { kontaktQuery } from "../modules/kontaktQuery";
 import KontaktInformation from "../components/DatoCMS/kontakt/KontaktInformation";
 import Footer from "../components/Footer";
+import Head from "next/head";
 
 // Frontend
 export default function KontaktPage({ data }) {

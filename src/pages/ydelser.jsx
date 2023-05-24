@@ -4,6 +4,7 @@ import Ydelser from "../components/DatoCMS/ydelser/Ydelser";
 import Question from "../components/DatoCMS/ydelser/Question";
 import { ydelserQuery } from "../modules/ydelserQuery";
 import Footer from "../components/Footer";
+import Head from "next/head";
 
 export default function YdelserPage({ data }) {
   console.log(data);

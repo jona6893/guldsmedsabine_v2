@@ -5,6 +5,7 @@ import OmMig from "../components/DatoCMS/omSabine/OmMig";
 import Galleri from "../components/DatoCMS/omSabine/Galleri";
 import Informationer from "../components/DatoCMS/omSabine/Informationer";
 import Footer from "../components/Footer";
+import Head from "next/head";
 
 export default function OmSabine({ data }) {
   console.log(data);

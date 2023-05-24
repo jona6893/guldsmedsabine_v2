@@ -3,6 +3,7 @@ import { smykkerQuery } from "../modules/smykkerQuery";
 import Galleri from "../components/DatoCMS/smykker/Galleri";
 import Hero from "../components/DatoCMS/smykker/Hero";
 import Footer from "../components/Footer";
+import Head from "next/head";
 
 export default function Smykker({ data }) {
   const { main, products, footer } = data;
