@@ -22,7 +22,7 @@ export default function GotoTop() {
      window.addEventListener("scroll", handleScroll, { passive: true });
      return () =>
        window.removeEventListener("scroll", handleScroll, { passive: true });
-   });
+   },);
 
 
   return (
@@ -32,7 +32,12 @@ export default function GotoTop() {
       }  text-offWhite w-full flex justify-end relative max-w-[1450px] mx-auto transition-opacity`}
     >
       <div className="fixed bottom-[7.5%] right-[5%] z-[50]">
-        <a href="#" className="block bg-gold-light hover:bg-gold-dark p-2 rounded-full shadow-md transition-colors">
+        <a
+          role="link"
+          ariaLabel="Gå til toppen af siden"
+          href="#"
+          className="block bg-gold-light hover:bg-gold-dark p-2 rounded-full shadow-md transition-colors"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -41,7 +46,11 @@ export default function GotoTop() {
             stroke="currentColor"
             className="w-8 h-8 stroke-offWhite"
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75"
+            />
           </svg>
         </a>
       </div>
