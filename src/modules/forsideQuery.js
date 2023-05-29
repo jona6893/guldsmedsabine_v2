@@ -13,6 +13,12 @@ export const forsideQuery = gql`
           baggrundsvideo {
             url
           }
+          mobileBaggrund {
+            url
+            height
+            alt
+            width
+          }
         }
         ... on EventRecord {
           __typename
