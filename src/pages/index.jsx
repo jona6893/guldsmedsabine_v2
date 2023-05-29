@@ -1,6 +1,6 @@
 import { GraphQLClient } from "graphql-request";
-import SimpleText from "../components/DatoCMS/SimpleText";
 import { forsideQuery } from "../modules/forsideQuery";
+import ForsideHero from "../components/DatoCMS/forside/ForsideHero";
 import Event from "../components/DatoCMS/forside/Event";
 import OmSabineForside from "../components/DatoCMS/forside/OmSabineForside";
 import FindMigHer from "../components/DatoCMS/forside/FindMigHer";
@@ -26,20 +26,20 @@ export default function HomePage({ data }) {
         {main[0].content.map((content) => {
           // render content on the page
           switch (content.__typename) {
-            /*  case "SimpleTextRecord":
-            return <SimpleText key={content.title} title={content.title} level={1} description={content.description} />; */
+            case "ForsideHeroRecord":
+              return <ForsideHero content={content} key={content.id} />;
             case "OmSabineForsideRecord":
-              return <OmSabineForside content={content} />;
+              return <OmSabineForside content={content} key={content.id} />;
             case "EventRecord":
-              return <Event content={content} />;
+              return <Event content={content} key={content.id} />;
             case "FindMigHerRecord":
-              return <FindMigHer content={content} />;
+              return <FindMigHer content={content} key={content.id} />;
             case "UdvalgteYdelserRecord":
-              return <UdvalgteYdelser content={content} />;
+              return <UdvalgteYdelser content={content} key={content.id} />;
             case "UdvalgteSmykkerRecord":
-              return <UdvalgteSmykker content={content} />;
+              return <UdvalgteSmykker content={content} key={content.id} />;
             case "ParallaxRecord":
-              return <Parallax content={content} />;
+              return <Parallax content={content} key={content.id} />;
           }
         })}
       </main>

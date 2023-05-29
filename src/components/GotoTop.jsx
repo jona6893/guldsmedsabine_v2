@@ -18,12 +18,10 @@ export default function GotoTop() {
   };
 
   // update scroll info when user scrolls
-   useEffect(() => {
-     window.addEventListener("scroll", handleScroll, { passive: true });
-     return () =>
-       window.removeEventListener("scroll", handleScroll, { passive: true });
-   },);
-
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll, { passive: true });
+  });
 
   return (
     <div
@@ -34,7 +32,7 @@ export default function GotoTop() {
       <div className="fixed bottom-[7.5%] right-[5%] z-[50]">
         <a
           role="link"
-          ariaLabel="Gå til toppen af siden"
+          aria-label="Gå til toppen af siden"
           href="#"
           className="block bg-gold-light hover:bg-gold-dark p-2 rounded-full shadow-md transition-colors"
         >
@@ -46,11 +44,7 @@ export default function GotoTop() {
             stroke="currentColor"
             className="w-8 h-8 stroke-offWhite"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75"
-            />
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75" />
           </svg>
         </a>
       </div>

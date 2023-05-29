@@ -7,13 +7,13 @@ export const forsideQuery = gql`
       id
       name
       content {
-        ... on SimpleTextRecord {
+        ... on ForsideHeroRecord {
           __typename
           id
-          title
-          description
+          baggrundsvideo {
+            url
+          }
         }
-
         ... on EventRecord {
           __typename
           id
@@ -78,6 +78,7 @@ export const forsideQuery = gql`
         }
         ... on UdvalgteYdelserRecord {
           __typename
+          id
           udvalgteYdelser {
             overskrift
             broedtekst
