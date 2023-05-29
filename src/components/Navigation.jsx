@@ -103,7 +103,10 @@ export default function Navigation() {
             {navData.map((item) => {
               return (
                 <li key={item.name}>
-                  <Anchor className="text-offWhite hover:text-gold-light transition-colors" href={`/${item.path}`}>
+                  <Anchor
+                    className="text-offWhite hover:text-gold-light transition-colors"
+                    href={`/${item.path}`}
+                  >
                     {item.name}
                   </Anchor>
                 </li>
@@ -111,7 +114,10 @@ export default function Navigation() {
             })}
           </ul>
         </div>
-        <div className="md:hidden relative p-4 flex justify-end">
+        <div className="md:hidden relative p-4 flex justify-between items-center">
+          <Anchor href="/">
+            <img className="w-12" src="/images/sabineLogo.svg" alt="" />
+          </Anchor>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -122,7 +128,11 @@ export default function Navigation() {
             className="w-8 h-8 stroke-offWhite"
             onClick={() => setIsOpen(!isOpen)} // Toggle isOpen when the icon is clicked
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
           </svg>
 
           <AnimatePresence>{isOpen && <Hamburger />}</AnimatePresence>
