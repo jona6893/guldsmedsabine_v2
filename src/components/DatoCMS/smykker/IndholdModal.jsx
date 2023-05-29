@@ -5,6 +5,9 @@ function IndholdModal({ produktInfo }) {
   return (
     <div className="grid text-offWhite sm:grid-cols-2 box-border max-h-screen popupMobile" onClick={(e) => e.stopPropagation()}>
       <div className="p-8 flex flex-col justify-between max-sm:order-2 overflow-y-auto">
+       <div className="flex flex-col gap-8">
+
+       
         <div className="flex flex-col gap-4">
           <h3 className="text-3xl text-gold-light">{produktInfo.produktNavn}</h3>
           <p className="">{produktInfo.produktBeskrivelse} </p>
@@ -30,7 +33,8 @@ function IndholdModal({ produktInfo }) {
             {produktInfo.pris},-
           </p>
         </div>
-        <a className="button-primary normal-case" href="/kontakt">
+        </div>
+        <a className="button-primary normal-case mx-auto" href="/kontakt">
           Kontakt Mig
         </a>
       </div>

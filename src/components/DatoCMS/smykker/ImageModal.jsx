@@ -26,7 +26,7 @@ function ImageModal({ images }) {
               width={image.width}
               height={image.height}
               alt={image.alt}
-              className="w-full h-full sm:rounded-r-md max-sm:rounded-b-md object-cover"
+              className="w-full h-full aspect-[2/3] sm:rounded-r-md max-sm:rounded-b-md object-cover"
               src={image.url}
               loading="lazy"
             />
