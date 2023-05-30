@@ -13,6 +13,13 @@ export default function KontaktPage({ data }) {
     <>
       <Head>
         <title>Kontakt Formular Bekræftigelse</title>
+        <meta
+          name="description"
+          content="Opdag unikke, håndlavede smykker fra Sabine Sørensen. 
+          Jeg tilbyder skræddersyede designs, smykke reparationer og personlig service i Fredensborg. 
+          Lad din passion for æstetik møde min ekspertise i smykkedesign og giv dine gamle smykker nyt liv. 
+          Besøg mig og oplev en uforglemmelig smykkeoplevelse."
+        ></meta>
       </Head>
       <main>
         {main[0].content.map((content) => {

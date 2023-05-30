@@ -14,13 +14,6 @@ export default function Document() {
         />
         <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet" />
         <meta
-          name="description"
-          content="Opdag unikke, håndlavede smykker fra Sabine Sørensen. 
-          Jeg tilbyder skræddersyede designs, smykke reparationer og personlig service i Fredensborg. 
-          Lad din passion for æstetik møde min ekspertise i smykkedesign og giv dine gamle smykker nyt liv. 
-          Besøg mig og oplev en uforglemmelig smykkeoplevelse."
-        ></meta>
-        <meta
           name="keywords"
           content="Sabine Sørensen, Unikke smykker, Håndlavede smykker, Smykkedesign, Skræddersyede smykker, Smykke reparation, Fredensborg guldsmed, Ædelsten, Perlesmykker, Kvalitetssmykker"
         ></meta>

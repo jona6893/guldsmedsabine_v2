@@ -13,6 +13,10 @@ export default function KontaktPage({ data }) {
     <>
       <Head>
         <title>Kontakt Formular | Send mig en besked</title>
+        <meta
+          name="description"
+          content="Har du et spørgsmål, ønsker du at bestille et unikt smykke, eller er du interesseret i et af mine services? Du er velkommen til at udfylde denne kontaktformular med dine oplysninger og beskrivelse af din anmodning. Jeg stræber efter at vende tilbage til dig så hurtigt som muligt for at imødekomme dine behov og hjælpe med at skabe dit drømmesmykke. Lad os starte dialogen her."
+        ></meta>
       </Head>
       <main>
         {main[0].content.map((content, index) => {

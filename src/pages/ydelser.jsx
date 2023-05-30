@@ -14,6 +14,10 @@ export default function YdelserPage({ data }) {
     <>
       <Head>
         <title>Ydelser</title>
+        <meta
+          name="description"
+          content="Oplev et væld af professionelle smykkeydelser fra Sabine - fra unikt smykkedesign og kreative redesigns til omhyggelige reparationer og forvandlende rhodinering. Hvad enten du ønsker at genoplive et elsket smykke eller drømmer om et personligt kunstværk, er du i kyndige hænder. Udforsk vores tjenester og oplev den skønhed, som skræddersyede smykkeoplevelser kan tilføre dit liv."
+        ></meta>
       </Head>
       <main>
         {main[0].content.map((content) => {

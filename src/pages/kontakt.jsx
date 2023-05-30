@@ -13,6 +13,10 @@ export default function KontaktPage({ data }) {
     <>
       <Head>
         <title>Kontakt | Kontakt mig her</title>
+        <meta
+          name="description"
+          content="Ønsker du at komme i kontakt med Guldsmed Sabine Sørensen? Her finder du alle nødvendige oplysninger for at nå ud til Sabine, uanset om du er interesseret i at købe et unikt smykke, få repareret et elsket stykke eller har spørgsmål til hendes arbejde. Benyt kontaktformularen for direkte kommunikation, eller besøg i butikken i Fredensborg, Danmark, for en personlig oplevelse."
+        ></meta>
       </Head>
       <main>
         {main[0].content.map((content) => {

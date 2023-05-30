@@ -26,7 +26,24 @@ export default function KontaktFormular({ formular }) {
   // TODO: forms functionality
   async function submitForm(e) {
     e.preventDefault();
-    //console.log(formData);
+    console.log(formData);
+
+    fetch('https://gold-creepy-seal.cyclic.app/send', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ 
+        email: formData.email,  // Extract the email address from the formData
+        data: formData  // Send the entire formData as another field
+    })
+})
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error('Error:', error));
+ 
+
+
     router.push("/kontakt-feedback");
   }
 

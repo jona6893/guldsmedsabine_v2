@@ -15,6 +15,10 @@ export default function OmSabine({ data }) {
     <>
       <Head>
         <title>Om Sabine | Lidt om mig</title>
+        <meta
+          name="description"
+          content="Træd ind i den fortryllende verden af smykker med Guldsmed Sabine Sørensen, en dedikeret kunstner med mere end 15 års erfaring. Her mødes passion, kreativitet og traditionelt håndværk for at skabe unikke smykker, der er skræddersyet til dig. Udforsk Sabines historie, hendes inspirerende kunstneriske rejse, og find ud af, hvordan du kan erhverve et smykke, der er håndlavet med omhu og kærlighed."
+        ></meta>
       </Head>
       <main>
         {main[0].content.map((content) => {

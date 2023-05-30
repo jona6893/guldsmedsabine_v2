@@ -15,6 +15,10 @@ export default function Smykker({ data }) {
     <>
       <Head>
         <title>Smykker | Galleri</title>
+        <meta
+          name="description"
+          content="Oplev Sabines unikke håndlavede smykker i en bred vifte af materialer og stilarter. Fra elegante øreringe med perler og diamanter til markante sølvringe med råt design. Tag et kig på vores smykkegalleri og lad dig inspirere af den unikke kunsthåndværk. Køb direkte ved at kontakte os eller besøg os på Fredensborg Briller hver torsdag."
+        ></meta>
       </Head>
       <main>
         <section className="flex items-center justify-center pt-12">
