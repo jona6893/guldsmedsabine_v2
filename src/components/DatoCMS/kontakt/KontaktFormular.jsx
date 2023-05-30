@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
 export default function KontaktFormular({ formular }) {
   const router = useRouter();
 
@@ -23,15 +29,28 @@ export default function KontaktFormular({ formular }) {
     return components;
   }
 
-  // TODO: forms functionality
-  async function submitForm(e) {
-    e.preventDefault();
+  async function handleSubmit(event) {
+    event.preventDefault();
+
     //console.log(formData);
+
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "Kontakt", ...formData }),
+      });
+
+      alert("Success!");
+    } catch (error) {
+      alert(error);
+    }
+
     router.push("/kontakt-feedback");
   }
 
   return (
-    <form className="flex flex-col gap-4" onSubmit={(e) => submitForm(e)}>
+    <form netlify className="flex flex-col gap-4" onSubmit={handleSubmit}>
       {renderFormFields()}
       <button
         type="submit"
