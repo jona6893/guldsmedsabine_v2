@@ -28,8 +28,8 @@ export default function HomePage({ data }) {
           switch (content.__typename) {
             case "ForsideHeroRecord":
               return <ForsideHero content={content} key={content.id} />;
-            case "OmSabineForsideRecord":
-              return <OmSabineForside content={content} key={content.id} />;
+            /* case "OmSabineForsideRecord":
+              return <OmSabineForside content={content} key={content.id} />; */
             case "EventRecord":
               return <Event content={content} key={content.id} />;
             case "FindMigHerRecord":

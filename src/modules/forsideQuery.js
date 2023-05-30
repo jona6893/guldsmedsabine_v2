@@ -19,6 +19,13 @@ export const forsideQuery = gql`
             alt
             width
           }
+          overskrift
+          subOverskrift
+          brDtekst
+          knap {
+            text
+            url
+          }
         }
         ... on EventRecord {
           __typename

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Anchor from "../../Anchor";
 
 export default function ForsideHero({ content }) {
   console.log(content)
@@ -7,8 +8,16 @@ export default function ForsideHero({ content }) {
       <div className="grid max-md:hidden relative h-[75vh]">
         <div className="bg-black/25 col-start-1 row-start-1 z-[1]">
           <div className=" text-offWhite flex flex-col justify-center p-4 gap-4 max-w-[1450px] mx-auto w-full h-full">
-            <h1 className="">Sabine guldsmid</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <h1 className="text-gold-light font-italianno mb-4">
+              {content.overskrift}
+            </h1>
+            <h2 className="text-gold-light uppercase font-light mb-4">
+              {content.subOverskrift}
+            </h2>
+            <p className="mb-8 text-offWhite max-w-lg">{content.brDtekst}</p>
+            <Anchor className="button-primary" href={content.knap[0].url}>
+              {content.knap[0].text}
+            </Anchor>
           </div>
         </div>
         <video
@@ -22,8 +31,16 @@ export default function ForsideHero({ content }) {
       </div>
       <div className="grid md:hidden h-[70vh]">
         <div className="bg-black/50 col-start-1 row-start-1 text-offWhite z-[1] flex flex-col justify-center p-4 gap-4">
-          <h1 className="">Sabine guldsmid</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <h1 className="text-gold-light font-italianno mb-4">
+            {content.overskrift}
+          </h1>
+          <h2 className="text-gold-light uppercase font-light mb-4">
+            {content.subOverskrift}
+          </h2>
+          <p className="mb-8 text-offWhite max-w-lg">{content.brDtekst}</p>
+          <Anchor className="button-primary" href={content.knap[0].url}>
+            {content.knap[0].text}
+          </Anchor>
         </div>
         <Image
           className="col-start-1 row-span-1 object-cover h-full col-start-1 row-start-1 aspect-square "
