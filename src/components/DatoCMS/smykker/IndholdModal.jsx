@@ -33,7 +33,7 @@ function IndholdModal({ content, produktInfo }) {
             </p>
           </div>
         </div>
-        <p>{content.tekst}</p>
+        <p className="text-gold-light text-base">{content.tekst}</p>
         <Anchor className="button-primary normal-case mx-auto" href="/kontakt">
           {content.knap}
         </Anchor>
