@@ -45,17 +45,16 @@ export default function ForsideHero({ content }) {
             </Anchor>
           </div>
         </div>
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
-          <video
-            ref={videoRef}
-            className="absolute top-50 left-50 transform -translate-x-50 -translate-y-50 min-w-full min-h-full object-cover"
-            autoPlay
-            loop
-            muted
-            playsInline
-            src={content.baggrundsvideo?.url}
-          />
-        </div>
+        <video
+          ref={videoRef}
+          muted
+          autoPlay
+          loop
+          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        >
+          <source src={content.baggrundsvideo?.url} type="video/mp4" />
+        </video>
+
       </div>
       <div className="grid md:hidden h-[70vh]">
         <div className="bg-black/50 col-start-1 row-start-1 text-offWhite z-[1] flex flex-col justify-center p-4 gap-4">
