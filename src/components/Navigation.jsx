@@ -125,7 +125,6 @@ export default function Navigation() {
             strokeWidth="1.5"
             stroke="currentColor"
             className="w-8 h-8 stroke-offWhite"
-            className="w-8 h-8 stroke-offWhite"
             onClick={() => setIsOpen(!isOpen)} // Toggle isOpen when the icon is clicked
           >
             <path
