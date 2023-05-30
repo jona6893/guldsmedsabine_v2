@@ -72,8 +72,6 @@ function Galleri({ produkter }) {
     return (kategoriFilter ? kategori === kategoriFilter : true) && (materialeFilter ? materiale.includes(materialeFilter) : true);
   });
 
-  console.log("filteredProducts:", filteredProducts);
-
   return (
     <>
       <Filtrering
