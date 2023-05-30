@@ -21,7 +21,7 @@ function OmMig({ content }) {
 
           <div className="px-5 max-md:py-16 md:pb-16 grid gap-8 justify-items-center">
             <article>
-              <h3 className="font-thin  text-gold-light mb-4 uppercase" >
+              <h3 className="font-thin  text-gold-light mb-4 uppercase text-3xl" >
                 {content.title2}
               </h3>
               <p className="max-w-xl ">{content.paragraph2}</p>
