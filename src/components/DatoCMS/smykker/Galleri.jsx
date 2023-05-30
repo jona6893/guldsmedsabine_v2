@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform, useSpring, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
+import { AnimatePresence } from "framer-motion";
 import ProduktGrid from "./ProduktGrid";
 import PopupModal from "../../PopupModal";
 import IndholdModal from "./IndholdModal";
@@ -36,8 +36,6 @@ function Galleri({ produkter }) {
   const [kategoriFilter, setKategoriFilter] = useState("");
   const [materialeFilter, setMaterialeFilter] = useState("");
 
-  //console.log(produkter);
-
   // Get an array of unique categories
   const uniqueKategorier = [...new Set(produkter.map((produkt) => produkt.kategori.kategori))];
   // Get an array of unique materiale
@@ -68,8 +66,13 @@ function Galleri({ produkter }) {
   // filter function
 
   const filteredProducts = produkter.filter((produkt) => {
-    return (kategoriFilter ? produkt.kategori === kategoriFilter : true) && (materialeFilter ? produkt.materiale === materialeFilter : true);
+    const kategori = produkt.kategori.kategori;
+    const materiale = produkt.materiale.map((obj) => obj.materiale);
+
+    return (kategoriFilter ? kategori === kategoriFilter : true) && (materialeFilter ? materiale.includes(materialeFilter) : true);
   });
+
+  console.log("filteredProducts:", filteredProducts);
 
   return (
     <>
