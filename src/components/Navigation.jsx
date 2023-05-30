@@ -69,19 +69,31 @@ export default function Navigation() {
             className="w-8 h-8 stroke-offWhite "
             onClick={() => setIsOpen(!isOpen)} // Toggle isOpen when the icon is clicked
           >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </button>
 
-        <Anchor href="/">
-          <img onClick={() => setIsOpen(!isOpen)} className="w-20" src="/images/sabineLogo.svg" alt="" />
+        <Anchor href="/" role="link" ariaLabel="Link til forsiden / Sabine Logo">
+          <img
+            onClick={() => setIsOpen(!isOpen)}
+            className="w-20"
+            src="/images/sabineLogo.svg"
+            alt=""
+          />
         </Anchor>
 
         <ul className="flex flex-col justify-center items-center gap-4">
           {navData.map((item) => {
             return (
               <li key={item.name} onClick={() => setIsOpen(!isOpen)}>
-                <Anchor className="text-offWhite hover:text-gold-light transition-colors" href={`/${item.path}`}>
+                <Anchor
+                  className="text-offWhite hover:text-gold-light transition-colors"
+                  href={`/${item.path}`}
+                >
                   {item.name}
                 </Anchor>
               </li>
