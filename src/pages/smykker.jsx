@@ -11,8 +11,6 @@ export default function Smykker({ data }) {
   const produkter = products;
   //console.log(produkter);
 
-  console.log(content);
-
   return (
     <>
       <Head>
