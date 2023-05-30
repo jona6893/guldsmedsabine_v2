@@ -35,15 +35,15 @@ export default function KontaktFormular({ formular }) {
     //console.log(formData);
 
     try {
-      await fetch("/", {
+      await fetch("/kontakt-formular", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "Kontakt", ...formData }),
       });
 
-      alert("Success!");
+      //alert("Success!");
     } catch (error) {
-      alert(error);
+      //alert(error);
     }
 
     router.push("/kontakt-feedback");
