@@ -4,7 +4,7 @@ export default function ForsideHero({ content }) {
   console.log(content)
   return (
     <section className="mx-auto">
-      <div className="grid max-md:hidden relative h-[85vh]">
+      <div className="grid max-md:hidden relative h-[75vh]">
         <div className="bg-black/25 col-start-1 row-start-1 z-[1]">
           <div className=" text-offWhite flex flex-col justify-center p-4 gap-4 max-w-[1450px] mx-auto w-full h-full">
             <h1 className="">Sabine guldsmid</h1>
@@ -20,7 +20,7 @@ export default function ForsideHero({ content }) {
           <source src={content.baggrundsvideo?.url} type="video/mp4" />
         </video>
       </div>
-      <div className="grid md:hidden">
+      <div className="grid md:hidden h-[70vh]">
         <div className="bg-black/50 col-start-1 row-start-1 text-offWhite z-[1] flex flex-col justify-center p-4 gap-4">
           <h1 className="">Sabine guldsmid</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
