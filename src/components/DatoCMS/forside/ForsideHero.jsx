@@ -1,8 +1,32 @@
 import Image from "next/image";
 import Anchor from "../../Anchor";
+import { useEffect, useRef } from "react";
 
 
 export default function ForsideHero({ content }) {
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              videoRef.current.load();
+            }
+          });
+        },
+        { threshold: 0.25 }
+      );
+      if (videoRef.current) {
+        observer.observe(videoRef.current);
+      }
+      return () => {
+        if (videoRef.current) {
+          observer.unobserve(videoRef.current);
+        }
+      };
+    }, []);
+
   console.log(content);
   return (
     <section className="mx-auto">
@@ -23,6 +47,7 @@ export default function ForsideHero({ content }) {
         </div>
         <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
           <video
+            ref={videoRef}
             className="absolute top-50 left-50 transform -translate-x-50 -translate-y-50 min-w-full min-h-full object-cover"
             autoPlay
             loop
