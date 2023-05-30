@@ -4,7 +4,7 @@ function Hero({ content }) {
       <div className="grid  h-full  items-center  max-w-[1450px] mx-auto">
         <div className="px-4 ">
           <h1 className="text-gold-light font-italianno">{content.title}</h1>
-          <p className="text-offWhite max-w-xl text-lg">{content.paragraph}</p>
+          <p className="text-offWhite max-w-xl ">{content.paragraph}</p>
         </div>
       </div>
     </section>
