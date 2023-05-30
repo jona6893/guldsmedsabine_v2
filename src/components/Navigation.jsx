@@ -86,10 +86,10 @@ export default function Navigation() {
           />
         </Anchor>
 
-        <ul className="flex flex-col justify-center items-center gap-4">
+        <ul className="flex flex-col justify-center items-center gap-6">
           {navData.map((item) => {
             return (
-              <li key={item.name} onClick={() => setIsOpen(!isOpen)}>
+              <li className="text-lg" key={item.name} onClick={() => setIsOpen(!isOpen)}>
                 <Anchor
                   className="text-offWhite hover:text-gold-light transition-colors"
                   href={`/${item.path}`}
