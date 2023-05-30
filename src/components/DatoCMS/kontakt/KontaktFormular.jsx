@@ -50,7 +50,7 @@ export default function KontaktFormular({ formular }) {
   }
 
   return (
-    <form netlify className="flex flex-col gap-4" onSubmit={handleSubmit}>
+    <form data-netlify="true" method="post" className="flex flex-col gap-4" onSubmit={handleSubmit}>
       {renderFormFields()}
       <button
         type="submit"
