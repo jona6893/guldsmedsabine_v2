@@ -30,7 +30,7 @@ export default function ForsideHero({ content }) {
   console.log(content);
   return (
     <section className="mx-auto">
-      <div className="grid max-md:hidden relative h-[75vh]">
+      <div className="grid max-md:hidden relative h-[80vh]">
         <div className="bg-black/25 col-start-1 row-start-1 z-[1]">
           <div className=" text-offWhite flex flex-col justify-center p-4 gap-4 max-w-[1450px] mx-auto w-full h-full">
             <h1 className="text-gold-light font-italianno mb-2 text-9xl">
