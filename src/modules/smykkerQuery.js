@@ -6,6 +6,14 @@ export const smykkerQuery = gql`
     main: allPages(filter: { name: { eq: "Smykker" } }) {
       id
       name
+      content {
+        ... on ProduktPopUpRecord {
+          __typename
+          id
+          tekst
+          knap
+        }
+      }
     }
     products: allProdukters {
       ... on ProdukterRecord {

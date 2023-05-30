@@ -7,8 +7,11 @@ import Head from "next/head";
 
 export default function Smykker({ data }) {
   const { main, products, footer } = data;
+  const [content] = main[0].content;
   const produkter = products;
   //console.log(produkter);
+
+  console.log(content);
 
   return (
     <>
@@ -20,7 +23,7 @@ export default function Smykker({ data }) {
           <Hero />
         </section>
         <div className="text-lg flex flex-col gap-8 justify-center items-center py-20 bg-grey-dark">
-          <Galleri produkter={produkter} />
+          <Galleri content={content} produkter={produkter} />
         </div>
       </main>
       <Footer content={footer[0].content[0]} />
