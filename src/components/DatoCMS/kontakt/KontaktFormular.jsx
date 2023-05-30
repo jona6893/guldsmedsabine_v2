@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 
+const encode = (data) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
+
 export default function KontaktFormular({ formular }) {
   const router = useRouter();
 
@@ -23,32 +29,29 @@ export default function KontaktFormular({ formular }) {
     return components;
   }
 
-  // TODO: forms functionality
-  async function submitForm(e) {
-    e.preventDefault();
-    console.log(formData);
+  async function handleSubmit(event) {
+    event.preventDefault();
 
-    fetch('https://gold-creepy-seal.cyclic.app/send', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ 
-        email: formData.email,  // Extract the email address from the formData
-        data: formData  // Send the entire formData as another field
-    })
-})
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
- 
+    //console.log(formData);
 
+    try {
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "Kontakt", ...formData }),
+      });
+
+      //alert("Success!");
+    } catch (error) {
+      //alert(error);
+    }
 
     router.push("/kontakt-feedback");
   }
 
   return (
-    <form className="flex flex-col gap-4" onSubmit={(e) => submitForm(e)}>
+    <form data-netlify="true" method="post" className="flex flex-col gap-4" onSubmit={handleSubmit}>
+      <input type="hidden" name="form-name" value="Kontakt" />
       {renderFormFields()}
       <button
         type="submit"
@@ -65,23 +68,42 @@ function FormField({ field, label, formData, setFormData }) {
     switch (field) {
       case "navn":
         return (
-          <input type="text" value={formData.navn} onChange={(e) => setFormData({ ...formData, navn: e.target.value })} className={classNames} />
+          <input
+            type="text"
+            name="navn"
+            value={formData.navn}
+            onChange={(e) => setFormData({ ...formData, navn: e.target.value })}
+            className={classNames}
+          />
         );
 
       case "email":
         return (
-          <input type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className={classNames} />
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            className={classNames}
+          />
         );
 
       case "telefon":
         return (
-          <input type="tel" value={formData.telefon} onChange={(e) => setFormData({ ...formData, telefon: e.target.value })} className={classNames} />
+          <input
+            type="tel"
+            name="telefon"
+            value={formData.telefon}
+            onChange={(e) => setFormData({ ...formData, telefon: e.target.value })}
+            className={classNames}
+          />
         );
 
       case "besked":
         return (
           <textarea
             type="text"
+            name="besked"
             value={formData.besked}
             onChange={(e) => setFormData({ ...formData, besked: e.target.value })}
             className={classNames + " h-36"}
