@@ -21,11 +21,9 @@ export const smykkerQuery = gql`
         produktBeskrivelse
         kategori {
           kategori
-          id
         }
         materiale {
           materiale
-          id
         }
       }
     }

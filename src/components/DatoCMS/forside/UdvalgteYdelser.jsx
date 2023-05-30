@@ -5,29 +5,15 @@ function UdvalgteYdelser({ content }) {
 
   return (
     <section className="bg-grey-light py-16 px-4 ">
-      <div className="max-w-[1450px] mx-auto grid gap-12  " >
-        <h2 className="text-gold-light font-light text-center">{content.overskriften}</h2>
+      <div className="max-w-[1450px] mx-auto grid gap-12  ">
+        <h2 className="text-gold-light font-light text-center uppercase">{content.overskriften}</h2>
         <ul className="grid md:grid-cols-3 items-center md:justify-evenly gap-x-4 gap-y-12">
           {content.udvalgteYdelser.map((udvalgtYdelse, index) => (
-            <li
-              key={udvalgtYdelse.id}
-              className="bg-grey-darker max-w-xs h-full mx-auto"
-            >
-              <Image
-                width={udvalgtYdelse.foto.width}
-                height={udvalgtYdelse.foto.height}
-                src={udvalgtYdelse.foto.url}
-                alt={udvalgtYdelse.foto.alt}
-                loading="lazy"
-                className="w-full h-48 object-cover "
-              />
+            <li key={udvalgtYdelse.id} className="bg-grey-darker max-w-xs h-full mx-auto">
+              <Image width={udvalgtYdelse.foto.width} height={udvalgtYdelse.foto.height} src={udvalgtYdelse.foto.url} alt={udvalgtYdelse.foto.alt} loading="lazy" className="w-full h-48 object-cover " />
               <article className="p-4 flex flex-col justify-center">
-                <h3 className="text-gold-light">
-                  {udvalgtYdelse.overskrift}
-                </h3>
-                <p className="text-offWhite leading-7">
-                  {udvalgtYdelse.broedtekst}
-                </p>
+                <h3 className="text-gold-light">{udvalgtYdelse.overskrift}</h3>
+                <p className="text-offWhite leading-7">{udvalgtYdelse.broedtekst}</p>
               </article>
             </li>
           ))}

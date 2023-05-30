@@ -6,7 +6,7 @@ function Event({ content }) {
     <section id="events" className="mx-auto max-w-[1450px] grid md:grid-cols-2 justify-items-center items-center    ">
       <div className=" flex flex-col gap-10  px-4 py-8">
         <article className="">
-          <h2 className="text-gold-light font-light mb-4">{content.title}</h2>
+          <h2 className="text-gold-light font-light mb-4 uppercase">{content.title}</h2>
 
           <p className="text-offWhite max-w-lg mb-4">{content.paragraph}</p>
           <h4 className="text-offWhite font-italianno text-5xl">{content.smallTitle}</h4>
