@@ -22,7 +22,7 @@ function UdvalgteSmykker({ content }) {
 
   return (
     <section className="py-16 max-w-[1450px] mx-auto grid gap-12 max-xl:justify-items-center px-4">
-      <h2 className="text-gold-light text-4xl font-light  text-center">{content.overskriften}</h2>
+      <h2 className="text-gold-light font-light  text-center">{content.overskriften}</h2>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
         {content.udvalgteSmykker.map((udvalgtSmykke, index) => {
           return index % 2 == 0 ? (

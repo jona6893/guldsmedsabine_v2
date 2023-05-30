@@ -6,13 +6,13 @@ function Event({ content }) {
     <section id="events" className="mx-auto max-w-[1450px] grid md:grid-cols-2 justify-items-center items-center    ">
       <div className=" flex flex-col gap-10  px-4 py-8">
         <article className="">
-          <h2 className="text-gold-light text-4xl font-light mb-4">{content.title}</h2>
+          <h2 className="text-gold-light font-light mb-4">{content.title}</h2>
 
           <p className="text-offWhite max-w-lg mb-4">{content.paragraph}</p>
-          <h4 className="text-offWhite font-italianno text-4xl">{content.smallTitle}</h4>
+          <h4 className="text-offWhite font-italianno text-5xl">{content.smallTitle}</h4>
         </article>
         <article className="grid gap-2">
-          <h3 className="text-gold-light text-2xl font-light"> {content.titleTwo}</h3>
+          <h3 className="text-gold-light font-light"> {content.titleTwo}</h3>
           <p className="flex gap-2 text-offWhite">
             {content.titleDate} <span className="text-gold-light">{content.date}</span>
           </p>
