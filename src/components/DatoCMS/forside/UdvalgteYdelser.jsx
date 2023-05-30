@@ -4,7 +4,7 @@ import Anchor from "../../Anchor";
 function UdvalgteYdelser({ content }) {
 
   return (
-    <section className="bg-grey-light py-16 px-4 ">
+    <section className="bg-grey-light py-20 px-4 ">
       <div className="max-w-[1450px] mx-auto grid gap-12  ">
         <h2 className="text-gold-light font-light text-center uppercase">{content.overskriften}</h2>
         <ul className="grid md:grid-cols-3 items-center md:justify-evenly gap-x-4 gap-y-12">
