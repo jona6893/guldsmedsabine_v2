@@ -27,7 +27,7 @@ function FindMigHer({ content }) {
         }}
       >
         <div>
-          <h2 className="text-gold-light font-light mb-4">
+          <h2 className="text-gold-light font-light mb-4 uppercase">
             {content.overskrift}
           </h2>
           <p className="text-offWhite max-w-md mb-6">{content.broedtekst}</p>

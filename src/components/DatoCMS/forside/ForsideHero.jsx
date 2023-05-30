@@ -6,7 +6,7 @@ export default function ForsideHero({ content }) {
     <section className="max-w-[1450px] mx-auto">
       <div className="grid max-md:hidden">
         <div className="bg-black/25 col-start-1 row-start-1 text-offWhite z-[1] flex flex-col justify-center p-4 gap-4">
-          <h1 className="">Sabine guldsmid</h1>
+          <h1 className="">Guldsmed Sabine</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
         </div>
         <video muted autoPlay loop className="w-full col-start-1 row-start-1 ">
