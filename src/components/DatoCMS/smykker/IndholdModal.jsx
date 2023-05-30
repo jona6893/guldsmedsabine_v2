@@ -2,7 +2,7 @@ import React from "react";
 import ImageModal from "./ImageModal";
 import Anchor from "../../Anchor";
 
-function IndholdModal({ produktInfo }) {
+function IndholdModal({ content, produktInfo }) {
   return (
     <div className="grid text-offWhite sm:grid-cols-2 box-border max-h-screen popupMobile" onClick={(e) => e.stopPropagation()}>
       <div className="p-8 flex flex-col justify-between max-sm:order-2 overflow-y-auto">
@@ -33,8 +33,9 @@ function IndholdModal({ produktInfo }) {
             </p>
           </div>
         </div>
+        <p>{content.tekst}</p>
         <Anchor className="button-primary normal-case mx-auto" href="/kontakt">
-          Kontakt Mig
+          {content.knap}
         </Anchor>
       </div>
       <div className="flex items-center justify-center overflow-hidden">

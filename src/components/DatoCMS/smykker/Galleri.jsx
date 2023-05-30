@@ -30,7 +30,7 @@ function useWindowSize() {
   return windowSize;
 }
 
-function Galleri({ produkter }) {
+function Galleri({ content, produkter }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [produktInfo, setProduktInfo] = useState(null);
   const [kategoriFilter, setKategoriFilter] = useState("");
@@ -85,7 +85,7 @@ function Galleri({ produkter }) {
         <AnimatePresence>
           {isModalOpen && (
             <PopupModal isOpen={isModalOpen} onClose={closeModal}>
-              <IndholdModal produktInfo={produktInfo} />
+              <IndholdModal content={content} produktInfo={produktInfo} />
             </PopupModal>
           )}
         </AnimatePresence>
