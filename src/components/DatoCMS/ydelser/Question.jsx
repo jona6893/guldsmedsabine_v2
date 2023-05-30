@@ -4,7 +4,7 @@ import Anchor from "../../Anchor";
 function Question({ content }) {
   console.log(content);
   return (
-    <section className="mx-auto   p-4 flex flex-col justify-center items-center pb-20 pt-20">
+    <section className="mx-auto bg-grey-darker  p-4 flex flex-col justify-center items-center pb-20 pt-20">
       <article className="max-w-[1450px]">
         <h2 className="text-gold-light font-italianno text-6xl text-center mb-4">{content.title}</h2>
         <p className="text-offWhite max-w-2xl text-center leading-8 text-lg mb-8">{content.paragraph}</p>
