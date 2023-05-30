@@ -67,23 +67,42 @@ function FormField({ field, label, formData, setFormData }) {
     switch (field) {
       case "navn":
         return (
-          <input type="text" value={formData.navn} onChange={(e) => setFormData({ ...formData, navn: e.target.value })} className={classNames} />
+          <input
+            type="text"
+            name="navn"
+            value={formData.navn}
+            onChange={(e) => setFormData({ ...formData, navn: e.target.value })}
+            className={classNames}
+          />
         );
 
       case "email":
         return (
-          <input type="email" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} className={classNames} />
+          <input
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            className={classNames}
+          />
         );
 
       case "telefon":
         return (
-          <input type="tel" value={formData.telefon} onChange={(e) => setFormData({ ...formData, telefon: e.target.value })} className={classNames} />
+          <input
+            type="tel"
+            name="telefon"
+            value={formData.telefon}
+            onChange={(e) => setFormData({ ...formData, telefon: e.target.value })}
+            className={classNames}
+          />
         );
 
       case "besked":
         return (
           <textarea
             type="text"
+            name="besked"
             value={formData.besked}
             onChange={(e) => setFormData({ ...formData, besked: e.target.value })}
             className={classNames + " h-36"}
