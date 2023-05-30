@@ -35,7 +35,7 @@ export default function KontaktFormular({ formular }) {
     //console.log(formData);
 
     try {
-      await fetch("/kontakt-formular", {
+      await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "Kontakt", ...formData }),
