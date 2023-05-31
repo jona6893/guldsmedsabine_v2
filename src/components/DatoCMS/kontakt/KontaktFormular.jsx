@@ -38,7 +38,7 @@ export default function KontaktFormular({ formular }) {
       await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "Kontakt", ...formData }),
+        body: encode({ "form-name": "Contact", ...formData }),
       });
 
       alert("Success!");
@@ -49,8 +49,8 @@ export default function KontaktFormular({ formular }) {
   }
 
   return (
-    <form data-netlify="true" method="post" className="flex flex-col gap-4" onSubmit={handleSubmit}>
-      <input type="hidden" name="form-name" value="Kontakt" />
+    <form data-netlify="true" name="Contact" method="post" className="flex flex-col gap-4" onSubmit={handleSubmit}>
+      <input type="hidden" name="form-name" value="Contact" />
       {renderFormFields()}
       <button
         type="submit"
