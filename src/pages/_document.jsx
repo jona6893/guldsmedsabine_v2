@@ -5,6 +5,16 @@ export default function Document() {
   return (
     <Html lang="da">
       <Head>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GPXYBC0F33"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments)}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GPXYBC0F33');
+</script>
+    
         <link rel="stylesheet" href="https://use.typekit.net/zof2uyg.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +27,9 @@ export default function Document() {
           name="keywords"
           content="Sabine Sørensen, Unikke smykker, Håndlavede smykker, Smykkedesign, Skræddersyede smykker, Smykke reparation, Fredensborg guldsmed, Ædelsten, Perlesmykker, Kvalitetssmykker"
         ></meta>
+        
       </Head>
+      
       <body className="bg-grey-dark">
         <Main />
         <NextScript />
