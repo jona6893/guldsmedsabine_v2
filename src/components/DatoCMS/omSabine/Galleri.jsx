@@ -55,7 +55,17 @@ function Galleri({ content }) {
       :
       <div className="md:hidden grid grid-cols-2 grid-rows-2 justify-items-center">
         {content.galleri.map((img, index) => {
-          return <Image key={img.id} className={"w-full"} src={img.url} alt={img.alt} width={img.width} height={img.height} loading="lazy" />;
+          return (
+            <Image
+              key={img.id}
+              className={"w-full aspect-[1/1] object-cover"}
+              src={img.url}
+              alt={img.alt}
+              width={img.width}
+              height={img.height}
+              loading="lazy"
+            />
+          );
         })}
       </div>
     </section>
