@@ -41,6 +41,10 @@ export default function Navigation() {
       path: "om-sabine",
     },
     {
+      name: "Butik",
+      path: "om-sabine/#butik",
+    },
+    {
       name: "Events",
       path: "#events",
     },
