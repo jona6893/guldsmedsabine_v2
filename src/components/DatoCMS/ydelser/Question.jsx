@@ -2,7 +2,7 @@ import React from "react";
 import Anchor from "../../Anchor";
 
 function Question({ content }) {
-  console.log(content);
+  //console.log(content);
   return (
     <section className="mx-auto bg-grey-darker  p-4 flex flex-col justify-center items-center pb-20 pt-20">
       <article className="max-w-[1450px]">

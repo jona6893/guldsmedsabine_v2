@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 export default function Layout({ children, navData }) {
   const router = useRouter();
   const currentUrl = router.asPath;
-  console.log(currentUrl);
+  //console.log(currentUrl);
   return (
     <>
       {currentUrl !== "/kontakt-feedback" && <Navigation navData={navData} />}
