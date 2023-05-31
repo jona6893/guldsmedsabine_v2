@@ -32,7 +32,7 @@ function FindMigHer({ content }) {
           </h2>
           <p className="text-offWhite max-w-md mb-6">{content.broedtekst}</p>
           <div className="grid max-md:justify-items-center">
-            <Anchor className="button-secondary" href={content.knap[0].url}>
+            <Anchor className="button-primary" href={content.knap[0].url}>
               {content.knap[0].text}
             </Anchor>
           </div>

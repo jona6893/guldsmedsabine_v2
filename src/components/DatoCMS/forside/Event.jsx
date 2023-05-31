@@ -5,9 +5,9 @@ function Event({ content }) {
   return (
     <section
       id="events"
-      className="mx-auto max-w-[1450px] grid md:grid-cols-2 justify-items-center items-center    "
+      className="mx-auto max-w-[1450px] grid md:grid-cols-2 max-md:grid-row-2 justify-items-center items-center    "
     >
-      <div className=" flex flex-col gap-10  px-4 py-8">
+      <div className=" flex flex-col gap-10  px-4 py-8 max-md:row-start-2">
         <article className="">
           <h2 className="text-gold-light font-light mb-4 uppercase">
             {content.title}
@@ -33,16 +33,16 @@ function Event({ content }) {
             <span className="text-gold-light">{content.location}</span>
           </p>
         </article>
-        <div className="flex flex-row gap-x-4 gap-y-8 justify-between flex-wrap">
-          <Anchor
+        <div className="flex flex-row gap-x-4 gap-y-8 max-md:justify-center flex-wrap">
+          {/* <Anchor
             className="button-primary"
             target="_blank"
             href={content.knapper[0]?.url}
           >
             {content.knapper[0]?.text}
-          </Anchor>
+          </Anchor> */}
           <Anchor
-            className="button-secondary"
+            className="button-primary"
             target="_blank"
             href={content.knapper[1]?.url}
           >
@@ -51,7 +51,10 @@ function Event({ content }) {
         </div>
       </div>
       {/* <Image width={content.photo.width} height={content.photo.height} alt={content.photo.alt} loading="lazy" src={content.photo.url} className="w-full  h-fit  object-cover max-md:order-first" /> */}
-      <div style={{ backgroundImage: `url("${content.photo.url}")` }} className="bg-cover bg-center w-full h-full"></div>
+      <div
+        style={{ backgroundImage: `url("${content.photo.url}")` }}
+        className="bg-cover bg-center w-full h-full max-md:h-[500px] max-md:row-start-1"
+      ></div>
     </section>
   );
 }
