@@ -17,27 +17,15 @@ function Galleri({ content }) {
   // Parallax effect for first and third grid
   const ySecond = useParallax(scrollYProgressSecond, 30);
 
-  console.log(content);
+  //console.log(content);
 
   return (
     <section className="bg-grey-dark ">
       <div className="max-md:hidden max-w-[1450px] mx-auto grid grid-cols-4 overflow-x-scroll overflow-y-hidden scrollbar-hide gap-4 items-center justify-around px-4 py-16">
         {content.galleri.map((img, index) => {
           return index % 2 == 0 ? (
-            <motion.div
-              key={img.id}
-              className="secondGrid grid gap-8"
-              style={{ y: ySecond }}
-              ref={refImage}
-            >
-              <Image
-                className={"mb-16 aspect-[2/3] object-cover"}
-                src={img.url}
-                alt={img.alt}
-                width={img.width}
-                height={img.height}
-                loading="lazy"
-              />
+            <motion.div key={img.id} className="secondGrid grid gap-8" style={{ y: ySecond }} ref={refImage}>
+              <Image className={"mb-16 aspect-[2/3] object-cover"} src={img.url} alt={img.alt} width={img.width} height={img.height} loading="lazy" />
             </motion.div>
           ) : (
             <Image
