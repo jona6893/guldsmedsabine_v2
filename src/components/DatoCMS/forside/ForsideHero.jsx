@@ -57,7 +57,7 @@ export default function ForsideHero({ content }) {
           </div>
         </div>
         <video ref={videoRef} muted autoPlay loop className="absolute top-0 left-0 w-full h-full object-cover z-0">
-          <source src={content.baggrundsvideo?.url} type="video/mp4" />
+          <source src={isMobile && content.baggrundsvideo?.url} type="video/mp4" />
         </video>
       </div>
       :
