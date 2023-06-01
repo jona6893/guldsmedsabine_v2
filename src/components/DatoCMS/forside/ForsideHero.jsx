@@ -65,9 +65,7 @@ export default function ForsideHero({ content }) {
         {isMobile ? (
           <video
             ref={videoRef}
-            muted
             preload="none"
-            loop
             className="absolute top-0 left-0 w-full h-full object-cover z-0"
           >
             {/*... video content ...*/}
@@ -83,7 +81,7 @@ export default function ForsideHero({ content }) {
           >
             {/*... video content ...*/}
           </video>
-        )}
+        )} t
       </div>
       {/* mobile */}
       <div className="grid md:hidden h-[70vh]">
