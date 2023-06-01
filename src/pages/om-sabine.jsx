@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 import Head from "next/head";
 
 export default function OmSabine({ data }) {
-  console.log(data);
+  //console.log(data);
   const { main, footer } = data;
 
   return (
