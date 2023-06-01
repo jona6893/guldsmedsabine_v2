@@ -55,8 +55,10 @@ export const omSabineQuery = gql`
           subHeading
           paragraph
           knap {
-            text
-            url
+            ... on EksternLinkRecord {
+              text
+              url
+            }
           }
           lokation
           lokationHeading
