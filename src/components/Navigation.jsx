@@ -81,19 +81,28 @@ export default function Navigation() {
           </svg>
         </button>
 
-        <Anchor href="/" role="link" ariaLabel="Link til forsiden / Sabine Logo">
+        <Anchor
+          href="/"
+          role="link"
+          ariaLabel="Link til forsiden / Sabine Logo"
+        >
           <img
             onClick={() => setIsOpen(!isOpen)}
             className="w-20"
             src="/images/sabineLogo.svg"
             alt=""
+            ariaLabel="Link til forsiden"
           />
         </Anchor>
 
         <ul className="flex flex-col justify-center items-center gap-6">
           {navData.map((item) => {
             return (
-              <li className="text-lg" key={item.name} onClick={() => setIsOpen(!isOpen)}>
+              <li
+                className="text-lg"
+                key={item.name}
+                onClick={() => setIsOpen(!isOpen)}
+              >
                 <Anchor
                   className="text-offWhite hover:text-gold-light transition-colors"
                   href={`/${item.path}`}
@@ -132,7 +141,12 @@ export default function Navigation() {
         </div>
         <div className="md:hidden relative p-4 flex justify-between items-center">
           <Anchor href="/">
-            <img className="w-12" src="/images/sabineLogo.svg" alt="" />
+            <img
+              className="w-12"
+              src="/images/sabineLogo.svg"
+              alt=""
+              ariaLabel="Link til forsiden"
+            />
           </Anchor>
           <svg
             xmlns="http://www.w3.org/2000/svg"
