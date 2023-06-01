@@ -91,7 +91,7 @@ export default function Navigation() {
             className="w-20"
             src="/images/sabineLogo.svg"
             alt=""
-            ariaLabel="Link til forsiden"
+           
           />
         </Anchor>
 
@@ -140,13 +140,12 @@ export default function Navigation() {
           </ul>
         </div>
         <div className="md:hidden relative p-4 flex justify-between items-center">
-          <Anchor href="/">
-            <img
-              className="w-12"
-              src="/images/sabineLogo.svg"
-              alt=""
-              ariaLabel="Link til forsiden"
-            />
+          <Anchor
+            href="/"
+            role="link"
+            ariaLabel="Link til forsiden / Sabine Logo"
+          >
+            <img className="w-12" src="/images/sabineLogo.svg" alt="" />
           </Anchor>
           <svg
             xmlns="http://www.w3.org/2000/svg"
