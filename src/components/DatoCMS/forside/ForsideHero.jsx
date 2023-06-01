@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Anchor from "../../Anchor";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function ForsideHero({ content }) {
   const videoRef = useRef(null);
+    const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+     // lazy loading the video
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -26,10 +28,24 @@ export default function ForsideHero({ content }) {
     };
   }, []);
 
+  useEffect(() => {
+    // serving content based on screen size
+    if (typeof window !== "undefined") {
+      setIsMobile(window.innerWidth <= 640);
+      const handleResize = () => {
+        setIsMobile(window.innerWidth <= 640);
+      };
+      window.addEventListener("resize", handleResize);
+
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
   //console.log(content);
   return (
     <section className="mx-auto">
-      <div className="grid max-md:hidden relative h-[80vh]">
+{!isMobile ? 
+      <div className="grid relative h-[80vh]">
         <div className="bg-black/25 col-start-1 row-start-1 z-[1]">
           <div className=" text-offWhite flex flex-col justify-center p-4 gap-4 max-w-[1450px] mx-auto w-full h-full">
             <h1 className="text-gold-light font-italianno mb-2 text-9xl">{content.overskrift}</h1>
@@ -44,7 +60,8 @@ export default function ForsideHero({ content }) {
           <source src={content.baggrundsvideo?.url} type="video/mp4" />
         </video>
       </div>
-      <div className="grid md:hidden h-[70vh]">
+      :
+      <div className="grid  h-[70vh]">
         <div className="bg-black/50 col-start-1 row-start-1 text-offWhite z-[1] flex flex-col justify-center p-4 gap-4">
           <h1 className="text-gold-light font-italianno mb-4">{content.overskrift}</h1>
           <h2 className="text-gold-light uppercase font-light mb-4 text-2xl">{content.subOverskrift}</h2>
@@ -62,6 +79,7 @@ export default function ForsideHero({ content }) {
           priority={true}
         />
       </div>
+      }
     </section>
   );
 }
