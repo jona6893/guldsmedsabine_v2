@@ -4,10 +4,11 @@ import { useEffect, useRef, useState } from "react";
 
 export default function ForsideHero({ content }) {
   const videoRef = useRef(null);
-    const [isMobile, setIsMobile] = useState(false);
+  const videoContainerRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-     // lazy loading the video
+    // lazy loading the video
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -40,6 +41,48 @@ export default function ForsideHero({ content }) {
       return () => window.removeEventListener("resize", handleResize);
     }
   }, []);
+  useEffect(() => {
+    const videoContainer = videoContainerRef.current;
+
+    const handleResize = () => {
+      if (window.innerWidth >= 768) {
+        // checks if the window width is at least 768px
+        if (!videoContainer.firstChild) {
+          // checks if the video isn't already loaded
+          const video = document.createElement("video");
+          video.setAttribute("muted", "");
+          video.setAttribute("autoplay", "");
+          video.setAttribute("loop", "");
+          video.classList.add(
+            "absolute",
+            "top-0",
+            "left-0",
+            "w-full",
+            "h-full",
+            "object-cover",
+            "z-0"
+          );
+
+          const source = document.createElement("source");
+          source.setAttribute("src", content.baggrundsvideo?.url);
+          source.setAttribute("type", "video/mp4");
+
+          video.appendChild(source);
+          videoContainer.appendChild(video);
+        }
+      } else {
+        if (videoContainer.firstChild) {
+          // checks if the video is loaded
+          videoContainer.removeChild(videoContainer.firstChild); // removes the video
+        }
+      }
+    };
+    handleResize(); // calls the function immediately to handle the current viewport size
+    window.addEventListener("resize", handleResize); // listens to the resize event to handl
+       return () => window.removeEventListener('resize', handleResize); // cleans up the listener when the component unmounts
+  }, [content.baggrundsvideo]);
+
+
 
   //console.log(content);
   return (
@@ -60,19 +103,10 @@ export default function ForsideHero({ content }) {
               </Anchor>
             </div>
           </div>
-          <video
-            ref={videoRef}
-            muted
-            autoPlay
-            loop
-            className="absolute top-0 left-0 w-full h-full object-cover z-0"
-          >
-            <source
-              src={content.baggrundsvideo?.url}
-              type="video/mp4"
-              media="(min-width: 640px)"
-            />
-          </video>
+          <div
+            ref={videoContainerRef}
+            className="absolute top-0 left-0 w-full h-full z-0"
+          ></div>
         </div>
       ) : (
         <div className="grid  h-[70vh]">
