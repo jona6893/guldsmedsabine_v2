@@ -68,7 +68,6 @@ export default function ForsideHero({ content }) {
             muted
             preload="none"
             loop
-            autoplay
             className="absolute top-0 left-0 w-full h-full object-cover z-0"
           >
             <source src={content.baggrundsvideo?.url} type="video/mp4" />
@@ -78,7 +77,6 @@ export default function ForsideHero({ content }) {
             ref={videoRef}
             muted
             loop
-            preload="auto"
             autoplay
             className="absolute top-0 left-0 w-full h-full object-cover z-0"
           >
