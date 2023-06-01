@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Anchor from "../../Anchor";
 import { useEffect, useRef, useState } from "react";
+import { Autoplay } from "swiper";
 
 export default function ForsideHero({ content }) {
   const videoRef = useRef(null);
@@ -28,6 +29,19 @@ export default function ForsideHero({ content }) {
     };
   }, []);
 
+   useEffect(() => {
+     if (typeof window !== "undefined") {
+       setIsMobile(window.innerWidth <= 640);
+       const handleResize = () => {
+         setIsMobile(window.innerWidth <= 640);
+       };
+       window.addEventListener("resize", handleResize);
+
+       // cleanup
+       return () => window.removeEventListener("resize", handleResize);
+     }
+   }, []);
+
 
   //console.log(content);
   return (
@@ -48,15 +62,28 @@ export default function ForsideHero({ content }) {
             </Anchor>
           </div>
         </div>
-        <video
-          ref={videoRef}
-          muted
-          preload="none"
-          loop
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
-        >
-          <source src={content.baggrundsvideo?.url} type="video/mp4" />
-        </video>
+        {isMobile ? (
+          <video
+            ref={videoRef}
+            muted
+            preload="none"
+            loop
+            className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          >
+            {/*... video content ...*/}
+          </video>
+        ) : (
+          <video
+            ref={videoRef}
+            muted
+            preload="none"
+            loop
+            autoplay
+            className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          >
+            {/*... video content ...*/}
+          </video>
+        )}
       </div>
       {/* mobile */}
       <div className="grid md:hidden h-[70vh]">

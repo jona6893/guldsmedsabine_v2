@@ -121,7 +121,11 @@ export default function Navigation() {
     <div className="w-full bg-grey-dark sticky top-0 z-[100]">
       <nav className="mx-auto max-w-[1450px]">
         <div className="max-md:hidden flex items-center justify-between p-4 w-full">
-          <Anchor href="/">
+          <Anchor
+            href="/"
+            role="link"
+            ariaLabel="Link til forsiden / Sabine Logo"
+          >
             <img className="w-16" src="/images/sabineLogo.svg" alt="" />
           </Anchor>
           <ul className="flex justify-end gap-4 p-4">
